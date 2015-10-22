@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700&subset=latin,cyrillic,cyrillic-ext);
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
 
 body, html { height: 100%; }
@@ -19,26 +20,31 @@ div, input, textarea, select, button, h1, h2, h3, h4, h5, h6, a, span, a:focus {
 ul, ol { list-style-type: none; }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+@font-face { font-family: "HelveticaNeue"; src: url("fonts/HelveticaNeueCyr-Roman.eot"); src: url("fonts/HelveticaNeueCyr-Roman.eot?#iefix") format("embedded-opentype"), url("fonts/HelveticaNeueCyr-Roman.woff2") format("woff2"), url("fonts/HelveticaNeueCyr-Roman.woff") format("woff"), url("fonts/HelveticaNeueCyr-Roman.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "HelveticaNeueCyr-Bold"; src: url("fonts/HelveticaNeueCyr-Bold.eot"); src: url("fonts/HelveticaNeueCyr-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/HelveticaNeueCyr-Bold.woff2") format("woff2"), url("fonts/HelveticaNeueCyr-Bold.woff") format("woff"), url("fonts/HelveticaNeueCyr-Bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+.in { margin: 0 auto; padding: 0 5px; width: 1280px; box-sizing: border-box; }
+
+body { font-family: "HelveticaNeueCyr-Bold", Arial, sans-serif; font-size: 15px; line-height: 18px; }
 
 @font-face { font-family: "svgfont"; src: url("fonts/svgfont.eot"); src: url("fonts/svgfont.eot?#iefix") format("eot"), url("fonts/svgfont.woff") format("woff"), url("fonts/svgfont.woff2") format("woff2"), url("fonts/svgfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 .icon, [class^="icon-"], [class*=" icon-"] { font-family: "svgfont"; font-style: normal; font-weight: normal; text-rendering: auto; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 .icon, [class^="icon-"], [class*=" icon-"] { display: inline-block; }
 
-.icon-sepa:before { content: ""; }
-
-.icon-skrill:before { content: ""; }
+.icon-logo:before { content: ""; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
+
+.header { *zoom: 1; }
+.header:after { content: " "; display: table; clear: both; }
+
+.logo { vertical-align: top; background-image: url("../img/icons.png"); width: 298px; height: 107px; background-position: 0px 0px; display: inline-block; }
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
-@media only screen and (max-width: 1024px){
- div{ display: block; }
- p{ background: red; } }
 
 
 

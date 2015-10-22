@@ -1,0 +1,36 @@
+//fonts
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700&subset=latin,cyrillic,cyrillic-ext)
++font("HelveticaNeue", HelveticaNeueCyr-Roman)
++font("HelveticaNeueCyr-Bold", HelveticaNeueCyr-Bold)
+
+// mixin
+=hl
+	font-family: "HelveticaNeueCyr-Bold", Arial, sans-serif
+=hlb
+	font-family: "HelveticaNeueCyr-Bold", Arial, sans-serif
+=r300
+	font-family: 'Roboto Condensed', Arial, sans-serif
+	font-weight: 300
+=r400
+	font-family: 'Roboto Condensed', Arial, sans-serif
+	font-weight: 400
+=r700
+	font-family: 'Roboto Condensed', Arial, sans-serif
+	font-weight: 700
+
+=svg($name, $width, $height)
+	background: url("../svg/#{$name}.svg") no-repeat 0 0
+	//background-image: inline-image('icons/svg/'+$sprite+'.svg','image/svg'); // to switches sprites to base64, elegant
+	background-size: #{$width}px #{$height}px
+	width: #{$width}px
+	height: #{$height}px
+	display: inline-block
+
+// extend
+.in
+	margin: 0 auto
+	padding: 0 5px
+	width: 1280px
+	box-sizing: border-box
+%in
+	@extend .in

@@ -1,9 +1,145 @@
 // header
 .header
-	+clr
+	height: 56px
+	color: $c_gray
+	+r400
+	font-size: 16px
+	&__in
+		position: relative
+		padding-top: 22px
+		padding-left: 288px
+		@extend %in
+		+box
+		+clr
+	&__right
+		float: right
+	a
+		border-bottom: 1px solid transparent
+		color: inherit
+		transition: border-color .3s
+		display: inline-block
+		&:active
+			border-color: $c_gray
+		+rm(1024)
+			&:hover
+				border-color: $c_gray
+	.logo
+		border: none
 
 // logo
 .logo
-	vertical-align: top
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 1
 	+s(logo)
+	display: inline-block 
+
+// nav
+.nav
+	float: left
+	font-size: 0
+	&__item
+		position: relative
+		padding: 0 12px 0 13px
+		font-size: 16px
+		vertical-align: top
+		display: inline-block
+		&:first-child
+			&:before
+				display: none
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			left: 0
+			transform: translate(0,-50%)
+			height: 9px
+			border-left: 1px dotted $bd_nav
+	a
+		display: block
+
+// lang
+.lang
+	padding-right: 11px
+
+// bal
+.bal
+	padding: 0 11px 0 14px
+	&__many
+		color: $l_green
+	.bal__plus
+		position: relative
+		margin: 4px 0 0 10px
+		width: 10px
+		height: 10px
+		border-bottom: none
+		vertical-align: top
+		display: inline-block
+		&:before
+			position: absolute
+			content: ''
+			left: 0
+			top: 50%
+			margin-top: -1px
+			height: 2px
+			width: 10px
+			background: $l_green
+		&:after
+			position: absolute
+			content: ''
+			left: 50%
+			top: 0
+			margin-left: -1px
+			height: 10px
+			width: 2px
+			background: $l_green
+
+// cabinet
+.cabinet
+	padding-left: 16px
+	.cabinet__link
+		color: $d_blue
+		&:active
+			border-color: $d_blue
+		+rm(1024)
+			&:hover
+				border-color: $d_blue
+
+.lang,
+.bal,
+.cabinet
+	position: relative
+	vertical-align: top
 	display: inline-block
+	&:first-child
+		&:before
+			display: none
+	&:before
+		position: absolute
+		content: ''
+		top: 50%
+		left: 0
+		transform: translate(0,-50%)
+		height: 9px
+		border-left: 1px dotted $bd_nav
+
+// filter
+.filter
+	padding: 21px 0 22px
+	font-size: 0
+	background: $blue
+	&__in
+		@extend %in
+		text-align: right
+		+clr
+	&__text
+		color: #fff
+		+r700
+		font-size: 20px
+		line-height: 37px
+		text-transform: uppercase
+		vertical-align: top
+		display: inline-block
+	.drop
+		margin: 0 10px

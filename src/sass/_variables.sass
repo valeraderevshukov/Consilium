@@ -18,19 +18,20 @@
 	font-family: 'Roboto Condensed', Arial, sans-serif
 	font-weight: 700
 
-=svg($name, $width, $height)
-	background: url("../svg/#{$name}.svg") no-repeat 0 0
-	//background-image: inline-image('icons/svg/'+$sprite+'.svg','image/svg'); // to switches sprites to base64, elegant
-	background-size: #{$width}px #{$height}px
-	width: #{$width}px
-	height: #{$height}px
-	display: inline-block
-
 // extend
 .in
 	margin: 0 auto
-	padding: 0 5px
+	padding: 0 8px
 	width: 1280px
 	box-sizing: border-box
 %in
 	@extend .in
+
+// variables
+$blue: #4671b3
+$d_blue: #4170b6
+$l_green: #62c2c1
+
+$c_gray: #767676
+
+$bd_nav: #919c9f

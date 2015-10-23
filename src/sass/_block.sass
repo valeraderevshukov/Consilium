@@ -1,0 +1,66 @@
+// btn
+.btn
+	padding: 0 30px
+	height: 38px
+	min-width: 113px
+	line-height: 37px
+	color: #fff
+	font-size: 14px
+	vertical-align: top
+	text-align: center
+	text-transform: uppercase
+	+r700
+	border-radius: 5px
+	transition: background .3s
+	background: $l_green
+	display: inline-block
+	+dr($l_green,15%)
+button.btn
+	line-height: 1
+
+// drop
+.drop
+	width: 100%
+	max-width: 218px
+	text-align: left
+	color: $c_gray
+	+r400
+	vertical-align: top
+	display: inline-block
+	input
+	&__text
+		position: relative
+		padding: 0 35px 0 12px
+		height: 37px
+		line-height: 36px
+		font-size: 16px
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+		user-select: none
+		border-radius: 5px
+		cursor: pointer
+		background: #fff
+		+box
+		&:before
+			position: absolute
+			content: ''
+			top: 9px
+			right: 10px
+			width: 19px
+			height: 19px
+			background: #d6dbdf
+			border-radius: 3px
+		&:after
+			position: absolute
+			content: ''
+			top: 17px
+			right: 16px
+			z-index: 1
+			+arr(7,4,#000,b)
+	&__block
+		display: none
+	&__title
+	&__in
+	ul
+	li

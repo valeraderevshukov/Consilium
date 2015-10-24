@@ -1,0 +1,89 @@
+// footer
+.footer
+	margin-top: -124px
+	padding: 22px 0 60px
+	color: #fff
+	background: $blue
+	&__in
+		@extend %in
+		+clr
+	&__left
+		float: left
+	&__right
+		float: right
+	&__menu
+		margin-left: 10px
+		vertical-align: top
+		display: inline-block
+		li
+			position: relative
+			padding: 0 13px 0 14px
+			display: inline-block
+			&:before
+				position: absolute
+				content: ''
+				top: 50%
+				left: 0
+				transform: translate(0,-50%)
+				height: 9px
+				border-left: 1px dotted $bd_nav
+		a
+			border-bottom: 1px solid transparent
+			transition: border-color .2s
+			&:active
+				border-color: #fff
+			+rm(1024)
+				&:hover
+					border-color: #fff
+	a
+		color: #fff
+
+// copy
+.copy
+
+// numb
+.numb
+	position: relative
+	margin-left: 115px
+	padding-left: 18px
+	&__tel
+		+hlb
+		font-size: 17px
+	&__all
+		margin-top: 5px
+		border-bottom: 1px solid #fff
+		&:active
+			border-color: transparent
+		+rm(1024)
+			&:hover
+				border-color: transparent
+	.ico
+		position: absolute
+		top: 0
+		left: 0
+
+// email
+.email
+	position: relative
+	padding-left: 25px
+	+hlb
+	&:active
+		span
+			border-color: #fff
+	+rm(1024)
+		&:hover
+			span
+				border-color: #fff
+	.ico
+		position: absolute
+		top: 4px
+		left: 0
+	span
+		border-bottom: 1px solid transparent
+		transition: border-color .2s
+
+.copy,
+.numb,
+.email
+	vertical-align: top
+	display: inline-block

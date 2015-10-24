@@ -1,3 +1,190 @@
-// Normally mainpage styles
-// body
-// 	+s(coderiver)
+// ad
+.ad
+	padding: 96px 0 110px
+	color: #fff
+	+r400
+	font-size: 58px
+	line-height: 56px
+	+font-smoothing(antialiased)
+	background: url(../img/bg-ad.png) no-repeat 0 0
+	background-size: cover
+	&__in
+		position: relative
+		margin: 0 auto
+		max-width: 1096px
+	&__block
+		padding: 25px 40px 32px
+		max-width: 525px
+		vertical-align: top
+		+box
+		border-radius: 10px
+		background-color: #62c2c1
+		p
+			letter-spacing: -3.3px
+	&__hand
+		position: absolute
+		right: 75px
+		bottom: -110px
+		width: 353px
+		height: 502px
+		background: url(../img/hand.png) no-repeat 0 0
+		background-size: contain
+	&__bot
+		margin-top: 22px
+		text-align: center
+
+// info
+.info
+	padding: 42px 0
+	color: #fff
+	background: $blue
+	&__in
+		@extend %in
+		+clr
+	&__item
+		float: left
+		padding-right: 20px
+		width: 25%
+		+box
+		+clr
+		&:first-child
+			.info__img
+				padding-right: 15px
+	&__img
+		float: left
+		width: 90px
+		text-align: center
+		+box
+	&__right
+		overflow: hidden
+	&__title
+		margin: -2px 0 5px 
+		padding-right: 34px
+		+r700
+		font-size: 22px
+		line-height: 1.1
+	&__text
+		opacity: .6
+	.ico
+		vertical-align: top
+
+// necess
+.necess
+	padding: 40px 0 70px
+	&__in
+		padding: 0 20px
+		margin: 0 auto
+		max-width: 1200px
+	&__row
+		+clr
+	&__item
+		float: left
+		margin-left: 1.5%
+		padding: 28px 35px 32px 27px
+		width: 32%
+		color: #fff
+		+box
+		border-radius: 5px
+		background: $l_green
+		&:first-child
+			margin-left: 0
+	&__img
+		float: left
+		margin: 4px 30px 0 0
+		width: 124px
+		height: 124px
+		font-size: 0
+		overflow: hidden
+		border-radius: 50%
+		background: #fff
+		img
+			display: block
+	&__text
+		font-size: 17px
+		overflow: hidden
+	&__title
+		margin-bottom: 12px
+		+r700
+		font-size: 22px
+	.title
+		margin-bottom: 25px
+
+// video
+.video
+	padding: 40px 0 60px
+	color: #fff
+	background: $l_blue
+	&__in
+		margin: 0 auto
+		max-width: 838px
+	&__wrap
+		position: relative
+		padding-bottom: 52%
+		+g(#fff, #717171)
+	&__l
+		position: absolute
+		top: 10px
+		left: 10px
+		right: 10px
+		bottom: 10px
+		font-size: 0
+		overflow: hidden
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 100%
+			transform: translate(-50%,-50%)
+			opacity: .8
+			display: block
+	&__play
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -39px 0 0 -39px
+		cursor: pointer
+		transition: transform .2s
+		+s(play)
+		&:active
+			transform: scale(1.2)
+		+rm(1024)
+			&:hover
+				transform: scale(1.2)
+	.title
+		margin-bottom: 18px
+
+// amount
+.amount
+	padding: 140px 0 70px
+	color: #fff
+	+r400
+	background: url(../img/bg-amount.png) no-repeat 0 0
+	background-size: cover
+	&__in
+		@extend %in
+		font-size: 0
+		text-align: center
+	&__item
+		margin-left: 38px
+		max-width: 214px
+		vertical-align: top
+		display: inline-block
+		&:first-child
+			margin-left: 0
+	&__tally
+		width: 214px
+		height: 214px
+		font-size: 58px
+		+gb
+		text-align: center
+		line-height: 188px
+		border-radius: 50%
+		border: 16px solid $l_blue
+		+box
+	&__text
+		margin-top: 25px
+		font-size: 30px
+		line-height: 31px
+	&__bot
+		margin-top: 68px
+		text-align: center

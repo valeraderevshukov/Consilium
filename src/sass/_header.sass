@@ -6,7 +6,7 @@
 	font-size: 16px
 	&__in
 		position: relative
-		padding-top: 22px
+		padding-top: 17px
 		padding-left: 288px
 		@extend %in
 		+box
@@ -126,6 +126,7 @@
 
 // filter
 .filter
+	position: relative
 	padding: 21px 0 22px
 	font-size: 0
 	background: $blue
@@ -143,3 +144,107 @@
 		display: inline-block
 	.drop
 		margin: 0 10px
+
+// drop
+.drop
+	position: static
+	width: 100%
+	max-width: 218px
+	text-align: left
+	color: $c_gray
+	+r400
+	vertical-align: top
+	display: inline-block
+	&.is-active
+		.drop__arr
+			&:after
+				opacity: 1
+	select
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		visibility: hidden
+		opacity: 0
+		z-index: -1
+	&__text
+		position: relative
+		padding: 0 35px 0 12px
+		height: 37px
+		line-height: 36px
+		font-size: 16px
+		user-select: none
+		border-radius: 5px
+		cursor: pointer
+		background: #fff
+		+box
+		span
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
+			display: block
+	&__arr
+		position: absolute
+		content: ''
+		top: 9px
+		right: 10px
+		width: 19px
+		height: 19px
+		background: #d6dbdf
+		border-radius: 3px
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			right: 50%
+			margin: -2px -3px 0 0
+			z-index: 1
+			+arr(7,4,#000,b)
+		&:after
+			position: absolute
+			content: ''
+			left: 50%
+			bottom: -32px
+			margin-left: -8px
+			z-index: 101	
+			+arr(16,8,#fff,t)
+			opacity: 0
+			transition: opacity .1s
+	&__block
+		position: absolute
+		top: 100%
+		left: 0
+		margin-top: -1px
+		padding: 35px 0 40px
+		width: 100%
+		color: $c_body
+		z-index: 100
+		box-shadow: 0 0 8.7px 0.3px rgba(0, 0, 0, 0.31)
+		background: #fff
+		display: none
+	&__title
+		margin-bottom: 18px
+		font-size: 20px
+		text-transform: uppercase
+		+r700
+	&__in
+		font-size: 0
+		@extend %in
+	ul
+		padding-right: 10px
+		width: 16.6%
+		line-height: 24px
+		font-size: 16px
+		vertical-align: top
+		+box
+		display: inline-block
+		span
+			cursor: pointer
+			border-bottom: 1px solid transparent
+			transition: border-color .2s
+			&:active
+				border-color: $c_body
+			+rm(1024)
+				&:hover
+					border-color: $c_body

@@ -53,84 +53,119 @@
 		</div>
 	</header>
 	<!-- filter -->
-	<div class="filter">
+	<section class="filter">
 		<div class="filter__in">
 			<form>
 				<div class="filter__text">Ищу специалиста</div>
 				<!-- drop -->
-				<div class="drop">
-					<input type="text" hidden>
-					<div class="drop__text">Специальность</div>
-					<div class="drop__block">
-						<div class="drop__title"></div>
+				<div class="drop js-select">
+					<div class="drop__text js-select-text"><span>Специальность</span><i class="drop__arr"></i></div>
+					<select>
+						<option value="Акушер-гинеколог">Акушер-гинеколог</option>
+						<option value="Гастроэнтеролог">Гастроэнтеролог</option>
+						<option value="Гинеколог">Гинеколог</option>
+						<option value="Дерматолог">Дерматолог</option>
+						<option value="Кардиолог">Кардиолог</option>
+						<option value="Маммолог">Маммолог</option>
+						<option value="Невролог">Невролог</option>
+						<option value="Ортодонт">Ортодонт</option>
+						<option value="Ортопед">Ортопед</option>
+						<option value="Отоларинголог (ЛОР)">Отоларинголог (ЛОР)</option>
+						<option value="Офтальмолог">Офтальмолог</option>
+						<option value="Педиатр">Педиатр</option>
+						<option value="Проктолог">Проктолог</option>
+						<option value="Психотерапевт">Психотерапевт</option>
+						<option value="Стоматолог">Стоматолог</option>
+						<option value="Терапевт">Терапевт</option>
+						<option value="УЗИ-специалист">УЗИ-специалист</option>
+						<option value="Уролог">Уролог</option>
+						<option value="Хирург">Хирург</option>
+						<option value="Эндокринолог">Эндокринолог</option>
+						<option value="УЗИ-специалист">УЗИ-специалист</option>
+						<option value="Уролог">Уролог</option>
+						<option value="Хирург">Хирург</option>
+						<option value="Эндокринолог">Эндокринолог</option>
+					</select>
+					<div class="drop__block js-select-list">
 						<div class="drop__in">
+							<div class="drop__title">специальность:</div>
 							<ul>
-								<li>Акушер-гинеколог</li>
-								<li>Гастроэнтеролог</li>
-								<li>Гинеколог</li>
-								<li>Дерматолог</li>
+								<li data-val="Акушер-гинеколог"><span>Акушер-гинеколог</span></li>
+								<li data-val="Гастроэнтеролог"><span>Гастроэнтеролог</span></li>
+								<li data-val="Гинеколог"><span>Гинеколог</span></li>
+								<li data-val="Дерматолог"><span>Дерматолог</span></li>
 							</ul>
 							<ul>
-								<li>Кардиолог</li>
-								<li>Маммолог</li>
-								<li>Невролог</li>
-								<li>Ортодонт</li>
+								<li data-val="Кардиолог"><span>Кардиолог</span></li>
+								<li data-val="Маммолог"><span>Маммолог</span></li>
+								<li data-val="Невролог"><span>Невролог</span></li>
+								<li data-val="Ортодонт"><span>Ортодонт</span></li>
 							</ul>
 							<ul>
-								<li>Ортопед</li>
-								<li>Отоларинголог (ЛОР)</li>
-								<li>Офтальмолог</li>
-								<li>Педиатр</li>
+								<li data-val="Ортопед"><span>Ортопед</span></li>
+								<li data-val="Отоларинголог (ЛОР)"><span>толаринголог (ЛОР)</span></li>
+								<li data-val="Офтальмолог"><span>Офтальмолог</span></li>
+								<li data-val="Педиатр"><span>Педиатр</span></li>
 							</ul>
 							<ul>
-								<li>Проктолог</li>
-								<li>Психотерапевт</li>
-								<li>Стоматолог</li>
-								<li>Терапевт</li>
+								<li data-val="Проктолог"><span>Проктолог</span></li>
+								<li data-val="Психотерапевт"><span>Психотерапевт</span></li>
+								<li data-val="Стоматолог"><span>Стоматолог</span></li>
+								<li data-val="Терапевт"><span>Терапевт</span></li>
 							</ul>
 							<ul>
-								<li>УЗИ-специалист</li>
-								<li>Уролог</li>
-								<li>Хирург</li>
-								<li>Эндокринолог</li>
+								<li data-val="УЗИ-специалист"><span>УЗИ-специалист</span></li>
+								<li data-val="Уролог"><span>Уролог</span></li>
+								<li data-val="Хирург"><span>Хирург</span></li>
+								<li data-val="Эндокринолог"><span>Эндокринолог</span></li>
 							</ul>
 							<ul>
-								<li>УЗИ-специалист</li>
-								<li>Уролог</li>
-								<li>Хирург</li>
-								<li>Эндокринолог</li>
+								<li data-val="УЗИ-специалист"><span>УЗИ-специалист</span></li>
+								<li data-val="Уролог"><span>Уролог</span></li>
+								<li data-val="Хирург"><span>Хирург</span></li>
+								<li data-val="Эндокринолог"><span>Эндокринолог</span></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 				<!-- drop -->
-				<div class="drop">
-					<input type="text" hidden>
-					<div class="drop__text">Страна</div>
-					<div class="drop__block">
-						<div class="drop__title">Lorem ipsum.</div>
+				<div class="drop js-select">
+					<div class="drop__text js-select-text"><span>Страна</span><i class="drop__arr"></i></div>
+					<select>
+						<option value="item1">item1</option>
+						<option value="item2">item2</option>
+						<option value="item3">item3</option>
+						<option value="item4">item4</option>
+					</select>
+					<div class="drop__block js-select-list">
 						<div class="drop__in">
+							<div class="drop__title">Страна:</div>
 							<ul>
-								<li>item1</li>
-								<li>item2</li>
-								<li>item3</li>
-								<li>item4</li> 
+								<li data-val="item1"><span>item1</span></li>
+								<li data-val="item2"><span>item2</span></li>
+								<li data-val="item3"><span>item3</span></li>
+								<li data-val="item4"><span>item4</span></li> 
 							</ul>
 						</div>
 					</div>
 				</div>
 				<!-- drop --> 
-				<div class="drop">
-					<input type="text" hidden>
-					<div class="drop__text">Город</div> 
-					<div class="drop__block">
-						<div class="drop__title">Lorem ipsum.</div>
+				<div class="drop js-select">
+					<div class="drop__text js-select-text"><span>Город</span><i class="drop__arr"></i></div> 
+					<select>
+						<option value="item1">item1</option>
+						<option value="item2">item2</option>
+						<option value="item3">item3</option>
+						<option value="item4">item4</option>
+					</select>
+					<div class="drop__block js-select-list">
 						<div class="drop__in">
+							<div class="drop__title">Город:</div>
 							<ul>
-								<li>item1</li>
-								<li>item2</li>
-								<li>item3</li> 
-								<li>item4</li>
+								<li data-val="item1"><span>item1</span></li>
+								<li data-val="item2"><span>item2</span></li>
+								<li data-val="item3"><span>item3</span></li>
+								<li data-val="item4"><span>item4</span></li> 
 							</ul>
 						</div>
 					</div>
@@ -138,9 +173,150 @@
 				<button class="btn" type="submit"><i class="ico ico-search"></i></button>
 			</form>
 		</div>
-	</div>
-
+	</section>
+	<!-- ad -->
+	<section class="ad">
+		<div class="ad__in">
+			<div class="ad__block">
+				<p>Видео-консультации лучших врачей не выходя из дома!</p>
+				<div class="ad__bot">
+					<a href="#" class="btn btn_big btn_blue">Присоединяйся</a>
+				</div>
+			</div>
+			<div class="ad__hand"></div>
+		</div>
+	</section>
+	<!-- info -->
+	<section class="info">
+		<div class="info__in">
+			<div class="info__item">
+				<div class="info__img">
+					<div class="ico ico_on-line"></div>
+				</div>
+				<div class="info__right">
+					<div class="info__title">Запись к врачу On-line</div>
+					<div class="info__text">Мы используем продукты из натурального сырья</div>
+				</div>
+			</div>
+			<div class="info__item">
+				<div class="info__img">
+					<div class="ico ico_doctors"></div>
+				</div>
+				<div class="info__right">
+					<div class="info__title">Врачи всех специальностей</div>
+					<div class="info__text">Мы используем продукты из натурального сырья</div>
+				</div>
+			</div>
+			<div class="info__item">
+				<div class="info__img">
+					<div class="ico ico_history"></div>
+				</div>
+				<div class="info__right">
+					<div class="info__title">История записей <br>в личном кабинете</div>
+					<div class="info__text">Мы используем продукты из натурального сырья</div>
+				</div>
+			</div>
+			<div class="info__item">
+				<div class="info__img">
+					<div class="ico ico_recipes"></div>
+				</div>
+				<div class="info__right">
+					<div class="info__title">Ваши рецепты <br>в личном кабинете</div>
+					<div class="info__text">Мы используем продукты из натурального сырья</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- necessary -->
+	<section class="necess">
+		<div class="necess__in">
+			<h3 class="title">Для кого это нужно?</h3>
+			<div class="necess__row">
+				<div class="necess__item">
+					<div class="necess__img"><img src="./img/necess1.png" alt="img"></div>
+					<div class="necess__text">
+						<div class="necess__title">Пациенты</div>
+						<p>Всё просто! Выбирайте врача - по рейтингу, советам, другим предпочтениям - и записывайтесь. Рейтинги объективные, а информация тщательно </p>
+					</div>
+				</div>
+				<div class="necess__item">
+					<div class="necess__img"><img src="./img/necess2.png" alt="img"></div>
+					<div class="necess__text">
+						<div class="necess__title">Специалисты</div>
+						<p>Всё просто! Выбирайте врача - по рейтингу, советам, другим предпочтениям - и записывайтесь. Рейтинги объективные, а информация тщательно </p>
+					</div>
+				</div>
+				<div class="necess__item">
+					<div class="necess__img"><img src="./img/necess3.png" alt="img"></div>
+					<div class="necess__text">
+						<div class="necess__title">Клиники</div>
+						<p>Всё просто! Выбирайте врача - по рейтингу, советам, другим предпочтениям - и записывайтесь. Рейтинги объективные, а информация тщательно </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- video -->
+	<section class="video">
+		<div class="video__in">
+			<h3 class="title">Как это работает?</h3>
+			<div class="video__wrap">
+				<div class="video__l"><img src="./img/video.png" alt="img"></div>
+				<div class="video__play"></div>
+			</div>
+		</div>
+	</section>
+	<!-- amount -->
+	<section class="amount">
+		<div class="amount__in">
+			<div class="amount__row">
+				<div class="amount__item">
+					<div class="amount__tally">264</div>
+					<div class="amount__text">Пациента</div>
+				</div>
+				<div class="amount__item">
+					<div class="amount__tally">185</div>
+					<div class="amount__text">Специалистов</div>
+				</div>
+				<div class="amount__item">
+					<div class="amount__tally">4 456</div>
+					<div class="amount__text">Проведенных консультаций</div>
+				</div>
+				<div class="amount__item">
+					<div class="amount__tally">23</div>
+					<div class="amount__text">Специализации</div>
+				</div>
+			</div>
+			<div class="amount__bot">
+				<a href="#" class="btn btn_big btn_red">Присоединяйся</a>
+			</div>
+		</div>
+	</section>
 </div>
 <!-- END out-->
+<!-- footer -->
+<footer class="footer">
+	<div class="footer__in">
+		<div class="footer__left">
+			<!-- copy -->
+			<div class="copy">Авторские права @ 2015 Консилиум</div>
+			<!-- numb -->
+			<div class="numb">
+				<i class="ico ico_fhone"></i>
+				<div class="numb__tel">8 800 333 4 555</div>
+				<a href="#" class="numb__all">Номера для связи в других городах</a>
+			</div>
+		</div>
+		<div class="footer__right">
+			<a href="mailto:hello@conciliumcenter.com" class="email"><i class="ico ico_email"></i><span>hello@conciliumcenter.com</span></a>
+			<ul class="footer__menu">
+				<li><a href="#">Специалисты</a></li>
+				<li><a href="#">Партнеры</a></li>
+				<li><a href="#">О проекте</a></li>
+			</ul>
+		</div>
+		
+	</div>
+</footer>
 </body>
 </html>

@@ -1,6 +1,5 @@
 Gulp Boilerplate for generic CSS/HTML/JS development
 =============
-<a href="http://riverco.de" target="_blank">riverco.de</a> gulp boilerplate.
 
 Structure
 =============

@@ -56,15 +56,19 @@ button.btn
 // select
 .select
 	position: relative
+	&.is-active
+		.select__text
+			border-radius: 5px 5px 0 0
 	&__text
 		position: relative
 		padding: 0 35px 0 12px
-		height: 37px
+		height: 38px
 		line-height: 36px
 		font-size: 16px
 		user-select: none
 		border-radius: 5px
 		border: 1px solid $bord_select
+		transition: border-radius .3s
 		cursor: pointer
 		background: #fff
 		+box
@@ -88,14 +92,26 @@ button.btn
 		position: absolute
 		top: 100%
 		left: 0
-		margin-top: -1px
-		padding: 35px 0 40px
-		width: 100%
+		right: 0
+		padding: 12px 0
 		color: $c_body
 		z-index: 100
-		box-shadow: 0 0 8.7px 0.3px rgba(0, 0, 0, 0.31)
+		border: 1px solid $bord_select
+		border-top: none
+		border-radius: 0 0 5px 5px
 		background: #fff
 		display: none
+		li
+			padding: 0 12px
+			cursor: pointer
+			transition: background .2s, color .2s
+			&:active
+				color: #fff
+				background: $l_green
+			+rm(1024)
+				&:hover
+					color: #fff
+					background: $l_green
 	select
 		position: absolute
 		top: 0

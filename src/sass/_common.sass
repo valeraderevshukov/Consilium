@@ -230,13 +230,44 @@ a
 	display: inline-block
 	input
 		padding: 0 32px 0 10px
-		height: 37px
+		height: 38px
+		font-size: 16px
+		+r400
+		color: $c_body
 		background-color: #fff
 		border: 1px solid $bord_select
 		border-radius: 5px
 		width: 100%
 		+box
 		display: block
+		&::placeholder
+			color: $c_body
+	img
+		position: absolute
+		top: 50%
+		right: 11px
+		margin-top: -7px
+		cursor: pointer
+
+.ui-datepicker
+	width: 14.1em
+	.ui-widget-header,
+	.ui-state-highlight,
+	.ui-state-hover
+		border-color: $bord_select
+		background: $l_green
+	.ui-state-highlight,
+	.ui-state-hover
+		color: #fff
+	.ui-state-active
+		border-color: $red
+		color: $blue
+	.ui-corner-all
+		cursor: pointer
+	td span,
+	td a
+		text-align: center
+
 
 // res
 .res

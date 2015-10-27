@@ -65,4 +65,28 @@ $(document).ready(function() {
 		});
 	}
 	tab();
+
+	// datepicker
+	$("#from").datepicker({
+		showOn			: "both",
+		buttonImage 	: "img/calendar.png",
+		buttonImageOnly	: true,
+		buttonText		: "Select date",
+		numberOfMonths	: 1,
+		dateFormat: "dd.mm.yy",
+		onClose: function( selectedDate ) {
+			$("#to").datepicker("option", "minDate", selectedDate);
+		}
+	});
+	$("#to").datepicker({
+		showOn			: "both",
+		buttonImage 	: "img/calendar.png",
+		buttonImageOnly	: true,
+		buttonText		: "Select date",
+		numberOfMonths	: 1,
+		dateFormat: "dd.mm.yy",
+		onClose: function( selectedDate ) {
+			$("#from").datepicker("option", "maxDate", selectedDate);
+		}
+	});
 });

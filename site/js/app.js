@@ -72,7 +72,6 @@ $(document).ready(function() {
 		select.removeClass("is-active");
 		selectList.slideUp(200);
 		return false;
-		
 	});
 
 	$(".js-select select").on("change", function() {
@@ -124,5 +123,15 @@ $(document).ready(function() {
 		onClose: function( selectedDate ) {
 			$("#from").datepicker("option", "maxDate", selectedDate);
 		}
+	}); 
+
+	// calendar
+	$('.js-calendar').slick({
+		dots: false,
+		infinite: false,
+		speed: 500,
+		cssEase: 'linear',
+		slidesToShow: 3,
+		slidesToScroll: 1
 	});
 });

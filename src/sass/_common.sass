@@ -142,32 +142,6 @@ a
 	&__cont
 		display: none
 
-// l
-.l
-	margin-top: 32px
-	+r400
-	+clr
-.l-col1
-	float: left
-	width: 25%
-	border: 1px solid $bord_cab
-	border-radius: 5px
-	.btn
-		width: 100%
-.l-col2
-	float: right
-	width: 73%
-	border: 1px solid $bord_cab
-	border-radius: 5px
-	.title-small
-		margin-bottom: 17px
-
-// field
-.field
-	padding: 25px 29px
-	border-top: 1px solid $bord_cab
-	&:first-child
-		border-top: none
 
 // event
 .event
@@ -186,10 +160,6 @@ a
 		+rm(1024)
 			&:hover
 				border-color: $blue
-// date
-.date
-	font-size: 16px
-	+r700
 
 // filt
 .filt
@@ -286,3 +256,218 @@ a
 	.event
 		& + .event
 			margin-top: 24px
+
+// unit
+.unit
+	padding: 22px 30px 30px
+	border-radius: 5px
+	box-shadow: 0 2px 5.7px 0.3px rgba(0, 0, 0, 0.2)
+	+box
+	& + .unit
+		margin-top: 10px
+	&__row
+		margin-top: 15px
+		&:first-child
+			margin-top: 0
+		& > a,
+		p > a
+			color: $blue
+			line-height: 18px
+			&:active
+				border-color: $blue
+			+rm(1024)
+				&:hover
+					border-color: $blue
+	&__but
+		margin-top: 17px
+	&__inst
+		margin-top: 18px
+		a
+			color: inherit
+			&:active
+				border-color: $c_body
+			+rm(1024)
+				&:hover
+					border-color: $c_body
+	&__wr
+		position: relative
+		padding-right: 58px
+		margin-top: 15px
+		.btn-open
+			position: absolute
+			right: 0
+			top: 0
+		& + .unit__wr
+			margin-top: 15px
+	a
+		transition: border-color .2s, background .3s
+		border-bottom: 1px solid transparent
+	.date
+		font-size: 20px
+		text-transform: uppercase
+		letter-spacing: -.5px
+
+// catal
+.catal
+	float: right
+	width: 73.5%
+	&__filter
+		+clr
+		.select,
+		.search
+			float: left
+			margin-left: 1%
+			width: 23.55%
+			&:first-child
+				margin-left: 0
+		.search
+			width: 50.7%
+	&__top
+		margin-top: 19px
+		+clr
+		.sorting
+			margin-top: 12px
+	&__left
+		overflow: hidden
+	&__right
+		float: right
+		width: 314px
+
+// search
+.search
+	position: relative
+	&__field
+		.input
+			padding-right: 35px
+	&__btn
+		position: absolute
+		top: 50%
+		right: 10px
+		transform: translate3d(0,0,0)
+		transform: translate(0,-50%)
+		transition: opacity .2s
+		width: 21px
+		height: 21px
+		text-align: center
+		line-height: 1
+		background: none
+		&:active
+			opacity: .8
+		+rm(1024)
+			&:hover
+				opacity: .8
+
+
+// specialists
+.specialists
+	position: relative
+	margin: 25px -30px 0
+	padding: 10px 10px 0 30px
+	&:before
+		position: absolute
+		content: ''
+		top: 0
+		left: 0
+		right: 0
+		height: 1px 
+		background: #e5e5e5
+	&__list
+		padding-top: 12px
+		max-height: 218px
+		overflow-y: auto
+		&::-webkit-scrollbar
+			width: 7px
+		&::-webkit-scrollbar-thumb
+			border-radius: 4px
+			background: #bcc2c2
+			+dr(#bcc2c2,15%)
+		a
+			color: inherit
+			&:active
+				border-color: $c_body
+			+rm(1024)
+				&:hover
+					border-color: $c_body
+
+// sorting
+.sorting
+	+r(400)
+	font-size: 0
+	&__item
+		position: relative	
+		padding: 0 10px
+		font-size: 16px
+		vertical-align: top
+		display: inline-block
+		&:first-child
+			padding-left: 0
+			&:before
+				display: none
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			left: 0
+			transform: translate(0,-50%)
+			height: 9px
+			border-left: 1px dotted $bd_nav
+	a
+		position: relative
+		padding-right: 19px
+		color: $blue
+		display: block
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			right: 0
+			margin-top: -3px
+			+arr(9,5,#ccc,b)
+
+// calendar
+.calendar
+	padding: 0 43px
+	+r(400)
+	font-size: 14px
+	letter-spacing: -.4px
+	line-height: 1.25
+	box-shadow: (inset 0 0 0 1px $bord_select)
+	border-radius: 5px
+	.calendar__day
+		padding: 8px 10px
+		height: 47px
+		box-shadow: (1px 0 0 $bord_select)
+		+box
+		&:first-child
+			border-left: none
+	.slick-prev,
+	.slick-next
+		top: 0
+		margin: 0
+		height: 47px
+		width: 43px
+		&:active
+			&:before
+				opacity: .5
+		+rm(1024)
+			&:hover
+				&:before
+					opacity: .5
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			left: 50%
+			transition: opacity .2s
+			transform: translate3d(0,0,0)
+			transform: translate(-50%,-50%)
+		&.slick-disabled
+			opacity: 1
+	.slick-prev
+		box-shadow: (1px 0 0 $bord_select)
+		&:before
+			+arr(5,9,#ccc,l)
+	.slick-next
+		box-shadow: (-1px 0 0 $bord_select)
+		&:before
+			+arr(5,9,#ccc,r)

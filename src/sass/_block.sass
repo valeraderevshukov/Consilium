@@ -5,6 +5,42 @@
 	height: auto
 	min-height: 100%
 	+box
+
+// center
+.center
+	padding: 28px 8px 33px
+	@extend %in
+
+// wrap
+.wrap
+	+clr
+
+// l
+.l
+	margin-top: 32px
+	+r400
+	+clr
+.l-col1
+	float: left
+	width: 25%
+	border: 1px solid $bord_cab
+	border-radius: 5px
+	.btn
+		width: 100%
+.l-col2
+	float: right
+	width: 73%
+	border: 1px solid $bord_cab
+	border-radius: 5px
+	.title-small
+		margin-bottom: 17px
+
+// field
+.field
+	padding: 25px 29px
+	border-top: 1px solid $bord_cab
+	&:first-child
+		border-top: none
 // btn
 .btn
 	padding: 0 30px
@@ -29,6 +65,9 @@
 	&_red
 		background: $red
 		+dr($red,15%)
+	&_middle
+		height: 45px
+		line-height: 45px
 	&_big
 		min-width: 276px
 		height: 59px
@@ -37,12 +76,43 @@
 button.btn
 	line-height: 1
 
+.btn-open
+	position: relative
+	width: 34px
+	height: 21px
+	background-color: $l_green
+	border-radius: 5px
+	display: inline-block
+	transition: background .3s
+	+dr($l_green,15%)
+	&:before,
+	&:after
+		position: absolute
+		content: ''
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		background: #fff
+	&:before
+		width: 2px
+		height: 10px
+	&:after
+		width: 10px
+		height: 2px
+
 // title
 .title
 	+r400
 	font-size: 58px
 	line-height: 1.2
 	text-align: center
+.title-h2
+	+r400
+	font-size: 41px
+	line-height: 57px
+.title-h5
+	+r700
+	font-size: 16px
 .title-small
 	+r400
 	font-size: 20px
@@ -56,6 +126,7 @@ button.btn
 // select
 .select
 	position: relative
+	+r400
 	&.is-active
 		.select__text
 			border-radius: 5px 5px 0 0
@@ -121,3 +192,116 @@ button.btn
 		visibility: hidden
 		opacity: 0
 		z-index: -1
+
+// input
+.input
+	padding: 0 12px
+	width: 100%
+	height: 38px
+	font-size: 16px
+	line-height: 36px
+	+r400
+	+box
+	border: 1px solid $bord_select
+	border-radius: 5px
+	display: block
+	&::placeholder
+		color: $c_gray
+		opacity: .5
+
+// checkbox
+.checkbox
+	position: relative
+	user-select: none
+	cursor: pointer
+	line-height: 1.2
+	letter-spacing: -.2px
+	display: block
+	input
+		opacity: 0
+		z-index: 2
+		&:checked
+			& + span
+				&:after
+					display: block
+	input,
+	span:before
+		position: absolute
+		top: 0
+		left: 0
+		width: 21px
+		height: 21px
+	span
+		position: relative
+		padding-left: 35px
+		display: block
+		&:before
+			position: absolute
+			content: ''
+			border: 1px solid #dedede
+			border-radius: 5px
+			+box
+		&:after
+			position: absolute
+			content: ''
+			top: 6px
+			left: 4px
+			display: none
+			+s(check-arr)
+
+// date
+.date
+	font-size: 16px
+	+r700
+
+// breadcrumbs
+.breadcrumbs
+	padding: 13px 0
+	font-size: 16px
+	+r400
+	line-height: 1.35
+	background: $bg_gread
+	&__arr
+		position: relative
+		margin-left: 7px
+		width: 10px
+		height: 10px
+		+box
+		border-radius: 50%
+		background-color: #fff
+		border: 2px solid $blue
+		display: inline-block
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			left: 50%
+			margin: -1px 0 0 -1px
+			width: 2px
+			height: 2px
+			background: $l_green
+	ul
+		@extend %in
+	li
+		margin-left: 7px
+		vertical-align: top
+		display: inline-block
+		&:first-child
+			margin-left: 0
+	a
+		color: $blue
+		transition: border-color .2s
+		border-bottom: 1px solid transparent
+		&:active
+			border-color: $blue
+		+rm(1024)
+			&:hover
+				border-color: $blue
+
+// banner
+.banner
+	margin: 12px 0 30px
+	height: 130px
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	background-size: cover

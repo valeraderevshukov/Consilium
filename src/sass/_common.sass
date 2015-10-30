@@ -331,7 +331,12 @@ a
 		overflow: hidden
 	&__right
 		float: right
-		width: 314px
+		width: 33.8%
+	&__in
+		margin-top: 21px
+	&__bot
+		margin-top: 31px
+		text-align: center
 
 // search
 .search
@@ -471,3 +476,146 @@ a
 		box-shadow: (-1px 0 0 $bord_select)
 		&:before
 			+arr(5,9,#ccc,r)
+
+// doc
+.doc
+	position: relative
+	margin-top: 9px
+	overflow: hidden
+	border-radius: 5px
+	box-shadow: 0 2px 5.7px 0.3px rgba(0, 0, 0, 0.2)
+	+clr
+	&:first-child
+		margin-top: 0
+	&__left
+		float: left
+		padding: 40px 0 30px
+		width: 30.14%
+		text-align: center
+	&__img
+		position: relative
+		height: 197px
+		width: 197px
+		overflow: hidden
+		border-radius: 50%
+		border: 8px solid #ebebeb
+		+box
+		vertical-align: top
+		display: inline-block
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			display: block
+	&__price
+		margin-top: 30px
+		font-size: 18px
+		+r400
+	&__cost
+		color: $blue
+		font-weight: 700
+		font-variant: small-caps
+	&__center
+		float: left
+		width: 34.446%
+		padding: 33px 25px 30px 0
+		+box
+	&__stat
+		color: $blue
+		font-size: 16px
+		+r400
+	&__inf
+		margin-top: 12px
+		font-size: 0
+		+r400
+		.rating
+			margin-top: 1px
+			vertical-align: top
+			display: inline-block
+	&__reviews,
+	&__rating
+		position: relative
+		padding: 0 8px
+		font-size: 16px
+		vertical-align: top
+		display: inline-block
+		&:first-child
+			padding-left: 0
+			&:before
+				display: none
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			left: 0
+			transform: translate(0,-50%)
+			height: 9px
+			border-left: 1px dotted $bd_nav
+		& > a
+			color: $blue
+			transition: border-color .2s
+			border-bottom: 1px solid transparent
+			&:active
+				border-color: $blue
+			+rm(1024)
+				&:hover
+					border-color: $blue
+	&__title 
+		margin-top: 5px
+		padding-right: 75px
+		letter-spacing: -.1px
+		font-size: 16px
+		line-height: 1.2
+		+r400
+	&__text
+		margin-top: 11px
+		color: $c_doc
+		line-height: 1.2
+		letter-spacing: -.2px
+	&__right
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		min-height: 345px
+		width: 33.8%
+		font-size: 0
+		+box
+		background: $l_green-2
+		.days
+			position: absolute
+			top: 50%
+			left: 0
+			right: 0
+			transform: translate(0,-50%)
+			padding: 35px 49px 40px 45px
+			+box
+	.title-small
+		margin-bottom: 12px
+
+// day
+.day
+	margin-left: 6.96%
+	width: 28.7%
+	+r400
+	font-size: 15px
+	color: #fff
+	text-align: center
+	vertical-align: top
+	display: inline-block
+	&:first-child
+		margin-left: 0
+	&__time
+		margin-top: 11px
+		display: block
+		&:first-child
+			margin-top: 0
+	&__but
+		margin-top: 24px
+	.btn
+		width: 100%
+	a
+		color: #fff
+	span
+		color: #76d6d5

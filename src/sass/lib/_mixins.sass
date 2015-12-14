@@ -89,6 +89,14 @@
 	background-color: $color1
 	background-image: linear-gradient(to right, $color1, $color2)
 
+=svg($name, $width, $height)
+	background: url("../img/svg/#{$name}.svg") no-repeat 0 0
+	//background-image: inline-image('icons/svg/'+$sprite+'.svg','image/svg'); // to switches sprites to base64, elegant
+	background-size: (#{$width}px #{$height}px)
+	width: #{$width}px
+	height: #{$height}px
+	display: inline-block
+
 //asdfast font-family
 =font($alias, $name)
 	@font-face

@@ -1,4 +1,4 @@
-// # SHORT HOWTO
+// # SHORT HOWTO 
 // ## Sprites
 //     .whatever
 //          +sized-sprite($icons, coderiver) //or
@@ -619,3 +619,235 @@ a
 		color: #fff
 	span
 		color: #76d6d5
+
+// chat
+.chat
+	padding: 25px
+	+box
+	border-radius: 5px
+	border: 1px solid $bord_cab
+	+clr
+	&__left
+		float: left
+		width: 20%
+	&__right
+		float: right
+		padding: 0 0 0 20px
+		width: 75%
+	&__wrap
+		+clr
+	&__row
+		margin-bottom: 6%
+		font-size: 0
+		&.is-big
+			.sub
+				width: 30.8%
+				&:nth-child(4n+4)
+					margin-left: 0
+		.sub
+			margin: 0 0 3.4% 3.4%
+			width: 22%
+			font-size: 14px
+			vertical-align: top
+			display: inline-block
+			&:first-child
+				margin-left: 0
+			a
+				color: $l_blue
+				+hl
+				transition: border-color .2s
+				border-bottom: 1px solid $l_blue
+				&:hover
+					border-color: transparent
+	&__talk
+		margin-top: 25px
+		+clr
+		.btn
+			float: right
+			margin-left: 25px
+		.talk
+			overflow: hidden
+	.request
+		margin-top: 70px
+	.time
+		margin-top: 15px
+
+// mapping
+.mapping
+	border: 1px solid $bord_cab
+	overflow: hidden
+	border-radius: 5px
+	width: 155px
+	&__video
+		height: 155px
+		img
+			width: 100%
+			display: block
+	&__name
+		padding: 5px 10px
+		border-top: 1px solid $bord_cab
+
+// time
+.time
+	&__text
+		+hlb
+	&__text,
+	&__numb
+		vertical-align: top
+		display: inline-block
+
+// request
+.request
+	&__title
+		+hlb
+	&__wrap
+		margin-top: 10px
+		&.is-mod
+			padding-left: 37px
+	&__input
+		margin-bottom: 15px
+	&__currency
+		line-height: 38px
+	&__doc
+		+hlb
+	&__price
+		margin-left: 4px
+		+hl
+	&__name,
+	&__price
+		vertical-align: top
+		display: inline-block
+	&__currency,
+	.input
+		vertical-align: top
+		display: inline-block
+	.input
+		width: 164px
+		display: inline-block
+
+// sub
+.sub
+	margin-left: 8%
+	max-width: 335px
+	overflow: hidden
+	border-radius: 5px
+	border: 1px solid $bord_cab
+	&__video
+		position: relative
+		&:hover
+			.sub__control
+				opacity: 1
+		img
+			width: 100%
+			display: block
+	&__control
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		padding: 0 15px 5px
+		z-index: 10
+		will-change: opacity
+		opacity: 0
+		transform: translate3d(0,0,0)
+		transition: opacity .2s
+		text-align: right
+	&__name
+		border-top: 1px solid $bord_cab
+		+hlb
+		padding: 5px 10px
+
+// volume
+.volume
+	color: #fff
+	vertical-align: top
+	display: inline-block
+	&:hover
+		.volume__ico
+			transform: scale(1.25)
+			opacity: 1
+		.volume__block
+			opacity: 1
+			visibility: visible
+	&__ico
+		font-size: 14px
+		cursor: pointer
+		transform: translate3d(0,0,0)
+		will-change: transform, opacity
+		opacity: .5
+		transition: transform .2s, opacity .2s
+		&:hover
+			transform: scale(1.25)
+			opacity: 1
+	&__block
+		position: relative
+		opacity: 0
+		will-change: opacity
+		transform: translate3d(0,0,0)
+		visibility: hidden
+		transition: visibility .2s, opacity .2s
+	&__ico,
+	&__block
+		vertical-align: top
+		display: inline-block
+	&__progress
+		margin-top: 3px
+		width: 50px
+		height: 6px
+		cursor: pointer
+		background: $l_green
+	&__toddler
+		width: 4px
+		height: 14px
+		position: absolute
+		top: -1px
+		border-radius: 4px
+		cursor: pointer
+		background: #fff
+
+// fullscreen increase
+.fullscreen,
+.increase
+	margin-left: 5px
+	color: #fff
+	font-size: 14px
+	line-height: 1
+	vertical-align: top
+	cursor: pointer
+	transform: translate3d(0,0,0)
+	will-change: transform, opacity
+	opacity: .5
+	transition: transform .2s, opacity .2s
+	display: inline-block
+	&:hover
+		transform: scale(1.25)
+		opacity: 1
+
+// talk
+.talk
+	&__wrap
+		overflow: hidden
+		border-radius: 5px
+		border: 1px solid $bord_cab
+	&__wind
+		padding: 10px
+		height: 125px
+		overflow-y: auto
+		p
+			margin-top: 5px
+			&:first-child
+				margin-top: 0
+	&__butt
+		margin-top: 25px
+		+clr
+	.btn
+		float: right
+		margin: 0
+		&:first-child
+			float: left
+	.input
+		border-color: $bord_cab
+		border-radius: 0
+		border-bottom: none
+		border-left: none
+		border-right: none

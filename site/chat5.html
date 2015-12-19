@@ -14,7 +14,7 @@
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/app.js"></script>
 </head>
-<body>
+<body class="is-hidden">
 <!-- BEGIN  out-->
 <div class="out">
 	<!-- header -->
@@ -175,127 +175,95 @@
 			</form>
 		</div>
 	</section>
-	<!-- ad -->
-	<section class="ad">
-		<div class="ad__in">
-			<div class="ad__block">
-				<p>Видео-консультации лучших врачей не выходя из дома!</p>
-				<div class="ad__bot">
-					<a href="#" class="btn btn_big btn_blue">Присоединяйся</a>
-				</div>
-			</div>
-			<div class="ad__hand"></div>
-		</div>
-	</section>
-	<!-- info -->
-	<section class="info">
-		<div class="info__in">
-			<div class="info__item">
-				<div class="info__img">
-					<div class="ico ico_on-line"></div>
-				</div>
-				<div class="info__right">
-					<div class="info__title">Запись к врачу On-line</div>
-					<div class="info__text">Мы используем продукты из натурального сырья</div>
-				</div>
-			</div>
-			<div class="info__item">
-				<div class="info__img">
-					<div class="ico ico_doctors"></div>
-				</div>
-				<div class="info__right">
-					<div class="info__title">Врачи всех специальностей</div>
-					<div class="info__text">Мы используем продукты из натурального сырья</div>
-				</div>
-			</div>
-			<div class="info__item">
-				<div class="info__img">
-					<div class="ico ico_history"></div>
-				</div>
-				<div class="info__right">
-					<div class="info__title">История записей <br>в личном кабинете</div>
-					<div class="info__text">Мы используем продукты из натурального сырья</div>
-				</div>
-			</div>
-			<div class="info__item">
-				<div class="info__img">
-					<div class="ico ico_recipes"></div>
-				</div>
-				<div class="info__right">
-					<div class="info__title">Ваши рецепты <br>в личном кабинете</div>
-					<div class="info__text">Мы используем продукты из натурального сырья</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- necessary -->
-	<section class="necess">
-		<div class="necess__in">
-			<h3 class="title">Для кого это нужно?</h3>
-			<div class="necess__row">
-				<div class="necess__item">
-					<div class="necess__img"><img src="./img/necess1.png" alt="img"></div>
-					<div class="necess__text">
-						<div class="necess__title">Пациенты</div>
-						<p>Всё просто! Выбирайте врача - по рейтингу, советам, другим предпочтениям - и записывайтесь. Рейтинги объективные, а информация тщательно </p>
+	<!-- center -->
+	<section class="center">
+		<!-- chat -->
+		<div class="chat">
+			<div class="chat__left">
+				<div class="chat__top">
+					<div class="mapping">
+						<div class="mapping__video">
+							<img src="http://lorempixel.com/155/155/people" alt="img">
+						</div>
+						<div class="mapping__name">Мое отображение</div>
+					</div>
+					<!-- time -->
+					<div class="time">
+						<span class="time__text">Время:</span>
+						<span class="time__numb">11:34</span>
 					</div>
 				</div>
-				<div class="necess__item">
-					<div class="necess__img"><img src="./img/necess2.png" alt="img"></div>
-					<div class="necess__text">
-						<div class="necess__title">Специалисты</div>
-						<p>Всё просто! Выбирайте врача - по рейтингу, советам, другим предпочтениям - и записывайтесь. Рейтинги объективные, а информация тщательно </p>
+				<!-- request -->
+				<div class="request">
+					<form action="">
+						<div class="request__title">Дополнительные услуги</div>
+						<div class="request__wrap">
+							<div class="request__input">
+								<input type="text" class="input">
+								<div class="request__currency">$</div>
+							</div>
+							<button class="btn btn_middle" type="submit">Сделать запрос</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="chat__right">
+				<div class="chat__wrap">
+					<!-- sub -->
+					<div class="sub">
+						<div class="sub__video">
+							<img src="http://lorempixel.com/335/235/people" alt="img">
+							<div class="sub__control">
+								<div class="volume">
+									<div class="volume__block">
+										<div class="volume__progress"></div>
+										<div class="volume__toddler" style="left: 10px;"></div>
+									</div>
+									<div class="volume__ico"><i class="icon icon-volume"></i></div>
+								</div>
+								<div class="fullscreen"><i class="icon icon-fullscreen"></i></div>
+							</div>
+						</div>
+						<div class="sub__name">Петров Андрей, Врач</div>
 					</div>
 				</div>
-				<div class="necess__item">
-					<div class="necess__img"><img src="./img/necess3.png" alt="img"></div>
-					<div class="necess__text">
-						<div class="necess__title">Клиники</div>
-						<p>Всё просто! Выбирайте врача - по рейтингу, советам, другим предпочтениям - и записывайтесь. Рейтинги объективные, а информация тщательно </p>
+				<div class="chat__talk">
+					<button class="btn btn_middle" type="button">Закончить консультацию</button>
+					<!-- talk -->
+					<div class="talk">
+						<div class="talk__wrap">
+							<div class="talk__wind">
+								<p>Lorem ipsum dolor sit amet.</p>
+								<p>Lorem ipsum dolor sit amet.</p>
+								<p>Lorem ipsum dolor sit amet.</p>
+								<p>Lorem ipsum dolor sit amet.</p>
+								<p>Lorem ipsum dolor sit amet.</p>
+								<p>Lorem ipsum dolor sit amet.</p>
+								<p>Lorem ipsum dolor sit amet.</p>
+								<p>Lorem ipsum dolor sit amet.</p>
+								<p>Lorem ipsum dolor sit amet.</p>
+								<p>Lorem ipsum dolor sit amet.</p>
+								<p>Lorem ipsum dolor sit amet.</p>
+								<p>Lorem ipsum dolor sit amet.</p>
+								<p>Lorem ipsum dolor sit amet.</p>
+								<p>Lorem ipsum dolor sit amet.</p>
+								<p>Lorem ipsum dolor sit amet.</p>
+								<p>Lorem ipsum dolor sit amet.</p>
+								<p>Lorem ipsum dolor sit amet.</p>
+								<p>Lorem ipsum dolor sit amet.</p>
+								<p>Lorem ipsum dolor sit amet.</p>
+								<p>Lorem ipsum dolor sit amet.</p>
+							</div>
+							<div class="talk__input">
+								<input type="text" class="input">
+							</div>
+						</div>
+						<div class="talk__butt">
+							<button class="btn btn_middle" type="button">загрузить файл</button>
+							<button class="btn btn_middle" type="button">выбрать файл</button>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</section>
-	<!-- video -->
-	<section class="video">
-		<div class="video__in">
-			<h3 class="title">Как это работает?</h3>
-			<div class="video__wrap js-video-slider">
-				<div class="video__slide">
-					<img src="./img/video.png" alt="img">
-					<div class="video__play"></div>
-				</div>
-				<div class="video__slide">
-					<img src="./img/video.png" alt="img">
-					<div class="video__play"></div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- amount -->
-	<section class="amount">
-		<div class="amount__in">
-			<div class="amount__row">
-				<div class="amount__item">
-					<div class="amount__tally">264</div>
-					<div class="amount__text">Пациента</div>
-				</div>
-				<div class="amount__item">
-					<div class="amount__tally">185</div>
-					<div class="amount__text">Специалистов</div>
-				</div>
-				<div class="amount__item">
-					<div class="amount__tally">4 456</div>
-					<div class="amount__text">Проведенных консультаций</div>
-				</div>
-				<div class="amount__item">
-					<div class="amount__tally">23</div>
-					<div class="amount__text">Специализации</div>
-				</div>
-			</div>
-			<div class="amount__bot">
-				<a href="#" class="btn btn_big btn_red">Присоединяйся</a>
 			</div>
 		</div>
 	</section>
@@ -325,5 +293,19 @@
 		
 	</div>
 </footer>
+<!-- full -->
+<div class="full is-active">
+	<img src="http://lorempixel.com/1200/800/people" alt="img">
+	<div class="full__control">
+		<div class="volume">
+			<div class="volume__block">
+				<div class="volume__progress"></div>
+				<div class="volume__toddler" style="left: 10px;"></div>
+			</div>
+			<div class="volume__ico"><i class="icon icon-volume"></i></div>
+		</div>
+		<div class="fullscreen"><i class="icon icon-fullscreen"></i></div>
+	</div>
+</div>
 </body>
 </html>

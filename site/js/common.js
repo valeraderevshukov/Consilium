@@ -1,8 +1,15 @@
 $(document).ready(function() {
 
-	$(document).click(function() {
-		$(".js-select").removeClass("is-active");
-		$(".js-select-list").slideUp(200);
+	// variables
+	var drop 		= $('.js-dropdown'),
+		allList 	= $('.js-dropdown-list'),
+		select 		= $('.js-select'),
+		selectList 	= $('.js-select-list');
+
+
+	$('body').on('click', function() {
+		select.removeClass("is-active");
+		selectList.slideUp(200);
 	});
 
 	// select list
@@ -11,6 +18,10 @@ $(document).ready(function() {
 	});
 	$("body").on("click",".js-select-text",function(event) {
 		var select = $(this).parents(".js-select");
+
+		drop.removeClass('is-active');
+		allList.slideUp(200);
+
 		if (select.hasClass("is-active")) {
 			$(".js-select").removeClass("is-active");
 			$(".js-select-list").slideUp(200);
@@ -41,6 +52,34 @@ $(document).ready(function() {
 	$(".js-select select").on("change", function() {
 		var text = $(this).val();
 		$(this).parents(".js-select").find(".js-select-text span").text(text);
+	});
+
+	// dropdown
+	$('.js-dropdown-text').on('click', function(event){
+		var this_ 	= $(this),
+			parent 	= this_.parents('.js-dropdown'),
+			list 	= parent.find('.js-dropdown-list');
+
+		select.removeClass("is-active");
+		selectList.slideUp(200);
+
+		if (!parent.hasClass('is-active')){
+			drop.removeClass('is-active');
+			allList.slideUp(200);
+			parent.addClass('is-active');
+			list.slideDown(200);
+		}
+		else {
+			parent.removeClass('is-active');
+			list.slideUp(200);
+		}
+	});
+	$('body').on('click', function() {
+		drop.removeClass('is-active');
+		allList.slideUp(200);
+	});
+	$('.js-dropdown-text').on("click", function(event) {
+		event.stopPropagation();
 	});
 
 	// tab
@@ -75,7 +114,7 @@ $(document).ready(function() {
 		buttonImageOnly	: true,
 		buttonText		: "Select date",
 		numberOfMonths	: 1,
-		dateFormat: "dd.mm.yy",
+		dateFormat		: "dd.mm.yy",
 		onClose: function( selectedDate ) {
 			$("#to").datepicker("option", "minDate", selectedDate);
 		}
@@ -86,7 +125,7 @@ $(document).ready(function() {
 		buttonImageOnly	: true,
 		buttonText		: "Select date",
 		numberOfMonths	: 1,
-		dateFormat: "dd.mm.yy",
+		dateFormat		: "dd.mm.yy",
 		onClose: function( selectedDate ) {
 			$("#from").datepicker("option", "maxDate", selectedDate);
 		}

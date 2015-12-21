@@ -432,6 +432,18 @@ a { text-decoration: none; }
 .drop ul span { cursor: pointer; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
 .drop ul span:active { border-color: #333; }
 
+.dropdown .dropdown__text { padding: 0 30px 0 0; cursor: pointer; color: #4170b6; border: none; }
+.dropdown__arr { position: absolute; top: 2px; right: 0; width: 19px; height: 19px; background: #d6dbdf; border-radius: 3px; }
+.dropdown__arr:before { position: absolute; content: ""; top: 50%; right: 50%; margin: -2px -3px 0 0; z-index: 1; width: 0px; height: 0px; border-style: solid; border-width: 4px 3.5px 0 3.5px; border-color: #000 transparent transparent transparent; }
+.dropdown__arr:after { position: absolute; content: ""; left: 50%; bottom: -32px; margin-left: -8px; z-index: 101; width: 0px; height: 0px; border-style: solid; border-width: 0 8px 8px 8px; border-color: transparent transparent #fff transparent; opacity: 0; transition: opacity 0.1s; }
+.dropdown__list { position: absolute; top: 100%; left: -16px; margin-top: 12px; min-width: 188px; z-index: 2; border-radius: 5px; box-shadow: 0 3px 7px rgba(0, 0, 0, 0.23); display: none; }
+.dropdown__list:before { position: absolute; content: ""; bottom: 100%; left: 42px; background-image: url("../img/icons.png"); width: 14px; height: 9px; background-position: -331px -144px; }
+.dropdown__list a { border: none; }
+.dropdown__item { padding: 8px 16px; border-top: 1px solid #f2f2f2; cursor: pointer; transition: background 0.2s, color 0.2s; background: #fff; display: block; }
+.dropdown__item:hover { color: #fff; background: #62c2c1; }
+.dropdown__item:first-child { border-radius: 5px 5px 0 0; border-top: none; }
+.dropdown__item:last-child { border-radius: 0 0 5px 5px; }
+
 .out { padding-bottom: 124px; height: 100%; height: auto; min-height: 100%; box-sizing: border-box; }
 
 .center { padding: 28px 8px 33px; }

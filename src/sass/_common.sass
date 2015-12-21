@@ -678,7 +678,7 @@ a
 	border: 1px solid $bord_cab
 	overflow: hidden
 	border-radius: 5px
-	width: 155px
+	width: 180px
 	&__video
 		height: 155px
 		img
@@ -703,8 +703,6 @@ a
 		+hlb
 	&__wrap
 		margin-top: 10px
-		&.is-mod
-			padding-left: 37px
 	&__input
 		margin-bottom: 15px
 	&__currency
@@ -723,8 +721,10 @@ a
 		vertical-align: top
 		display: inline-block
 	.input
-		width: 164px
-		display: inline-block
+		width: 168px
+	.btn
+		padding: 0 20px
+		min-width: 180px
 
 // sub
 .sub
@@ -835,6 +835,22 @@ a
 			margin-top: 5px
 			&:first-child
 				margin-top: 0
+	&__input
+		position: relative
+	&__send
+		position: absolute
+		top: 50%
+		right: 10px
+		color: $l_green
+		margin-top: -14px
+		transition: color .2s
+		background: transparent
+		&:hover
+			color: darken($l_green, 15%)
+		&:active
+			color: darken($l_green, 20%)
+		.icon
+			font-size: 28px
 	&__butt
 		margin-top: 25px
 		+clr

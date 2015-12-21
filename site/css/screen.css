@@ -209,7 +209,7 @@ a { text-decoration: none; }
 .chat .request { margin-top: 70px; }
 .chat .time { margin-top: 15px; }
 
-.mapping { border: 1px solid #e6e6e6; overflow: hidden; border-radius: 5px; width: 155px; }
+.mapping { border: 1px solid #e6e6e6; overflow: hidden; border-radius: 5px; width: 180px; }
 .mapping__video { height: 155px; }
 .mapping__video img { width: 100%; display: block; }
 .mapping__name { padding: 5px 10px; border-top: 1px solid #e6e6e6; }
@@ -219,14 +219,14 @@ a { text-decoration: none; }
 
 .request__title { font-family: "HelveticaNeueCyr-Bold", Arial, sans-serif; }
 .request__wrap { margin-top: 10px; }
-.request__wrap.is-mod { padding-left: 37px; }
 .request__input { margin-bottom: 15px; }
 .request__currency { line-height: 38px; }
 .request__doc { font-family: "HelveticaNeueCyr-Bold", Arial, sans-serif; }
 .request__price { margin-left: 4px; font-family: "HelveticaNeue", Arial, sans-serif; }
 .request__name, .request__price { vertical-align: top; display: inline-block; }
 .request__currency, .request .input { vertical-align: top; display: inline-block; }
-.request .input { width: 164px; display: inline-block; }
+.request .input { width: 168px; }
+.request .btn { padding: 0 20px; min-width: 180px; }
 
 .sub { max-width: calc(100% - 259px); overflow: hidden; border-radius: 5px; border: 1px solid #e6e6e6; }
 .sub__video { position: relative; }
@@ -252,6 +252,11 @@ a { text-decoration: none; }
 .talk__wind { padding: 10px; height: 125px; overflow-y: auto; }
 .talk__wind p { margin-top: 5px; }
 .talk__wind p:first-child { margin-top: 0; }
+.talk__input { position: relative; }
+.talk__send { position: absolute; top: 50%; right: 10px; color: #62c2c1; margin-top: -14px; transition: color 0.2s; background: transparent; }
+.talk__send:hover { color: #3c9b9a; }
+.talk__send:active { color: #358988; }
+.talk__send .icon { font-size: 28px; }
 .talk__butt { margin-top: 25px; *zoom: 1; }
 .talk__butt:after { content: " "; display: table; clear: both; }
 .talk .btn { float: right; margin: 0; }
@@ -276,6 +281,8 @@ a { text-decoration: none; }
 .icon-volume:before { content: ""; }
 
 .icon-monitor:before { content: ""; }
+
+.icon-send:before { content: ""; }
 
 .slick-slider { position: relative; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
 

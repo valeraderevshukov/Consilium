@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+	//= partials/head.html
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	//= partials/header.html
+	//= partials/filter.html
+	<!-- cab -->
+	<section class="cab">
+		<div class="cab__in">
+			<!-- tab -->
+			<div class="tab is-data">
+				<ul class="tab__list">
+					<li class="tab__item is-active">
+						<a href="#" class="tab__link">
+							<span class="tab__step">1</span>
+							<span>Регистрационные данные</span>
+						</a>
+					</li>
+					<li class="tab__item">
+						<a href="#" class="tab__link">
+							<span class="tab__step">2</span>
+							<span>Информация о вас</span>
+						</a>
+					</li>
+					<li class="tab__item">
+						<a href="#" class="tab__link">
+							<span class="tab__step">3</span>
+							<span>Мой график</span>
+						</a>
+					</li>
+				</ul>
+				<div class="tab__in">
+					<div class="tab__cont">
+						<!-- details -->
+						<div class="details">
+							<div class="details__in">
+								<h3 class="title-small">Регистрационные данные</h3>
+								<!-- wrapper -->
+								<div class="wrapper">
+									<form action="" class="form">
+										<div class="form__top">
+											<span>Я</span>
+											<label class="radiobox">
+												<input type="radio" name="person">
+												<span>Пациент</span>
+											</label>
+											<label class="radiobox">
+												<input type="radio" name="person" checked>
+												<span>Специалист</span>
+											</label>
+											<label class="radiobox">
+												<input type="radio" name="person">
+												<span>Юридическое лицо</span>
+											</label>
+										</div>
+										<div class="form__row">
+											<label for="email" class="form__label">Введите email</label>
+											<input type="text" name="email" id="email" placeholder="Email@gmail.com" class="input">
+										</div>
+										<div class="form__row">
+											<label for="password" class="form__label">Введите пароль</label>
+											<input type="password" name="password" id="password" placeholder="********" class="input">
+										</div>
+										<div class="form__row">
+											<label for="password_2" class="form__label">Подтвердите пароль</label>
+											<input type="password" name="password_2" id="password_2" placeholder="********" class="input">
+										</div>
+										<div class="form__row">
+											<label class="checkbox is-green">
+												<input type="checkbox" checked>
+												<span>Согласится с офертой</span>
+											</label>
+										</div>
+										<div class="form__butt">
+											<button class="btn btn_middle" type="button">дальше</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<!-- END out-->
+//= partials/footer.html
+</body>
+</html>

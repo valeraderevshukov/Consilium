@@ -1,0 +1,369 @@
+<!doctype html>
+<html>
+<head>
+	//= partials/head.html
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	//= partials/header.html
+	//= partials/filter.html
+	<!-- cab -->
+	<section class="cab">
+		<div class="cab__in">
+			<!-- tab -->
+			<div class="tab is-data">
+				<ul class="tab__list">
+					<li class="tab__item">
+						<a href="#" class="tab__link">
+							<span class="tab__step">1</span>
+							<span>Регистрационные данные</span>
+						</a>
+					</li>
+					<li class="tab__item is-active">
+						<a href="#" class="tab__link">
+							<span class="tab__step">2</span>
+							<span>Информация о вас</span>
+						</a>
+					</li>
+					<li class="tab__item">
+						<a href="#" class="tab__link">
+							<span class="tab__step">3</span>
+							<span>Мой график</span>
+						</a>
+					</li>
+				</ul>
+				<div class="tab__in">
+					<div class="tab__cont">
+						<!-- inform -->
+						<div class="inform">
+							<form action="">
+								<div class="inform__in">
+									<div class="inform__left">
+									<h3 class="title-small">Мое фото</h3>
+									<!-- wrapper -->
+									<div class="wrapper">
+										<div class="form">
+											<div class="photo">
+												<img src="img/photo.png" alt="img">
+											</div>
+											<button class="btn btn_average" type="button">загрузить фото</button>
+										</div>
+									</div>
+									<h3 class="title-small">Стоимость часа</h3>
+									<!-- wrapper -->
+									<div class="wrapper">
+										<div class="form">
+											<div class="cost">
+												<div class="cost__row">
+													<div class="cost__text">Стоимость 1 консультации $</div>
+													<div class="cost__right">
+														<input type="text" class="input">
+													</div>
+												</div>
+												<div class="cost__row">
+													<div class="cost__text">Пакет консультаций</div>
+													<div class="cost__right">
+														<input type="text" class="input">
+														<div class="cost__curr">$</div>
+														<input type="text" class="input">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<h3 class="title-small">Реквизиты карты</h3>
+									<!-- wrapper -->
+									<div class="wrapper">
+										<div class="form">
+											<div class="form__field">
+												<label for="card-numb" class="form__label">Введите номер карты для вывода средств</label>
+												<div class="alt">
+													<i class="ico ico_info"></i>
+													<div class="alt__block">Номер карты содержит 12 цифр, указанных на вашей пластиковой карте</div>
+												</div>
+											</div>
+											<input type="text" name="card-numb" id="card-numb" class="input">
+										</div>
+									</div>
+									<h3 class="title-small">промо-код</h3>
+									<!-- wrapper -->
+									<div class="wrapper">
+										<div class="form">
+											<div class="form__row">
+												<div class="form__field">
+													<label for="promo-code" class="form__label">Введите промо-код</label>
+												</div>
+												<input type="text" name="promo-code" id="promo-code" class="input">
+											</div>
+											<div class="form__foot">
+												<button class="btn btn_average" type="button">активировать</button>
+											</div>
+										</div>
+									</div>
+									</div>
+									<div class="inform__right">
+										<div class="inform__wrap">
+											<div class="inform__col">
+												<div class="title-small">Общие данные</div>
+												<!-- wrapper -->
+												<div class="wrapper">
+													<div class="form">
+														<div class="form__row">
+															<input type="text" class="input" placeholder="Фамилия">
+														</div>
+														<div class="form__row">
+															<input type="text" class="input" placeholder="Имя">
+														</div>
+														<div class="form__row">
+															<input type="text" class="input" placeholder="Отчество">
+														</div>
+														<div class="form__floor">
+															<strong>Пол:</strong>
+															<label class="radiobox" >
+																<input type="radio" name="floor" checked>
+																<span>Мужчина</span>
+															</label>
+															<label class="radiobox">
+																<input type="radio" name="floor">
+																<span>Женщина</span>
+															</label>
+														</div>
+														<div class="form__date">
+															<strong class="dat-text">Дата рождения:</strong>
+															<div class="datepicker">
+																<input type="text" class="js-datepicker" value="08.10.2015">
+															</div>
+														</div>
+														<div class="form__row">
+															<div class="select js-select">
+																<div class="select__text js-select-text">
+																	<span>Часовой пояс</span>
+																</div>
+																<ul class="select__list js-select-list">
+																	<li data-val="var0">var0</li>
+																	<li data-val="var1">var1</li>
+																	<li data-val="var2">var2</li>
+																	<li data-val="var3">var3</li>
+																</ul>
+																<select>
+																	<option value="var0">var0</option>
+																	<option value="var1">var1</option>
+																	<option value="var2">var2</option>
+																	<option value="var3">var3</option>
+																</select>
+															</div>
+														</div>
+														<div class="form__row">
+															<div class="select js-select">
+																<div class="select__text js-select-text">
+																	<span>Язык интерфейса</span>
+																</div>
+																<ul class="select__list js-select-list">
+																	<li data-val="var0">var0</li>
+																	<li data-val="var1">var1</li>
+																	<li data-val="var2">var2</li>
+																	<li data-val="var3">var3</li>
+																</ul>
+																<select>
+																	<option value="var0">var0</option>
+																	<option value="var1">var1</option>
+																	<option value="var2">var2</option>
+																	<option value="var3">var3</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="title-small">специальность</div>
+												<!-- wrapper -->
+												<div class="wrapper">
+													<div class="form">
+														<div class="form__row">
+															<input type="text" class="input" placeholder="Введите ваш профить деятельности">
+														</div>
+														<div class="form__row">
+															<div class="select js-select">
+																<div class="select__text js-select-text">
+																	<span>Моя специализация</span>
+																</div>
+																<ul class="select__list js-select-list">
+																	<li data-val="var0">var0</li>
+																	<li data-val="var1">var1</li>
+																	<li data-val="var2">var2</li>
+																	<li data-val="var3">var3</li>
+																</ul>
+																<select>
+																	<option value="var0">var0</option>
+																	<option value="var1">var1</option>
+																	<option value="var2">var2</option>
+																	<option value="var3">var3</option>
+																</select>
+															</div>
+														</div>
+														<div class="form__row">
+															<div class="form__field">
+																<label class="checkbox is-green">
+																	<input type="checkbox" checked>
+																	<span>Я профессор или кардидат наук</span>
+																</label>
+																<div class="alt">
+																	<i class="ico ico_info"></i>
+																	<div class="alt__block">Lorem ipsum dolor sit amet.</div>
+																</div>
+															</div>
+														</div>
+														<div class="form__foot">
+															<button class="btn btn_average" type="button">добавить специальность</button>
+														</div>
+													</div>
+												</div>
+												<div class="title-small">Образование</div>
+												<!-- wrapper -->
+												<div class="wrapper">
+													<div class="form">
+														<textarea name="" class="textarea">Политихнический университет, можно перечислить &#13;&#10;с новой строки</textarea>
+													</div>
+												</div>
+											</div>
+											<div class="inform__col">
+												<div class="title-small">Владею языками</div>
+												<!-- wrapper -->
+												<div class="wrapper">
+													<div class="form">
+														<div class="form__row">
+															<div class="select js-select">
+																<div class="select__text js-select-text">
+																	<span>Английский</span>
+																</div>
+																<ul class="select__list js-select-list">
+																	<li data-val="var0">var0</li>
+																	<li data-val="var1">var1</li>
+																	<li data-val="var2">var2</li>
+																	<li data-val="var3">var3</li>
+																</ul>
+																<select>
+																	<option value="var0">var0</option>
+																	<option value="var1">var1</option>
+																	<option value="var2">var2</option>
+																	<option value="var3">var3</option>
+																</select>
+															</div>
+														</div>
+														<div class="form__row">
+															<div class="select js-select">
+																<div class="select__text js-select-text">
+																	<span>Французский</span>
+																</div>
+																<ul class="select__list js-select-list">
+																	<li data-val="var0">var0</li>
+																	<li data-val="var1">var1</li>
+																	<li data-val="var2">var2</li>
+																	<li data-val="var3">var3</li>
+																</ul>
+																<select>
+																	<option value="var0">var0</option>
+																	<option value="var1">var1</option>
+																	<option value="var2">var2</option>
+																	<option value="var3">var3</option>
+																</select>
+															</div>
+														</div>
+														<div class="form__foot">
+															<button class="btn btn_average" type="button">добавить язык</button>
+														</div>
+													</div>
+												</div>
+												<div class="title-small">Контакты</div>
+												<!-- wrapper -->
+												<div class="wrapper">
+													<div class="form">
+														<div class="form__row">
+															<input type="text" class="input" placeholder="Телефон">
+														</div>
+														<div class="form__row">
+															<input type="text" class="input" placeholder="Доп. телефон">
+														</div>
+														<div class="form__row">
+															<input type="text" class="input" placeholder="E-mail">
+														</div>
+													</div>
+												</div>
+												<div class="title-small">документы</div>
+												<!-- wrapper -->
+												<div class="wrapper">
+													<div class="form">
+														<div class="form__row">
+															<ul class="list-green">
+																<li>
+																	<i class="ico ico_check-green"></i>
+																	<span>Диплом специалиста</span>
+																</li>
+																<li>
+																	<i class="ico ico_check-green"></i>
+																	<span>Лицензия</span>
+																</li>
+																<li>
+																	<i class="ico ico_check-green"></i>
+																	<span>Сертификат</span>
+																</li>
+															</ul>
+														</div>
+														<div class="form__foot">
+															<button class="btn btn_average" type="button">Загрузить новый</button>
+														</div>
+													</div>
+												</div>
+												<div class="title-small">награды</div>
+												<!-- wrapper -->
+												<div class="wrapper">
+													<div class="form">
+														<div class="form__row">
+															<ul class="list-green">
+																<li>
+																	<i class="ico ico_check-green"></i>
+																	<span>Награда 1</span>
+																</li>
+																<li>
+																	<i class="ico ico_check-green"></i>
+																	<span>Награда 2</span>
+																</li>
+																<li>
+																	<i class="ico ico_check-green"></i>
+																	<span>Награда 3</span>
+																</li>
+															</ul>
+														</div>
+														<div class="form__foot">
+															<button class="btn btn_average" type="button">Загрузить новую</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="inform__bott">
+											<h3 class="title-small">О себе</h3>
+											<!-- wrapper -->
+											<div class="wrapper">
+												<div class="form">
+													<textarea class="textarea" >Политихнический университет, &#13;&#10;можно перечислить &#13;&#10;с новой строки</textarea>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="inform__foot">
+									<button class="btn btn_middle" type="submit">Дальше</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<!-- END out-->
+//= partials/footer.html
+</body>
+</html>

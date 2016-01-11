@@ -6,12 +6,20 @@
 	font-size: 58px
 	line-height: 56px
 	+font-smoothing(antialiased)
-	background: url(../img/bg-ad.png) no-repeat 0 0
+	background: url(../img/bg-ad.png) no-repeat 50% 0
 	background-size: cover
+	+r(1200)
+		padding-left: 10px
+	+r(960)
+		padding: 34px 0 
+		font-size: 44px
+		line-height: 40px
 	&__in
 		position: relative
 		margin: 0 auto
 		max-width: 1096px
+		+r(960)
+			padding: 0 30px 343px
 	&__block
 		padding: 25px 40px 32px
 		max-width: 525px
@@ -19,6 +27,8 @@
 		+box
 		border-radius: 10px
 		background-color: #62c2c1
+		+r(960)
+			margin: 0 auto
 		p
 			letter-spacing: -3.3px
 	&__hand
@@ -29,18 +39,30 @@
 		height: 502px
 		background: url(../img/hand.png) no-repeat 0 0
 		background-size: contain
+		+r(960)
+			right: 50%
+			margin-right: -125px
+			width: 247px
+			height: 428px
 	&__bot
 		margin-top: 22px
 		text-align: center
+		.btn
+			+r(960)
+				width: 100%
 
 // info
 .info
 	padding: 42px 0
 	color: #fff
 	background: $blue
+	+r(768)
+		padding-bottom: 28px
 	&__in
 		@extend %in
 		+clr
+		+r(768)
+			padding: 0
 	&__item
 		float: left
 		padding-right: 20px
@@ -50,11 +72,32 @@
 		&:first-child
 			.info__img
 				padding-right: 15px
+				+r(1200)
+					padding-right: 0
+		+r(1200)
+			margin: 25px 0 0
+			width: 50%
+			&:first-child,
+			&:nth-child(2)
+				margin-top: 0
+			&:nth-child(2)
+				+r(768)
+					margin-top: 32px
+		+r(768)
+			margin-top: 32px
+			padding: 30px 60px 0
+			width: 100%
+			border-top: 1px solid #597fbb
+			&:first-child
+				padding-top: 0
+				border-top: none
 	&__img
 		float: left
 		width: 90px
 		text-align: center
 		+box
+		+r(768)
+			width: 135px
 	&__right
 		overflow: hidden
 	&__title
@@ -63,18 +106,27 @@
 		+r700
 		font-size: 22px
 		line-height: 1.1
+		+r(768)
+			padding-right: 0
+			font-size: 24px
 	&__text
 		opacity: .6
+		+r(768)
+			font-size: 17px
 	.ico
 		vertical-align: top
 
 // necess
 .necess
 	padding: 40px 0 70px
+	+r(768)
+		padding: 32px 0 38px
 	&__in
 		padding: 0 20px
 		margin: 0 auto
 		max-width: 1200px
+		+r(768)
+			padding: 0 30px
 	&__row
 		text-align: center
 		font-size: 0
@@ -92,6 +144,11 @@
 		display: inline-block
 		&:first-child
 			margin-left: 0
+		+r(1200)
+			margin: 15px 0 0
+			width: 100%
+			&:first-child
+				margin-top: 0
 	&__img
 		float: left
 		margin: 4px 30px 0 0
@@ -112,15 +169,21 @@
 		font-size: 22px
 	.title
 		margin-bottom: 25px
+		+r(768)
+			margin-bottom: 15px
 
 // video
 .video
 	padding: 40px 0 60px
 	color: #fff
 	background: $l_blue
+	+r(768)
+		padding: 32px 0 80px
 	&__in
 		margin: 0 auto
 		max-width: 838px
+		+r(960)
+			padding: 0 30px
 	&__wrap
 		position: relative
 		padding: 10px
@@ -156,12 +219,34 @@
 			opacity: .7
 		&:before
 			display: none
+		+r(960)
+			display: none !important
 	.slick-next
 		right: -152px
 		+s(sl-next)
+		+r(1280)
+			right: -50px
 	.slick-prev
 		left: -152px
 		+s(sl-prev)
+		+r(1280)
+			left: -50px
+	.slick-dots
+		bottom: -30px
+		line-height: 1
+		font-size: 0
+		li
+			&.slick-active
+				button
+					opacity: 1
+					background: #fff
+			button
+				height: 10px
+				width: 10px
+				transition: background .3s
+				border: 2px solid #fff
+				box-shadow: none
+				background: transparent
 	.title
 		margin-bottom: 18px
 
@@ -170,8 +255,10 @@
 	padding: 140px 0 70px
 	color: #fff
 	+r400
-	background: url(../img/bg-amount.png) no-repeat 0 0
+	background: url(../img/bg-amount.png) no-repeat 50% 0
 	background-size: cover
+	+r(960)
+		padding: 44px 0 51px
 	&__in
 		@extend %in
 		font-size: 0
@@ -183,6 +270,15 @@
 		display: inline-block
 		&:first-child
 			margin-left: 0
+			+r(960)
+				margin: 0 auto
+		+r(1200)
+			margin-left: 30px
+			+r(1024)
+				margin-left: 10px
+			+r(960)
+				margin: 38px auto 0
+				display: block
 	&__tally
 		width: 214px
 		height: 214px
@@ -197,6 +293,13 @@
 		margin-top: 25px
 		font-size: 30px
 		line-height: 31px
+		+r(960)
+			margin: 16px -70px 0
 	&__bot
 		margin-top: 68px
 		text-align: center
+		+r(768)
+			margin-top: 30px
+	.btn
+		+r(500)
+			width: 100%

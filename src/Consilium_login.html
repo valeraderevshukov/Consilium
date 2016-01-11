@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+	//= partials/head.html
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	//= partials/header.html
+	//= partials/filter.html
+	<!-- breadcrumbs -->
+	<section class="breadcrumbs">
+		<ul>
+			<li>
+				<a href="#">Главная</a>
+				<span class="breadcrumbs__arr"></span>
+			</li>
+			<li>Авторизация</li>
+		</ul>
+	</section>
+	<!-- login -->
+	<section class="login">
+		<div class="login__form">
+			<h3 class="title-small">Авторизация</h3>
+			<!-- wrapper -->
+			<div class="wrapper">
+				<form action="" class="form">
+					<div class="form__row">
+						<label for="email" class="form__label">Логин</label>
+						<input type="text" class="input" name="email" id="email" placeholder="Email@gmail.com">
+					</div>
+					<div class="form__row">
+						<label for="password" class="form__label">Пароль</label>
+						<input type="password" class="input" name="password" id="password" placeholder="*******">
+					</div>
+					<div class="form__row">
+						<button class="btn btn_middle" type="submit">Войти</button>
+					</div>
+					<ul class="form__help">
+						<li><a href="#">Регистрация</a></li>
+						<li><a href="#">Забыли пароль</a></li>
+					</ul>
+				</form>
+			</div>
+		</div>
+	</section>
+</div>
+<!-- END out-->
+//= partials/footer.html
+</body>
+</html>

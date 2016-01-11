@@ -1,0 +1,943 @@
+<!doctype html>
+<html>
+<head>
+	//= partials/head.html
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	//= partials/header.html
+	//= partials/links.html
+	<!-- cab -->
+	<section class="cab">
+		<div class="cab__in">
+			<!-- banner -->
+			<div class="banner" style="background-image: url('img/banner.png')"></div>
+			<!-- tab -->
+			<div class="tab js-tab-group">
+				<ul class="tab__list js-tab">
+					<li class="tab__item js-tab-item">
+						<a href="js-tab1" class="tab__link">Регистратура</a>
+					</li>
+					<li class="tab__item js-tab-item">
+						<a href="js-tab2" class="tab__link">Календарь</a>
+					</li>
+					<li class="tab__item js-tab-item">
+						<a href="js-tab3" class="tab__link">Мой счет</a>
+					</li>
+					<li class="tab__item js-tab-item"> 
+						<a href="js-tab4" class="tab__link">Мои файлы</a>
+					</li>
+					<li class="tab__item js-tab-item">
+						<a href="js-tab5" class="tab__link">Мои пациенты</a>
+					</li> 
+					<li class="tab__item js-tab-item">
+						<a href="js-tab6" class="tab__link">Отзывы</a>
+					</li>
+				</ul>
+				<div class="tab__in">
+					<div class="tab__cont js-tab-cont js-tab1">
+						<h3 class="title-small is-gray">Добрый день!</h3>
+						<h3 class="title-small">Петров Андрей Александрович <a href="#" class="btn btn_average">мой профиль</a></h3>
+						<!-- l -->
+						<div class="l">
+							<div class="l-col1">
+								<div class="field">
+									<h3 class="title-small is-blue">ближайшие записи</h3>
+								</div>
+								<div class="field">
+									<div class="event">
+										<div class="date">Сегодня, 5 августа 2015</div>
+										<p>10:00 с <a href="#">Анастасия Палочкина</a></p>
+										<p>Статус: Заявка подтверждена </p>
+									</div>
+									<a href="#" class="btn btn_green">начать консультацию</a>
+								</div>
+								<div class="field">
+									<div class="event">
+										<div class="date">6 августа 2015</div>
+										<p>10:00 с <a href="#">Вадим Сидоров</a></p>
+										<p>Статус: Заявка подтверждена </p>
+									</div>
+								</div>
+								<div class="field">
+									<div class="event">
+										<div class="date">7 августа 2015</div>
+										<p>10:00 с <a href="#">Алексеем Ивановым</a></p>
+										<p>Статус: Заявка подтверждена</p>
+									</div>
+								</div>
+								<div class="field"><a href="#" class="btn">все записи</a></div>
+							</div>
+							<div class="l-col2">
+								<div class="field">
+									<h3 class="title-small is-blue">история записей</h3>
+									<!-- filt -->
+									<div class="filt">
+										<form>
+											<div class="filt__col">
+												<div class="filt__label">Пациент</div>
+												<div class="select js-select">
+													<div class="select__text js-select-text">
+														<span>Выберите пациента</span>
+													</div>
+													<ul class="select__list js-select-list">
+														<li data-val="var0">var0</li>
+														<li data-val="var1">var1</li>
+														<li data-val="var2">var2</li>
+														<li data-val="var3">var3</li>
+													</ul>
+													<select>
+														<option value="var0">var0</option>
+														<option value="var1">var1</option>
+														<option value="var2">var2</option>
+														<option value="var3">var3</option>
+													</select>
+												</div>
+											</div>
+											<div class="filt__col is-date">
+												<div class="filt__label">Дата</div>
+												<div class="filt__row">
+													<div class="datepicker">
+														<input type="text" id="from" value="08.10.2015" placeholder="От">
+													</div>
+													<div class="datepicker">
+														<input type="text" id="to" value="08.10.2015" placeholder="До">
+													</div>
+												</div>
+											</div>
+											<div class="filt__col is-stat">
+												<div class="filt__label">Статус</div>
+												<div class="select js-select">
+													<div class="select__text js-select-text">
+														<span>Статус консультации</span>
+													</div>
+													<ul class="select__list js-select-list">
+														<li data-val="var0">var0</li>
+														<li data-val="var1">var1</li>
+														<li data-val="var2">var2</li>
+														<li data-val="var3">var3</li>
+													</ul>
+													<select>
+														<option value="var0">var0</option>
+														<option value="var1">var1</option>
+														<option value="var2">var2</option>
+														<option value="var3">var3</option>
+													</select>
+												</div>
+											</div>
+											<div class="filt__col is-btn">
+												<button class="btn" type="submit">найти</button>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="field">
+									<!-- res -->
+									<div class="res">
+										<h3 class="res__title">Результаты поиска:</h3>
+										<div class="res__in">
+											<div class="res__col">
+												<div class="event">
+													<div class="event__row">
+														<div class="date">7 августа 2015,</div>10:00 с <a href="#">Алексеем Ивановым</a>
+													</div>
+													<p>Статус: Заявка подтверждена</p>
+												</div>
+												<div class="event">
+													<div class="event__row">
+														<div class="date">7 августа 2015,</div>10:00 с <a href="#">Алексеем Ивановым</a>
+													</div>
+													<p>Статус: Заявка подтверждена</p>
+												</div>
+												<div class="event">
+													<div class="event__row">
+														<div class="date">7 августа 2015,</div>10:00 с <a href="#">Алексеем Ивановым</a>
+													</div>
+													<p>Статус: Заявка подтверждена</p>
+												</div>
+												<div class="event">
+													<div class="event__row">
+														<div class="date">7 августа 2015,</div>10:00 с <a href="#">Алексеем Ивановым</a>
+													</div>
+													<p>Статус: Заявка подтверждена</p>
+												</div>
+											</div>
+											<div class="res__col">
+												<div class="event">
+													<div class="event__row">
+														<div class="date">7 августа 2015,</div>10:00 с <a href="#">Алексеем Ивановым</a>
+													</div>
+													<p>Статус: Заявка подтверждена</p>
+												</div>
+												<div class="event">
+													<div class="event__row">
+														<div class="date">7 августа 2015,</div>10:00 с <a href="#">Алексеем Ивановым</a>
+													</div>
+													<p>Статус: Заявка подтверждена</p>
+												</div>
+												<div class="event">
+													<div class="event__row">
+														<div class="date">7 августа 2015,</div>10:00 с <a href="#">Алексеем Ивановым</a>
+													</div>
+													<p>Статус: Заявка подтверждена</p>
+												</div>
+												<div class="event">
+													<div class="event__row">
+														<div class="date">7 августа 2015,</div>10:00 с <a href="#">Алексеем Ивановым</a>
+													</div>
+													<p>Статус: Заявка подтверждена</p>
+												</div>
+											</div>
+										</div>
+										<div class="res__bot">
+											<button class="btn">ПОКАЗАТЬ ЕЩЕ<i class="ico ico_down"></i></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab__cont js-tab-cont js-tab2">
+						<div class="title-small">
+							<span>мои записи</span>
+							<div class="hist">
+								<div class="hist__item">
+									<div class="hist__color is-blue"></div>
+									<div class="hist__name">- Текущий день</div>
+								</div>
+								<div class="hist__item">
+									<div class="hist__color is-pink"></div>
+									<div class="hist__name">- День консультации </div>
+								</div>
+								<div class="hist__item">
+									<div class="hist__color is-green"></div>
+									<div class="hist__name">- Прошедшая консультация</div>
+								</div>
+							</div>
+						</div>
+						<!-- l -->
+						<div class="l">
+							<div class="leftbar">
+								<div class="fullcalendar js-fullcalendar"></div>
+							</div>
+							<div class="rightbar">
+								<!-- block -->
+								<div class="block">
+									<div class="field">
+										<h3 class="title-small is-blue">сегодня, 5 августа 2015</h3>
+										<div class="event">
+											<p>10:00 с <a href="#">Анастасия Палочкина</a></p>
+											<p>Статус: Заявка подтверждена </p>
+										</div>
+										<a href="#" class="btn btn_green btn_middle">начать консультацию</a>
+									</div>
+								</div>
+								<!-- block -->
+								<div class="block">
+									<div class="field">
+										<h3 class="title-small is-blue">ближайшие записи</h3>
+										<div class="event">
+											<div class="date">6 августа 2015</div>
+											<p>10:00 с <a href="#">Вадим Сидоров</a></p>
+											<p>Статус: Заявка подтверждена </p>
+										</div>
+										<div class="event">
+											<div class="date">7 августа 2015</div>
+											<p>10:00 с <a href="#">Алексеем Ивановым</a></p>
+											<p>Статус: Заявка подтверждена </p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab__cont js-tab-cont js-tab3">
+						<!-- topper -->
+						<div class="topper">
+							<div class="topper__left">
+								<h3 class="title-small">история транзакций</h3>
+							</div>
+							<div class="topper__right">
+								<div class="count">
+									<div class="count__item">
+										<div class="count__text">Баланс</div>
+										<div class="count__bal">$ 1.500</div>
+									</div>
+								</div>
+								<a href="#" class="btn btn_green btn_average">Сделать запрос на выдачу</a>
+								<a href="#" class="btn btn_green btn_average">пополнить</a>
+								<a href="#" class="btn btn_average">платные услуги</a>
+							</div>
+						</div>
+						<!-- up -->
+						<div class="up">
+							<button class="up__close" type="button"></button>
+							<h3 class="title-h4">Повысьте свой рейтинг - получите больше клиентов!</h3>
+							<div class="up__wrap">
+								<div class="up__left">
+									<p>Вы можете отображаться на первой странице <br>в каталоге по своей специализации.</p>
+									<ul class="list-green">
+										<li>
+											<i class="ico ico_check-green"></i>
+											Пациенты будут видеть вас сразу при попадании на страницу вашей специализации
+										</li>
+										<li>
+											<i class="ico ico_check-green"></i>
+											Вы получите больше клиентов!
+										</li>
+										<li>
+											<i class="ico ico_check-green"></i>
+											Вы заработаете больше!
+										</li>
+									</ul>
+								</div>
+								<div class="up__right">
+									<div class="price">всего 100.00 <span>₽</span></div>
+									<button class="btn btn_green btn_h48" type="button">повысить рейтинг</button>
+								</div>
+							</div>
+						</div>
+						<!-- filt -->
+						<div class="filt">
+							<div class="filt__left">
+								<div class="filt__text">Поиск по дате:</div>
+								<div class="datepicker">
+									<input type="text" id="from1" value="08.10.2015" placeholder="От">
+								</div>
+								<div class="datepicker">
+									<input type="text" id="to1" value="08.10.2015" placeholder="До">
+								</div>
+							</div>
+							<div class="filt__sel">
+								<div class="select js-select">
+									<div class="select__text js-select-text">
+										<span>Пополнение счета</span>
+									</div>
+									<ul class="select__list js-select-list">
+										<li data-val="var0">var0</li>
+										<li data-val="var1">var1</li>
+										<li data-val="var2">var2</li>
+										<li data-val="var3">var3</li>
+									</ul>
+									<select>
+										<option value="var0">var0</option>
+										<option value="var1">var1</option>
+										<option value="var2">var2</option>
+										<option value="var3">var3</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<!-- bill --> 
+						<div class="bill">
+							<div class="wrapper">
+								<div class="field is-head">
+									<div class="td">Дата</div>
+									<div class="td">Код операции</div>
+									<div class="td">Описание</div>
+									<div class="td">Статус</div>
+									<div class="td">Сумма</div>
+								</div>
+								<div class="field">
+									<div class="td">05.08.2015 10:56</div>
+									<div class="td">09203940920394</div>
+									<div class="td">Пополнение баланса</div>
+									<div class="td">Успешно</div>
+									<div class="td">$ 1.500.00</div>
+								</div>
+								<div class="field">
+									<div class="td">05.08.2015 10:56</div>
+									<div class="td">09203940920394</div>
+									<div class="td">Резервирование средств</div>
+									<div class="td">Успешно</div>
+									<div class="td">$ 1.500.00</div>
+								</div>
+								<div class="field">
+									<div class="td">05.08.2015 10:56</div>
+									<div class="td">09203940920394</div>
+									<div class="td">Покупка пакета “Доступ к профессорам”</div>
+									<div class="td">Успешно</div>
+									<div class="td">$ 1.500.00</div>
+								</div>
+								<div class="field is-active">
+									<div class="td">05.08.2015 10:56</div>
+									<div class="td">09203940920394</div>
+									<div class="td">Пополнение баланса</div>
+									<div class="td">Успешно</div>
+									<div class="td">$ 1.500.00</div>
+								</div>
+								<div class="field">
+									<div class="td">05.08.2015 10:56</div>
+									<div class="td">09203940920394</div>
+									<div class="td">Попролнение баланса</div>
+									<div class="td">Успешно</div>
+									<div class="td">$ 1.500.00</div>
+								</div>
+								<div class="field is-foot">
+									<div class="td td_title">остаток за предыдущий месяц</div>
+									<div class="td td_all">$ 200.00</div>
+								</div>
+							</div>
+						</div>
+						<!-- bott -->
+						<div class="bott">
+							<!-- pagination -->
+							<ul class="pagin">
+								<li><a class="pagin__prev" href="#"></a></li>
+								<li><a href="#">1</a></li>
+								<li><a class="is-active" href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li><a class="pagin__next" href="#"></a></li>
+							</ul>
+							<button class="btn btn_green btn_average" type="button">Скачать историю</button>
+						</div>
+					</div>
+					<div class="tab__cont js-tab-cont js-tab4">
+						<!-- topper -->
+						<div class="topper">
+							<div class="topper__left">
+								<h3 class="title-small">история добавленных ФАЙЛОВ</h3>
+							</div>
+							<div class="topper__right">
+								<button class="btn btn_average btn_pad" type="button">загрузите файл</button>
+							</div>
+						</div>
+						<!-- filt -->
+						<div class="filt">
+							<div class="filt__left">
+								<div class="filt__text">Поиск по дате:</div>
+								<div class="datepicker">
+									<input type="text" id="from1" value="08.10.2015" placeholder="От">
+								</div>
+								<div class="datepicker">
+									<input type="text" id="to1" value="08.10.2015" placeholder="До">
+								</div>
+							</div>
+							<div class="filt__sel">
+								<div class="search">
+									<div class="search__field"><input type="text" class="input" placeholder="Введите имя специалиста..."></div>
+									<button class="search__btn" type="submit"><i class="ico ico_search-green"></i></button>
+								</div>
+							</div>
+						</div>
+						<!-- hist -->
+						<div class="hist">
+							<div class="wrapper">
+								<div class="field is-head">
+									<div class="td">Имя файла</div>
+									<div class="td">Описание</div>
+									<div class="td">Открыть доступ</div>
+									<div class="td">Статус файла</div>
+									<div class="td">Действия</div>
+								</div>
+								<div class="field">
+									<div class="field__row">
+										<div class="td"></div>
+										<div class="td"></div>
+										<div class="td">
+											<div class="btn-text">
+												<span>Константин Игнатович</span>
+												<a href="#" class="ico ico_remove-red-small"></a>
+											</div>
+										</div>
+										<div class="td"></div>
+										<div class="td"></div>
+									</div>
+									<div class="field__row">
+										<div class="td">
+											<span class="td__text">09203940920394</span>
+										</div>
+										<div class="td">
+											<span class="td__text">Отчет врача из клиники Медлайф</span>
+										</div>
+										<div class="td">
+											<div class="select js-select">
+												<div class="select__text js-select-text">
+													<span>Пациенту</span>
+												</div>
+												<ul class="select__list js-select-list"> 
+													<li data-val="var0">var0</li>
+													<li data-val="var1">var1</li>
+													<li data-val="var2">var2</li>
+													<li data-val="var3">var3</li>
+												</ul>
+												<select>
+													<option value="var0">var0</option>
+													<option value="var1">var1</option>
+													<option value="var2">var2</option>
+													<option value="var3">var3</option>
+												</select>
+											</div>
+										</div>
+										<div class="td">
+											<a href="#" class="stat">Мой</a>
+										</div>
+										<div class="td">
+											<button class="btn-reg" type="button">
+												<i class="ico ico_reg"></i>
+											</button>
+											<button class="btn-remove" type="button">
+												<i class="ico ico_remove"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="field">
+									<div class="field__row">
+										<div class="td"></div>
+										<div class="td"></div>
+										<div class="td">
+											<div class="btn-text">
+												<span>Константин Игнатович</span>
+												<a href="#" class="ico ico_remove-red-small"></a>
+											</div>
+										</div>
+										<div class="td"></div>
+										<div class="td"></div>
+									</div>
+									<div class="field__row">
+										<div class="td">
+											<span class="td__text">09203940920394</span>
+										</div>
+										<div class="td">
+											<span class="td__text">Отчет врача из клиники Медлайф</span>
+										</div>
+										<div class="td">
+											<div class="select js-select">
+												<div class="select__text js-select-text">
+													<span>Пациенту</span>
+												</div>
+												<ul class="select__list js-select-list"> 
+													<li data-val="var0">var0</li>
+													<li data-val="var1">var1</li>
+													<li data-val="var2">var2</li>
+													<li data-val="var3">var3</li>
+												</ul>
+												<select>
+													<option value="var0">var0</option>
+													<option value="var1">var1</option>
+													<option value="var2">var2</option>
+													<option value="var3">var3</option>
+												</select>
+											</div>
+										</div>
+										<div class="td">
+											<a href="#" class="stat">Открыт доступ Петров</a>
+										</div>
+										<div class="td">
+											<button class="btn-reg" type="button">
+												<i class="ico ico_reg"></i>
+											</button>
+											<button class="btn-remove" type="button">
+												<i class="ico ico_remove"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="field">
+									<div class="field__row">
+										<div class="td"></div>
+										<div class="td"></div>
+										<div class="td">
+											<div class="btn-text">
+												<span>Константин Игнатович</span>
+												<a href="#" class="ico ico_remove-red-small"></a>
+											</div>
+										</div>
+										<div class="td"></div>
+										<div class="td"></div>
+									</div>
+									<div class="field__row">
+										<div class="td">
+											<span class="td__text">09203940920394</span>
+										</div>
+										<div class="td">
+											<span class="td__text">Отчет врача из клиники Медлайф</span>
+										</div>
+										<div class="td">
+											<div class="select js-select">
+												<div class="select__text js-select-text">
+													<span>Пациенту</span>
+												</div>
+												<ul class="select__list js-select-list"> 
+													<li data-val="var0">var0</li>
+													<li data-val="var1">var1</li>
+													<li data-val="var2">var2</li>
+													<li data-val="var3">var3</li>
+												</ul>
+												<select>
+													<option value="var0">var0</option>
+													<option value="var1">var1</option>
+													<option value="var2">var2</option>
+													<option value="var3">var3</option>
+												</select>
+											</div>
+										</div>
+										<div class="td">
+											<a href="#" class="stat">Мой</a>
+										</div>
+										<div class="td">
+											<button class="btn-reg" type="button">
+												<i class="ico ico_reg"></i>
+											</button>
+											<button class="btn-remove" type="button">
+												<i class="ico ico_remove"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="field">
+									<div class="field__row">
+										<div class="td"></div>
+										<div class="td"></div>
+										<div class="td">
+											<div class="btn-text">
+												<span>Константин Игнатович</span>
+												<a href="#" class="ico ico_remove-red-small"></a>
+											</div>
+										</div>
+										<div class="td"></div>
+										<div class="td"></div>
+									</div>
+									<div class="field__row">
+										<div class="td">
+											<span class="td__text">09203940920394</span>
+										</div>
+										<div class="td">
+											<span class="td__text">Отчет врача из клиники Медлайф</span>
+										</div>
+										<div class="td">
+											<div class="select js-select">
+												<div class="select__text js-select-text">
+													<span>Пациенту</span>
+												</div>
+												<ul class="select__list js-select-list"> 
+													<li data-val="var0">var0</li>
+													<li data-val="var1">var1</li>
+													<li data-val="var2">var2</li>
+													<li data-val="var3">var3</li>
+												</ul>
+												<select>
+													<option value="var0">var0</option>
+													<option value="var1">var1</option>
+													<option value="var2">var2</option>
+													<option value="var3">var3</option>
+												</select>
+											</div>
+										</div>
+										<div class="td">
+											<a href="#" class="stat">Открыт доступ Петров</a>
+										</div>
+										<div class="td">
+											<button class="btn-reg" type="button">
+												<i class="ico ico_reg"></i>
+											</button>
+											<button class="btn-remove" type="button">
+												<i class="ico ico_remove"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- pagination -->
+						<ul class="pagin">
+							<li><a class="pagin__prev" href="#"></a></li>
+							<li><a href="#">1</a></li>
+							<li><a class="is-active" href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a class="pagin__next" href="#"></a></li>
+						</ul>
+					</div>
+					<div class="tab__cont js-tab-cont js-tab5">
+						<div class="title-small">мои специалисты</div>
+						<!-- filt -->
+						<div class="filt">
+							<div class="filt__in">
+								<div class="filt__right">
+									<div class="filt__text">Дата</div>
+								</div>
+							</div>
+							<div class="filt__in">
+								<div class="filt__search">
+									<div class="search">
+										<div class="search__field"><input type="text" class="input" placeholder="Введите имя специалиста..."></div>
+										<button class="search__btn" type="submit"><i class="ico ico_search-green"></i></button>
+									</div>
+								</div>
+								<div class="filt__right">
+									<div class="datepicker">
+										<input type="text" id="from1" value="08.10.2015" placeholder="От">
+									</div>
+									<div class="datepicker">
+										<input type="text" id="to1" value="08.10.2015" placeholder="До">
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- l -->
+						<div class="l l_patients">
+							<div class="leftbar">
+								<!-- patient -->
+								<div class="patients">
+									<div class="wrapper">
+										<div class="field is-head">
+											<div class="td">Имя Специалиста</div>
+											<div class="td">Последняя консультация</div>
+											<div class="td">Последний комментарий</div>
+											<div class="td"></div>
+										</div>
+										<div class="field">
+											<div class="td">
+												<a href="#">Игорь Тараев</a>
+											</div>
+											<div class="td">24.05.2015 в 10:00</div>
+											<div class="td">Жалобы на головные боли и боли в пояснице при физических нагрузках</div>
+											<div class="td">
+												<button class="btn-open" type="button"></button>
+											</div>
+										</div>
+										<div class="field">
+											<div class="td">
+												<a href="#">Анастасия Сидорова</a>
+											</div>
+											<div class="td">24.05.2015 в 10:00</div>
+											<div class="td">Жалобы на головные боли и боли в пояснице при физических нагрузках</div>
+											<div class="td">
+												<button class="btn-open is-active" type="button"></button>
+											</div>
+										</div>
+										<div class="field">
+											<div class="td">
+												<a href="#">Максим Игольников</a>
+											</div>
+											<div class="td">24.05.2015 в 10:00</div>
+											<div class="td">Жалобы на головные боли и боли в пояснице при физических нагрузках</div>
+											<div class="td">
+												<button class="btn-open" type="button"></button>
+											</div>
+										</div>
+										<div class="field">
+											<div class="td">
+												<a href="#">Алексей Иванов</a>
+											</div>
+											<div class="td">24.05.2015 в 10:00</div>
+											<div class="td">Жалобы на головные боли и боли в пояснице при физических нагрузках</div>
+											<div class="td">
+												<button class="btn-open" type="button"></button>
+											</div>
+										</div>
+										<div class="field">
+											<div class="td">
+												<a href="#">Игорь Тараев</a>
+											</div>
+											<div class="td">24.05.2015 в 10:00</div>
+											<div class="td">Жалобы на головные боли и боли в пояснице при физических нагрузках</div>
+											<div class="td">
+												<button class="btn-open" type="button"></button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- pagination -->
+								<ul class="pagin">
+									<li><a class="pagin__prev" href="#"></a></li>
+									<li><a href="#">1</a></li>
+									<li><a class="is-active" href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li><a class="pagin__next" href="#"></a></li>
+								</ul>
+							</div>
+							<div class="rightbar">
+								<!-- block -->
+								<div class="block">
+									<div class="field">
+										<!-- messages -->
+										<div class="messages">
+											<a href="#" class="title-cap is-blue">Анастасия Абрамовна</a>
+											<div class="message">
+												<a href="#" class="i-am">Я</a>
+												<div class="message__text">Жалобы на головные боли и в пояснице</div>
+											</div>
+											<div class="message">
+												<a href="#" class="patient">Игорь Тараев</a>
+												<div class="message__text">Жалобы на головные боли и в пояснице</div>
+											</div>
+											<div class="message">
+												<a href="#" class="i-am">Я</a>
+												<div class="message__text">Жалобы на головные боли и в пояснице</div>
+											</div>
+											<div class="message">
+												<a href="#" class="patient">Игорь Тараев</a>
+												<div class="message__text">Жалобы на головные боли и в пояснице</div>
+											</div>
+											<div class="message">
+												<a href="#" class="i-am">Я</a>
+												<div class="message__text">Жалобы на головные боли и в пояснице</div>
+											</div>
+											<div class="message">
+												<a href="#" class="patient">Игорь Тараев</a>
+												<div class="message__text">Жалобы на головные боли и в пояснице</div>
+											</div>
+											<div class="message">
+												<a href="#" class="i-am">Я</a>
+												<div class="message__text">Жалобы на головные боли и в пояснице</div>
+											</div>
+											<div class="message">
+												<a href="#" class="patient">Игорь Тараев</a>
+												<div class="message__text">Жалобы на головные боли и в пояснице</div>
+											</div>
+										</div>
+										
+									</div>
+									<div class="field">
+										<div class="title-cap is-blue">21.05.2015</div>
+										<div class="message">
+											<a href="#" class="i-am">Я</a>
+											<div class="message__text">Жалобы на головные боли и в пояснице</div>
+										</div>
+										<div class="message">
+											<a href="#" class="patient">Игорь Тараев</a>
+											<div class="message__text">Жалобы на головные боли и в пояснице</div>
+										</div>
+										<a href="#" class="btn btn_h38">ПОсмотреть всю переписку</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab__cont js-tab-cont js-tab6">
+						<!-- reviews -->
+						<div class="reviews">
+							<h3 class="title-small">Оставленные отзывы</h3>
+							<div class="date date_small date_green">Сегодня, 5 августа 2015</div>
+							<div class="wrapper">
+								<div class="field">
+									<div class="td">
+										<!-- face -->
+										<a href="#" class="face">
+											<img src="img/face_1.png" alt="img">
+										</a>
+									</div>
+									<div class="td">
+										<p>Кому: <a href="#">Владимир Коноваленко</a></p>
+										<div class="date">26.05.2015 в 18:30</div>
+										<!-- rating -->
+										<ul class="rating">
+											<li class="rating__item is-yellow"><a href="#" class="icon-star"></a></li>
+											<li class="rating__item is-yellow"><a href="#" class="icon-star"></a></li>
+											<li class="rating__item is-yellow"><a href="#" class="icon-star"></a></li>
+											<li class="rating__item is-yellow"><a href="#" class="icon-star"></a></li>
+											<li class="rating__item"><a href="#" class="icon-star"></a></li>
+										</ul>
+									</div>
+									<div class="td">
+										<p>Доктор полностью оправдала положительные отзывы, которые я прочитала о ней на сайте. </p>
+										<p>Не грузила лишними терминами, медицинскими деталями. </p>
+										<p>Объясняла доступно, понятно и высокопрофессионально.</p>
+									</div>
+									<div class="td">
+										<button class="btn-reg" type="button">
+											<i class="ico ico_reg"></i>
+										</button>
+										<button class="btn-remove" type="button">
+											<i class="ico ico_remove"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="date date_small date_green">Сегодня, 5 августа 2015</div>
+							<div class="wrapper">
+								<div class="field">
+									<div class="td">
+										<!-- face -->
+										<a href="#" class="face">
+											<img src="img/face_2.png" alt="img">
+										</a>
+									</div>
+									<div class="td">
+										<p>Кому: <a href="#">Владимир Коноваленко</a></p>
+										<div class="date">26.05.2015 в 18:30</div>
+										<!-- rating -->
+										<ul class="rating">
+											<li class="rating__item is-yellow"><a href="#" class="icon-star"></a></li>
+											<li class="rating__item is-yellow"><a href="#" class="icon-star"></a></li>
+											<li class="rating__item is-yellow"><a href="#" class="icon-star"></a></li>
+											<li class="rating__item is-yellow"><a href="#" class="icon-star"></a></li>
+											<li class="rating__item is-yellow"><a href="#" class="icon-star"></a></li>
+										</ul>
+									</div>
+									<div class="td">
+										<p>Понравился доктор, очень внимательная, у меня высокое давление было, доктор посмотрела дала таблетку и кардиограмму сделала, приемом осталась довольна очень.</p>
+									</div>
+									<div class="td">
+										<button class="btn-reg" type="button">
+											<i class="ico ico_reg"></i>
+										</button>
+										<button class="btn-remove" type="button">
+											<i class="ico ico_remove"></i>
+										</button>
+									</div>
+								</div>
+								<div class="field">
+									<div class="td">
+										<!-- face -->
+										<a href="#" class="face">
+											<img src="img/face_3.png" alt="img">
+										</a>
+									</div>
+									<div class="td">
+										<p>Кому: <a href="#">Владимир Коноваленко</a></p>
+										<div class="date">26.05.2015 в 18:30</div>
+										<!-- rating -->
+										<ul class="rating">
+											<li class="rating__item is-yellow"><a href="#" class="icon-star"></a></li>
+											<li class="rating__item is-yellow"><a href="#" class="icon-star"></a></li>
+											<li class="rating__item is-yellow"><a href="#" class="icon-star"></a></li>
+											<li class="rating__item"><a href="#" class="icon-star"></a></li>
+											<li class="rating__item"><a href="#" class="icon-star"></a></li>
+										</ul>
+									</div>
+									<div class="td">
+										<p>Все устроило, доктор сразу же поняла в чем проблема, все рассказала, все объяснила, выписала лечение на первое время. Знает человек свое дело, приемом довольны.</p>
+									</div>
+									<div class="td">
+										<button class="btn-reg" type="button">
+											<i class="ico ico_reg"></i>
+										</button>
+										<button class="btn-remove" type="button">
+											<i class="ico ico_remove"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- pagination -->
+						<ul class="pagin">
+							<li><a class="pagin__prev" href="#"></a></li>
+							<li><a href="#">1</a></li>
+							<li><a class="is-active" href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a class="pagin__next" href="#"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- banner -->
+			<div class="banner" style="background-image: url('img/banner.png')"></div>
+		</div>
+	</section>
+</div>
+<!-- END out-->
+//= partials/footer.html
+</body>
+</html>

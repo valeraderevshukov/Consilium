@@ -10,6 +10,7 @@
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
 	<link rel="stylesheet" media="all" href="css/jquery-ui.min.css" >
+	<link rel="stylesheet" media="all" href="css/fullcalendar.css" >
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/app.js"></script>
@@ -17,55 +18,50 @@
 <body>
 <!-- BEGIN  out-->
 <div class="out">
-	<!-- header -->
-	<header class="header">
+	<header class="header js-header">
 		<div class="header__in">
 			<!-- logo -->
 			<a href="#" class="logo"></a>
-			<!-- nav -->
-			<ul class="nav">
-				<li class="nav__item"> 
-					<a href="#">О проекте</a>
-				</li>
-				<li class="nav__item">
-					<a href="#">Как это работает?</a>
-				</li>
-				<li class="nav__item">
-					<a href="#">Наши партнеры</a>
-				</li>
-			</ul> 
-			<div class="header__right">
-				<!-- lang -->
-				<div class="lang">
-					<a href="#">Русский</a> / 
-					<a href="#">English</a>
-				</div>
-				<!-- bal -->
-				<div class="bal">
-					<span>Баланс на счету: </span>
-					<span class="bal__many">3 600 ₴</span>
-					<a href="#" class="bal__plus"></a>
-				</div>
-				<!-- cabinet -->
-				<div class="cabinet">
-					<div class="dropdown js-dropdown">
-						<a href="#" class="dropdown__text js-dropdown-text">Личный кабинет</a>
-						<div class="dropdown__arr"></div>
-						<ul class="dropdown__list js-dropdown-list">
-							<li class="dropdown__item"><a href="#">Мой профиль</a></li>
-							<li class="dropdown__item"><a href="#">Регистратура</a></li>
-							<li class="dropdown__item"><a href="#">Календарь</a></li>
-							<li class="dropdown__item"><a href="#">Мой счет</a></li>
-							<li class="dropdown__item"><a href="#">Выйти</a></li>
-						</ul>
+			<div class="header__wrap js-header-wrap">
+				<!-- nav -->
+				<ul class="nav">
+					<li class="nav__item"> 
+						<a href="#">О проекте</a>
+					</li>
+					<li class="nav__item">
+						<a href="#">Как это работает?</a>
+					</li>
+					<li class="nav__item">
+						<a href="#">Наши партнеры</a>
+					</li>
+				</ul> 
+				<div class="header__right">
+					<!-- lang -->
+					<div class="lang">
+						<a href="#">Русский</a> / 
+						<a href="#">English</a>
+					</div>
+					<!-- bal -->
+					<div class="bal">
+						<span>Баланс на счету: </span>
+						<div class="bal__many">
+							<span>3 600 ₴</span>
+							<a href="#" class="bal__plus"></a>
+						</div>
+					</div>
+					<!-- cabinet -->
+					<div class="cabinet">
+						<a href="#" class="cabinet__link">Личный кабинет</a>
 					</div>
 				</div>
 			</div>
+			<button class="btn-menu js-btn-menu" type="button"><span></span></button>
+			<button class="btn-search js-btn-search" type="button"><i class="icon icon-search"></i></button>
 		</div>
 	</header>
 	<!-- filter -->
 	<section class="filter">
-		<div class="filter__in">
+		<div class="filter__in js-filter-in">
 			<form>
 				<div class="filter__text">Ищу специалиста</div>
 				<!-- drop -->
@@ -327,7 +323,7 @@
 	<div class="footer__in">
 		<div class="footer__left">
 			<!-- copy -->
-			<div class="copy">Авторские права @ 2015 Консилиум</div>
+			<div class="copy is-hide-mob">Авторские права @ 2015 Консилиум</div>
 			<!-- numb -->
 			<div class="numb">
 				<i class="ico ico_fhone"></i>
@@ -343,7 +339,7 @@
 				<li><a href="#">О проекте</a></li>
 			</ul>
 		</div>
-		
+		<div class="copy is-show-mob">Авторские права @ 2015 Консилиум</div>
 	</div>
 </footer>
 </body>

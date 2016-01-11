@@ -49,10 +49,12 @@
 
 
 body
+	min-width: 480px
 	color: $c_body
 	+hl
 	font-size: 15px
 	line-height: 22px
+	background: #fff
 	&.is-hidden
 		overflow: hidden
 
@@ -66,17 +68,27 @@ a
 	background: $light
 	&__in
 		@extend %in
+	.banner 
+		margin: 30px 0 0
 
 // tab
 .tab
 	padding: 33px 0 60px
+	&.is-data
+		.tab__item
+			margin-left: 1%
+			width: calc(32.66%)
+			&:first-child
+				margin-left: 0
+	& + .banner
+		margin: -30px 0 30px
 	&__list
 		font-size: 0
 		width: 100%
 	&__item
 		position: relative
-		margin-left: -3px
-		width: calc(16.624% + 3px)
+		margin-left: 0.5%
+		width: calc(16.25%)
 		text-align: center
 		font-size: 16px
 		+r400
@@ -84,16 +96,14 @@ a
 		background: $l_green
 		border-radius: 20px 20px 0px 0px
 		transition: background .2s
-		box-shadow: 2px 0 2.8px 0.2px rgba(0, 0, 0, 0.1)
+		box-shadow: 0 2px 6.7px 0.3px rgba(0, 0, 0, 0.15)
 		display: inline-block
-		+r(1200)
-			width: calc(16.6% + 3px)
 		&:before
 			position: absolute
 			content: ''
 			top: 100%
-			left: 0
-			right: 0
+			left: -3px
+			right: -3px
 			height: 6px
 			background: #fff
 		&:active
@@ -104,50 +114,67 @@ a
 				color: $c_body
 		+rm(1024)
 			&:hover
+				z-index: 2
 				background: #fff
 				&:before
 					background: #fff
 				.tab__link
 					color: $c_body
+				.tab__step
+					background: $l_green
+					color: #fff
 		&:first-child
 			margin-left: 0
-			z-index: 5
-			box-shadow: 0 2px 6.7px 0.3px rgba(0, 0, 0, 0.15)
-		&:nth-child(2)
-			z-index: 4
-		&:nth-child(3)
-			z-index: 3
-		&:nth-child(4)
-			z-index: 2
-		&:nth-child(5)
-			z-index: 1
+			&:before
+				left: 0
+		&:last-child
+			&:before
+				right: 0
 		&.is-active
 			background: #fff
-			z-index: 7
+			z-index: 2
 			&:before
 				background: #fff
 			.tab__link
 				color: $c_body
+			.tab__step
+				background: $l_green
+				color: #fff
 	&__link
 		height: 46px
 		color: #fff
 		line-height: 46px
 		transition: color .2s
 		display: block
+	&__step
+		margin-right: 10px
+		height: 23px
+		width: 23px
+		color: $l_green
+		text-align: center
+		line-height: 23px
+		vertical-align: middle
+		transition: background .2s, color .2s
+		border-radius: 50%
+		background: #fff
+		display: inline-block
 	&__in
 		position: relative
 		padding: 35px 50px 50px
 		box-shadow: 0 2px 6.7px 0.3px rgba(0, 0, 0, 0.15)
-		z-index: 6
+		z-index: 1
 		background: #fff
 	&__cont
 		display: none
-
+	strong
+		+r700
 
 // event
 .event
 	line-height: 1.3
 	& + .event
+		margin-top: 20px
+	& + .btn
 		margin-top: 20px
 	&__row
 		.date
@@ -165,6 +192,7 @@ a
 // filt
 .filt
 	font-size: 0
+	+clr
 	&__col
 		margin-left: 1%
 		font-size: 16px
@@ -186,6 +214,36 @@ a
 		font-size: 0
 	&__label
 		margin-bottom: 2px
+	&__text
+		+r400
+		font-size: 16px
+		display: inline-block
+	&__sel
+		float: right
+		width: calc(100% - 364px)
+		.search
+			width: 100%
+	&__search
+		float: left
+		margin-right: 9px
+		width: 413px
+	&__in
+		+clr
+	.filt__right
+		float: right
+		width: calc(100% - 422px)
+		.datepicker
+			margin-left: 5px
+			width: 118px
+	.filt__left
+		float: left
+		+clr
+		.filt__text
+			margin: 7px 12px 0 0
+		.datepicker
+			float: right
+			margin-left: 5px
+			width: 118px
 	.select
 		display: block
 	.datepicker
@@ -217,8 +275,13 @@ a
 		position: absolute
 		top: 50%
 		right: 11px
-		margin-top: -7px
+		margin-top: -9px
 		cursor: pointer
+
+// dat-text
+.dat-text
+	margin-top: 8px
+	display: inline-block
 
 .ui-datepicker
 	width: 14.1em
@@ -477,6 +540,99 @@ a
 		box-shadow: (-1px 0 0 $bord_select)
 		&:before
 			+arr(5,9,#ccc,r)
+
+// fullcalendar
+.fullcalendar
+	overflow: hidden
+	border: 1px solid $bord_cab
+	border-radius: 5px
+	.fc-toolbar
+		margin-bottom: 0
+		background: $bg_head_ful
+		.fc-button
+			height: 51px
+			width: 40px
+			font-size: 0
+			border: none
+			box-shadow: none
+			background: none
+			&:before
+				position: absolute
+				content: ''
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				transition: border-color .2s
+		.fc-next-button
+			&:before
+				+arr(5,9,$bord_add_full,r)
+			&:hover
+				&:before
+					+arr(5,9,darken($bord_add_full, 20%),r)
+		.fc-prev-button
+			&:before
+				+arr(5,9,$bord_add_full,l)
+			&:hover
+				&:before
+					+arr(5,9,darken($bord_add_full, 20%),l)
+	.fc-center
+		margin-top: 16px
+		text-transform: uppercase
+		h2
+			font-size: 16px
+			+r400
+	.fc-head
+		display: none
+	.fc-basic-view td.fc-day-number
+		position: relative
+		text-align: left
+		padding: 12px 15px
+		padding-top: 6.5%
+		font-size: 24px
+		&.fc-mon,
+		&.fc-tue,
+		&.fc-wed,
+		&.fc-thu,
+		&.fc-fri,
+		&.fc-sat,
+		&.fc-sun
+			&:before
+				position: absolute
+				top: 9px
+				right: 9px
+				font-size: 12px
+				line-height: 1
+				+r300
+		&.fc-mon
+			&:before
+				content: 'Пн'
+		&.fc-tue
+			&:before
+				content: 'Вт'
+		&.fc-wed
+			&:before
+				content: 'Ср'
+		&.fc-thu
+			&:before
+				content: 'Чт'
+		&.fc-fri
+			&:before
+				content: 'Пт'
+		&.fc-sat
+			&:before
+				content: 'Сб'
+		&.fc-sun
+			&:before
+				content: 'Вс'
+	.fc-widget-content
+		border-bottom: none
+		&:first-child
+			border-left: none !important
+		&:last-child
+			border-right: none !important
+	.fc-view > table
+		width: calc(100% + 1px)
+
 
 // doc
 .doc
@@ -883,7 +1039,7 @@ a
 			background: rgba(#000, .5)
 	img
 		width: 100%
-	&__name
+	// &__name
 	&__control
 		position: absolute
 		bottom: 0
@@ -894,3 +1050,291 @@ a
 		transition: background .2s
 		background: rgba(#000, .2)
 		text-align: right
+
+// topper
+.topper
+	+clr
+	& + .topper
+		margin-top: 20px
+	& + .filt
+		margin-top: 17px
+	&__left
+		float: left
+	&__right
+		float: right
+		.btn
+			margin-top: -2px
+	.btn
+		margin-left: 2px
+		&:first-child
+			margin-left: 0
+	.name
+		margin: 4px 8px 0 0
+
+// bill
+.bill
+	.td
+		width: 195px
+		&:nth-child(3)
+			width: 435px
+		&:nth-child(4)
+			width: 205px
+		&:last-child
+			width: 70px
+
+// hist
+.hist
+	.td
+		&:first-child
+			width: 165px
+		&:nth-child(2)
+			width: 292px
+		&:nth-child(3)
+			width: 302px
+		&:nth-child(4)
+			width: 270px
+		&:last-child
+			width: 72px
+	.select
+		margin-right: 10px
+		max-width: 248px
+
+// patients
+.patients
+	.wrapper
+		margin-top: 0
+		.field
+			&:hover
+				color: $c_body
+				background: transparent
+				a
+					color: $blue
+		a
+			&:hover
+				color: darken($blue, 15%) !important
+	.td
+		&:first-child
+			width: 176px
+		&:nth-child(2)
+			width: 214px
+		&:nth-child(3)
+			width: 294px
+		&:last-child
+			width: 72px
+
+// reviews
+.reviews
+	.title-small
+		margin-bottom: 22px
+	.wrapper
+		margin: 10px 0 25px
+	.td
+		vertical-align: top
+		&:first-child
+			width: 110px
+		&:nth-child(2)
+			width: 232px
+		&:nth-child(3)
+			width: 675px
+		&:last-child
+			vertical-align: middle
+		.date
+			+r400
+	.rating
+		margin-top: 12px
+		font-size: 16px
+
+// details
+.details
+	&__in
+		margin: 0 auto
+		max-width: 508px
+	.title-small
+		margin-bottom: 27px
+		text-align: center
+
+// inform
+.inform
+	&__in
+		+clr
+	&__left
+		float: left
+		width: 35.3%
+	&__right
+		float: right
+		width: 62.5%
+	&__wrap
+		+clr
+	&__col
+		float: left
+		width: 48%
+		margin-left: 4%
+		&:first-child
+			margin-left: 0
+	&__bott
+		margin-top: 16px
+	.inform__foot 
+		margin: 30px -50px -50px
+		padding: 40px 54px 30px
+		text-align: right
+		border-top: 1px solid #e5e5e5
+		.btn
+			min-width: 238px
+	.form__row
+		margin-top: 9px
+		&:first-child
+			margin-top: 0
+	.wrapper
+		margin-top: 16px
+	.btn
+		min-width: 183px
+	.input
+		&::placeholder
+			color: $c_body
+			opacity: 1
+	.title-small
+		margin-top: 23px
+		&:first-child
+			margin-top: 0
+
+// schedule
+.schedule
+	+r400
+	&__top
+		& > strong
+			line-height: 26px
+			vertical-align: top
+			display: inline-block
+	.radiobox
+		margin-left: 20px
+		&:first-child
+			margin-left: 0
+
+// add-top
+.add-top
+	+clr
+	.title-small
+		float: left
+	.btn
+		margin: -4px 0
+		float: right
+
+// graph
+.graph
+	border-top: 1px solid $bord_cab
+	+box
+	background: $light
+	+clr
+	&:first-child
+		border-top: none
+	&__left
+		float: left
+		padding: 25px
+		width: 31%
+		+box
+		+clr
+	&__right
+		float: right
+		width: 69%
+		+box
+		border-left: 1px solid $bord_cab
+	&__col
+		float: left
+		width: 56%
+		&:first-child
+			width: 44%
+		.radiobox
+			margin: 16px 0 0
+			display: block
+			&:first-child
+				margin-top: 0
+	&__row
+		padding: 18px 29px
+		border-top: 1px solid $bord_cab
+		&:first-child
+			border-top: none
+		&.is-top
+			padding: 29px 29px 27px
+	&__field
+		margin-top: 12px
+		&:first-child
+			margin-top: 0
+	&__text
+		margin: 0 5px
+		line-height: 38px
+		vertical-align: top
+		display: inline-block
+		&:first-child
+			margin-left: 0
+	.datepicker
+		width: 118px
+	.checkbox
+		margin-left: 18px
+		vertical-align: top
+		display: inline-block
+		&:first-child
+			margin-left: 0
+	.select
+		width: 88px
+		vertical-align: top
+		display: inline-block
+		& + .btn
+			margin: 3px 0 0 10px
+	.btn
+		min-width: 183px
+
+// login
+.login
+	padding: 40px 0 50px
+	&__form
+		margin: 0 auto
+		max-width: 298px
+	.btn
+		width: 100%
+	.form__label
+		margin-bottom: 5px
+	.form__row 
+		margin-top: 10px
+	.title-small
+		text-align: center
+
+// up
+.up
+	position: relative
+	margin: 8px 0 18px
+	padding: 45px 54px 50px 60px
+	color: #fff
+	font-size: 15px
+	line-height: 1.3
+	background: #4671b3
+	&__close
+		position: absolute
+		top: 12px
+		right: 13px
+		will-change: opacity
+		transition: opacity .2s
+		background: transparent
+		+s(remove)
+		&:hover
+			opacity: .7
+	&__wrap
+		margin-top: 12px
+		+clr
+	&__left
+		float: left
+	&__right
+		float: right
+		text-align: right
+		.btn
+			min-width: 230px
+	.list-green
+		margin-top: 27px
+		line-height: 1.5
+	.price
+		font-size: 28px
+		text-transform: uppercase
+		+r700
+		& + .btn
+			margin-top: 20px
+		span
+			+r400

@@ -1,9 +1,45 @@
+body
+	&.is-open-menu
+		position: fixed
+		width: 100%
+		overflow: hidden
+		.header
+			&:before
+				visibility: visible
+				opacity: .7
+				z-index: 1
+		.header__wrap
+			opacity: 1
+			visibility: visible
+			z-index: 10
+		.btn-search
+			opacity: 0
+			z-index: -1
+
 // header
 .header
 	height: 56px
 	color: $c_gray
 	+r400
 	font-size: 16px
+	&:before
+		position: fixed
+		content: ''
+		left: 0
+		right: 0
+		bottom: 0
+		top: 57px
+		background: #000
+		visibility: hidden
+		opacity: 0
+		z-index: -1
+		transform: translate3d(0,0,0)
+		will-change: opacity
+		transition: opacity .3s, visibility .3s
+	+r(1200)
+		font-size: 14px
+	+r(1024)
+		border-bottom: 1px solid #e5e5e5
 	&__in
 		position: relative
 		padding-top: 17px
@@ -11,8 +47,16 @@
 		@extend %in
 		+box
 		+clr
+		+r(1024)
+			padding-top: 17px
 	&__right
 		float: right
+		+r(1024)
+			float: none
+			width: 100%
+			order: 1
+			display: flex
+			flex-flow: row wrap
 	a
 		border-bottom: 1px solid transparent
 		color: inherit
@@ -23,6 +67,22 @@
 		+rm(1024)
 			&:hover
 				border-color: $c_gray
+	&__wrap
+		+r(1024)
+			position: fixed
+			top: 57px
+			left: 0
+			right: 0
+			overflow-x: auto
+			z-index: 10
+			transform: translate3d(0,0,0)
+			will-change: opacity
+			transition: opacity .3s, visibility .3s
+			opacity: 0
+			visibility: hidden
+			background: #fff
+			display: flex
+			flex-flow: row wrap
 	.logo
 		border: none
 
@@ -34,18 +94,36 @@
 	z-index: 1
 	+s(logo)
 	display: inline-block 
+	+r(1024)
+		margin: 6px 0 0 30px
+		+svg(logo_mob,160,44)
 
 // nav
 .nav
 	float: left
 	font-size: 0
+	+r(1024) 
+		float: none
+		width: 100%
+		order: 2
 	&__item
 		position: relative
 		padding: 0 12px 0 13px
 		font-size: 16px
 		vertical-align: top
 		display: inline-block
+		+r(1200)
+			font-size: 14px
+			padding: 0 8px
+			+r(1024) 
+				padding: 15px 33px
+				border-top: 1px solid #e5e5e5
+				display: block
 		&:first-child
+			+r(1200)
+				padding-left: 13px
+				+r(1024)
+					padding-left: 33px
 			&:before
 				display: none
 		&:before
@@ -56,18 +134,33 @@
 			transform: translate(0,-50%)
 			height: 9px
 			border-left: 1px dotted $bd_nav
+			+r(1024)
+				display: none
 	a
 		display: block
+		+r(1024)
+			border-bottom: none
 
 // lang
 .lang
 	padding-right: 11px
+	+r(1200)
+		padding-right: 5px
+	+r(1024)
+		order: 3
 
 // bal
 .bal
 	padding: 0 11px 0 14px
+	+r(1200)
+		padding: 0 4px 0 8px
+	+r(1024)
+		margin-top: -1px
 	&__many
 		color: $l_green
+		display: inline-block
+		+r(1024)
+			display: block
 	.bal__plus
 		position: relative
 		margin: 4px 0 0 10px
@@ -76,6 +169,10 @@
 		border-bottom: none
 		vertical-align: top
 		display: inline-block
+		+r(1200)
+			margin-left: 6px
+			+r(1024)
+				margin-top: 5px
 		&:before
 			position: absolute
 			content: ''
@@ -98,6 +195,8 @@
 // cabinet
 .cabinet
 	padding-left: 16px
+	+r(1200)
+		padding-left: 8px
 	.cabinet__link
 		color: $d_blue
 		&:active
@@ -112,6 +211,12 @@
 	position: relative
 	vertical-align: top
 	display: inline-block
+	+r(1200)
+		+r(1024)
+			padding: 15px 33px
+			width: 100%
+			border-top: 1px solid #e5e5e5
+			display: block
 	&:first-child
 		&:before
 			display: none
@@ -123,17 +228,24 @@
 		transform: translate(0,-50%)
 		height: 9px
 		border-left: 1px dotted $bd_nav
+		+r(1024)
+			display: none
 
 // filter
 .filter
 	position: relative
-	padding: 21px 0 22px
 	font-size: 0
 	background: $blue
 	&__in
+		padding-top: 21px
+		padding-bottom: 22px
 		@extend %in
 		text-align: right
 		+clr
+		+r(1024)
+			padding-top: 21px
+			padding-bottom: 22px
+			display: none
 	&__text
 		color: #fff
 		+r700
@@ -142,9 +254,34 @@
 		text-transform: uppercase
 		vertical-align: top
 		display: inline-block
+		+r(1200)
+			margin-right: 5px
+		+r(1024)
+			margin: 0 0 5px
+			text-align: left
+			display: block
 	.drop
 		margin: 0 10px
+		+r(1280)
+			max-width: 170px
+		+r(1200)
+			margin: 0 5px
+			width: 140px
+			+r(1024)
+				position: relative
+				margin: 0 0 13px
+				width: 100%
+				max-width: 100%
+				display: block
+				&__block
+					margin-top: 4px
 	.btn
+		+r(1200)
+			margin-left: 5px
+			+r(1024)
+				margin: 0
+				width: 100%
+				display: block
 		.ico
 			margin-left: 0
 
@@ -225,6 +362,11 @@
 		box-shadow: 0 0 8.7px 0.3px rgba(0, 0, 0, 0.31)
 		background: #fff
 		display: none
+		+r(960)
+			max-height: 404px
+			overflow-y: auto
+		+r(768)
+			max-height: 200px
 	&__title
 		margin-bottom: 18px
 		font-size: 20px
@@ -241,6 +383,12 @@
 		vertical-align: top
 		+box
 		display: inline-block
+		+r(960)
+			width: 33%
+		+r(768)
+			width: 50%
+		+r(480)
+			width: 100%
 		span
 			cursor: pointer
 			border-bottom: 1px solid transparent
@@ -254,10 +402,12 @@
 // dropdown
 .dropdown
 	.dropdown__text
-		padding: 0 30px 0 0
+		padding: 0 28px 0 0
 		cursor: pointer
 		color: $d_blue
 		border: none
+		+r(1024)
+			display: block
 	&__arr
 		position: absolute
 		top: 2px
@@ -266,6 +416,9 @@
 		height: 19px
 		background: #d6dbdf
 		border-radius: 3px
+		+r(1024)
+			top: 16px
+			right: 30px
 		&:before
 			position: absolute
 			content: ''
@@ -290,10 +443,14 @@
 		left: -16px
 		margin-top: 12px
 		min-width: 188px
-		z-index: 2
+		z-index: 10
 		border-radius: 5px
 		box-shadow: 0 3px 7px rgba(0, 0, 0, 0.23)
 		display: none
+		+r(1024)
+			left: 30px
+			right: 30px
+			margin-top: 0
 		&:before
 			position: absolute
 			content: ''
@@ -317,3 +474,64 @@
 			border-top: none
 		&:last-child
 			border-radius: 0 0 5px 5px
+
+// btn-menu, btn-search
+.btn-menu,
+.btn-search
+	float: right
+	background: transparent
+	display: none
+	+r(1024)
+		display: block
+
+.btn-menu
+	position: relative
+	margin-left: 15px
+	width: 23px
+	height: 16px
+	&.is-active
+		&:before
+			transform: rotate(45deg) translate(6px, 3px)
+		&:after
+			transform: rotate(-45deg) translate(5px, -3px)
+		span
+			opacity: 0
+			transform: scale(0)
+	&:before,
+	&:after,
+	span
+		position: absolute
+		content: ''
+		left: 0
+		right: 0
+		height: 4px
+		border-radius: 2px
+		transition: opacity .3s, transform .3s
+		background: $blue
+	&:before
+		top: 0
+	&:after
+		bottom: 0
+	span
+		top: 6px
+
+// btn-search
+.btn-search
+	position: relative
+	font-size: 19px
+	color: $blue
+	will-change: opacity
+	transition: opacity .3s, color .3s
+	z-index: 1
+	&:before
+		position: absolute
+		content: '' 
+		bottom: -16px
+		right: 0
+		transform: translate3d(0,0,0)
+		transition: transform .3s
+		+arr(14,7,#fff,b)
+	&.is-active
+		color: $l_green-2
+		&:before
+			transform: translate(0,7px)

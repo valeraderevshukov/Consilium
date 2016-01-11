@@ -4,21 +4,49 @@
 	padding: 22px 0 60px
 	color: #fff
 	background: $blue
+	+r(1200)
+		margin-top: 0
+		padding-bottom: 40px
+	+r(768)
+		padding: 38px 0 40px
+		text-align: center
 	&__in
 		@extend %in
 		+clr
+		+r(768)
+			padding: 0
 	&__left
 		float: left
+		+clr
+		+r(1200)
+			float: none
+			text-align: center
 	&__right
 		float: right
+		+clr
+		+r(1200)
+			float: none
+			margin-top: 15px
+			text-align: center
+			+r(768)
+				margin-top: 0
 	&__menu
 		margin-left: 10px
 		vertical-align: top
 		display: inline-block
+		+r(768)
+			margin: 32px 0 40px
+			display: block
 		li
 			position: relative
 			padding: 0 13px 0 14px
 			display: inline-block
+			+r(768)
+				padding: 0
+				border-bottom: 1px solid #597fbb
+				display: block
+				&:first-child
+					border-top: 1px solid #597fbb
 			&:before
 				position: absolute
 				content: ''
@@ -27,8 +55,13 @@
 				transform: translate(0,-50%)
 				height: 9px
 				border-left: 1px dotted $bd_nav
+				+r(768)
+					display: none
 		a
 			border-bottom: 1px solid transparent
+			+r(768)
+				padding: 12px 0
+				display: block
 			&:active
 				border-color: #fff
 			+rm(1024)
@@ -44,9 +77,19 @@
 	position: relative
 	margin-left: 115px
 	padding-left: 18px
+	+r(1280)
+		margin-left: 50px
+		+r(768)
+			margin-left: 0
+			padding-left: 0
 	&__tel
 		+hlb
 		font-size: 17px
+		+r(1200)
+			margin-right: 10px
+			display: inline-block
+		+r(768)
+			font-size: 19px
 	&__all
 		margin-top: 5px
 		border-bottom: 1px solid #fff
@@ -55,16 +98,23 @@
 		+rm(1024)
 			&:hover
 				border-color: transparent
+		+r(768)
+			border-bottom: none
+			display: block
 	.ico
 		position: absolute
 		top: 0
 		left: 0
+		+r(768)
+			display: none
 
 // email
 .email
 	position: relative
 	padding-left: 25px
 	+hlb
+	+r(768)
+		+hl
 	&:active
 		span
 			border-color: #fff
@@ -76,6 +126,10 @@
 		position: absolute
 		top: 4px
 		left: 0
+		+r(768)
+			position: relative
+			margin: -8px 5px 0 0 
+			vertical-align: middle
 	span
 		border-bottom: 1px solid transparent
 		transition: border-color .2s
@@ -85,3 +139,5 @@
 .email
 	vertical-align: top
 	display: inline-block
+	+r(768)
+		display: block

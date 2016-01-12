@@ -277,6 +277,9 @@ button.btn
 	font-size: 20px
 	text-transform: uppercase
 	line-height: 1.2
+	+r(768)
+		font-size: 22px
+		+r700
 	&.is-gray
 		color: $c_gray
 	&.is-blue
@@ -529,6 +532,8 @@ input[name^='password']
 		display: block
 	&__top
 		font-size: 0
+		+r(768)
+			display: table
 		span
 			font-size: 16px
 	&__butt
@@ -578,6 +583,16 @@ input[name^='password']
 			+rm(1024)
 				&:hover
 					border-color: $blue
+	&__td
+		+r(768)
+			vertical-align: top 
+			display: table-cell
+		.radiobox
+			+r(768)
+				margin-top: 8px
+				display: block
+				&:first-child
+					margin-top: 0
 	.radiobox
 		margin-left: 18px
 	.photo

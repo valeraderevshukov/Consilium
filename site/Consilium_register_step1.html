@@ -186,7 +186,7 @@
 		<div class="cab__in">
 			<!-- tab -->
 			<div class="tab is-data">
-				<ul class="tab__list">
+				<ul class="tab__list is-hide-mob">
 					<li class="tab__item is-active">
 						<a href="#" class="tab__link">
 							<span class="tab__step">1</span>
@@ -207,6 +207,12 @@
 					</li>
 				</ul>
 				<div class="tab__in">
+					<div class="tab__item is-active is-show-mob">
+						<a href="#" class="tab__link">
+							<span class="tab__step">1</span>
+							<span>Регистрационные данные</span>
+						</a>
+					</div>
 					<div class="tab__cont">
 						<!-- details -->
 						<div class="details">
@@ -216,19 +222,21 @@
 								<div class="wrapper">
 									<form action="" class="form">
 										<div class="form__top">
-											<span>Я</span>
-											<label class="radiobox">
-												<input type="radio" name="person">
-												<span>Пациент</span>
-											</label>
-											<label class="radiobox">
-												<input type="radio" name="person" checked>
-												<span>Специалист</span>
-											</label>
-											<label class="radiobox">
-												<input type="radio" name="person">
-												<span>Юридическое лицо</span>
-											</label>
+											<span class="form__td">Я</span>
+											<div class="form__td">
+												<label class="radiobox">
+													<input type="radio" name="person">
+													<span>Пациент</span>
+												</label>
+												<label class="radiobox">
+													<input type="radio" name="person" checked>
+													<span>Специалист</span>
+												</label>
+												<label class="radiobox">
+													<input type="radio" name="person">
+													<span>Юридическое лицо</span>
+												</label>
+											</div>
 										</div>
 										<div class="form__row">
 											<label for="email" class="form__label">Введите email</label>
@@ -254,6 +262,20 @@
 									</form>
 								</div>
 							</div>
+						</div>
+					</div>
+					<div class="tab__block is-show-mob">
+						<div class="tab__item">
+							<a href="#" class="tab__link">
+								<span class="tab__step">2</span>
+								<span>Информация о вас</span>
+							</a>
+						</div>
+						<div class="tab__item">
+							<a href="#" class="tab__link">
+								<span class="tab__step">3</span>
+								<span>Мой график</span>
+							</a>
 						</div>
 					</div>
 				</div>

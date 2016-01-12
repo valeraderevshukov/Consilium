@@ -74,14 +74,18 @@ a
 // tab
 .tab
 	padding: 33px 0 60px
+	+r(768)
+		padding: 35px 0 
 	&.is-data
 		.tab__item
 			margin-left: 1%
 			width: calc(32.66%)
+			+r(768)
+				margin: 0
+				width: 100%
+				display: block
 			&:first-child
 				margin-left: 0
-		.tab__cont
-			display: block
 	& + .banner
 		margin: -30px 0 30px
 	&__list
@@ -100,6 +104,14 @@ a
 		transition: background .2s
 		box-shadow: 0 2px 6.7px 0.3px rgba(0, 0, 0, 0.15)
 		display: inline-block
+		+r(768)
+			margin: 0
+			width: 100%
+			font-size: 18px
+			text-align: left
+			border-radius: 0
+			border-top: 1px solid #86d0cf
+			display: block
 		&:before
 			position: absolute
 			content: ''
@@ -108,12 +120,17 @@ a
 			right: -3px
 			height: 6px
 			background: #fff
+			+r(768)
+				display: none
 		&:active
 			background: #fff
 			&:before
 				background: #fff
 			.tab__link
 				color: $c_body
+			.tab__step
+				background: $l_green
+				color: #fff
 		+rm(1024)
 			&:hover
 				z-index: 2
@@ -127,6 +144,8 @@ a
 					color: #fff
 		&:first-child
 			margin-left: 0
+			+r(768)
+				border-top: none
 			&:before
 				left: 0
 		&:last-child
@@ -135,6 +154,12 @@ a
 		&.is-active
 			background: #fff
 			z-index: 2
+			+r(768)
+				z-index: 0
+				border-radius: 5px 5px 0 0
+				border-bottom: 1px solid $bord_cab
+				box-shadow: 0 7px 0 #fff, 0 2px 6.7px 0.3px rgba(0, 0, 0, 0.15)
+				overflow: hidden
 			&:before
 				background: #fff
 			.tab__link
@@ -148,6 +173,13 @@ a
 		line-height: 46px
 		transition: color .2s
 		display: block
+		+r(768)
+			padding: 0 45px 0 30px
+			height: 60px
+			line-height: 60px
+		span
+			+r(768)
+				vertical-align: middle
 	&__step
 		margin-right: 10px
 		height: 23px
@@ -166,8 +198,41 @@ a
 		box-shadow: 0 2px 6.7px 0.3px rgba(0, 0, 0, 0.15)
 		z-index: 1
 		background: #fff
+		+r(768)
+			padding: 0
+			box-shadow: none
+			background: none
 	&__cont
-		display: none
+		+r(768)
+			overflow: hidden
+			border-radius: 0 0 5px 5px
+			box-shadow: 0 2px 5.7px 0.3px rgba(0, 0, 0, 0.2)
+			background: #fff
+	&__block
+		margin: 10px 0
+		overflow: hidden
+		border-radius: 5px 
+		box-shadow: 0 2px 5.7px 0.3px rgba(0, 0, 0, 0.2)
+		&:first-child
+			margin-top: 0
+		&:last-child
+			margin-bottom: 0
+		.tab__item
+			box-shadow: none
+	.wrapper
+		+r(768)
+			border-radius: 0
+			border-left: none
+			border-right: none
+			.form
+				border-radius: 0
+	.title-small
+		+r(768)
+			padding: 27px 30px 0
+			text-align: left
+	.btn
+		+r(768)
+			width: 100%
 	strong
 		+r700
 
@@ -1150,10 +1215,15 @@ a
 .details
 	&__in
 		margin: 0 auto
-		max-width: 508px
+		width: 508px
+		+r(768)
+			width: 100%
 	.title-small
 		margin-bottom: 27px
 		text-align: center
+	.wrapper
+		+r(768)
+			border-bottom: none
 
 // inform
 .inform
@@ -1235,16 +1305,25 @@ a
 		width: 31%
 		+box
 		+clr
+		+r(1200)
+			width: 26%
 	&__right
 		float: right
 		width: 69%
 		+box
 		border-left: 1px solid $bord_cab
+		+r(1200)
+			width: 74%
 	&__col
 		float: left
 		width: 56%
+		+r(1200)
+			width: 100%
 		&:first-child
 			width: 44%
+			+r(1200)
+				margin-bottom: 16px
+				width: 100%
 		.radiobox
 			margin: 16px 0 0
 			display: block

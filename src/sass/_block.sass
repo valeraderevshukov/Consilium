@@ -414,7 +414,7 @@ input[name^='password']
 					border-color: $l_green-2
 					background: $l_green-2
 		span
-			padding-left: 38px 
+			padding-left: 36px 
 			line-height: 26px
 			&:before
 				width: 26px
@@ -550,8 +550,25 @@ input[name^='password']
 			display: inline-block
 	&__floor
 		margin: 16px 0 15px
+		+r(1278)
+			display: table
+			.form__td
+				display: table-cell
+			.radiobox
+				margin-top: 9px
+				display: block
+				&:first-child
+					margin-top: 0
 	&__date
 		margin-bottom: 19px
+		+r(1278)
+			margin-bottom: 9px
+			.dat-text
+				display: block
+			.datepicker
+				float: none
+				margin-top: 9px
+				width: 100%
 	&__foot
 		margin-top: 15px
 		text-align: right
@@ -584,8 +601,9 @@ input[name^='password']
 				&:hover
 					border-color: $blue
 	&__td
-		+r(768)
-			vertical-align: top 
+		vertical-align: top
+		display: inline-block
+		+r(768) 
 			display: table-cell
 		.radiobox
 			+r(768)
@@ -598,14 +616,24 @@ input[name^='password']
 	.photo
 		float: left
 		margin: -11px 0 -19px -6px
+		+r(768)
+			float: none
+			margin: -11px auto 0
+			display: block
 		& + .btn
 			margin-top: 47px
 			float: right
+			+r(768)
+				margin-top: 30px
 	.datepicker
 		float: right
 		width: 167px
 	.alt
 		margin-left: 5px
+		+r(1278)
+			margin-left: 0
+		+r(1200)
+			margin-left: 5px
 
 // photo
 .photo

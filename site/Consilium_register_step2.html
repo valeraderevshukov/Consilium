@@ -186,7 +186,7 @@
 		<div class="cab__in">
 			<!-- tab -->
 			<div class="tab is-data">
-				<ul class="tab__list">
+				<ul class="tab__list is-hide-mob">
 					<li class="tab__item">
 						<a href="#" class="tab__link">
 							<span class="tab__step">1</span>
@@ -207,73 +207,87 @@
 					</li>
 				</ul>
 				<div class="tab__in">
+					<div class="tab__block">
+						<div class="tab__item">
+							<a href="#" class="tab__link">
+								<span class="tab__step">1</span>
+								<span>Регистрационные данные</span>
+							</a>
+						</div>
+					</div>
+					<div class="tab__item is-active is-show-mob">
+						<a href="#" class="tab__link">
+							<span class="tab__step">2</span>
+							<span>Информация о вас</span>
+						</a>
+					</div>
 					<div class="tab__cont">
 						<!-- inform -->
 						<div class="inform">
 							<form action="">
 								<div class="inform__in">
 									<div class="inform__left">
-									<h3 class="title-small">Мое фото</h3>
-									<!-- wrapper -->
-									<div class="wrapper">
-										<div class="form">
-											<div class="photo">
-												<img src="img/photo.png" alt="img">
+										<h3 class="title-small">Мое фото</h3>
+										<!-- wrapper -->
+										<div class="wrapper">
+											<div class="form">
+												<div class="photo">
+													<img src="img/photo.png" alt="img">
+												</div>
+												<button class="btn btn_average" type="button">загрузить фото</button>
 											</div>
-											<button class="btn btn_average" type="button">загрузить фото</button>
 										</div>
-									</div>
-									<h3 class="title-small">Стоимость часа</h3>
-									<!-- wrapper -->
-									<div class="wrapper">
-										<div class="form">
-											<div class="cost">
-												<div class="cost__row">
-													<div class="cost__text">Стоимость 1 консультации $</div>
-													<div class="cost__right">
-														<input type="text" class="input">
+										<h3 class="title-small">Стоимость часа</h3>
+										<!-- wrapper -->
+										<div class="wrapper">
+											<div class="form">
+												<div class="cost">
+													<div class="cost__row">
+														<div class="cost__text">Стоимость 1 консультации $</div>
+														<div class="cost__right">
+															<input type="text" class="input">
+														</div>
+													</div>
+													<div class="cost__row">
+														<div class="cost__text">Пакет консультаций</div>
+														<div class="cost__right">
+															<input type="text" class="input">
+															<div class="cost__curr">$</div>
+															<input type="text" class="input">
+														</div>
 													</div>
 												</div>
-												<div class="cost__row">
-													<div class="cost__text">Пакет консультаций</div>
-													<div class="cost__right">
-														<input type="text" class="input">
-														<div class="cost__curr">$</div>
-														<input type="text" class="input">
-													</div>
-												</div>
 											</div>
 										</div>
-									</div>
-									<h3 class="title-small">Реквизиты карты</h3>
-									<!-- wrapper -->
-									<div class="wrapper">
-										<div class="form">
-											<div class="form__field">
-												<label for="card-numb" class="form__label">Введите номер карты для вывода средств</label>
-												<div class="alt">
-													<i class="ico ico_info"></i>
-													<div class="alt__block">Номер карты содержит 12 цифр, указанных на вашей пластиковой карте</div>
-												</div>
-											</div>
-											<input type="text" name="card-numb" id="card-numb" class="input">
-										</div>
-									</div>
-									<h3 class="title-small">промо-код</h3>
-									<!-- wrapper -->
-									<div class="wrapper">
-										<div class="form">
-											<div class="form__row">
+										<h3 class="title-small">Реквизиты карты</h3>
+										<!-- wrapper -->
+										<div class="wrapper">
+											<div class="form">
 												<div class="form__field">
-													<label for="promo-code" class="form__label">Введите промо-код</label>
+													<label for="card-numb" class="form__label">Введите номер карты для вывода средств</label>
+													<div class="alt">
+														<i class="ico ico_info"></i>
+														<div class="alt__block">Номер карты содержит 12 цифр, указанных на вашей пластиковой карте</div>
+													</div>
 												</div>
-												<input type="text" name="promo-code" id="promo-code" class="input">
-											</div>
-											<div class="form__foot">
-												<button class="btn btn_average" type="button">активировать</button>
+												<input type="text" name="card-numb" id="card-numb" class="input">
 											</div>
 										</div>
-									</div>
+										<h3 class="title-small">промо-код</h3>
+										<!-- wrapper -->
+										<div class="wrapper">
+											<div class="form">
+												<div class="form__row">
+													<div class="form__field">
+														<label for="promo-code" class="form__label">Введите промо-код</label>
+													</div>
+													<input type="text" name="promo-code" id="promo-code" class="input">
+												</div>
+												<div class="form__foot">
+													<button class="btn btn_average" type="button">активировать</button>
+												</div>
+											</div>
+										</div>
 									</div>
 									<div class="inform__right">
 										<div class="inform__wrap">
@@ -292,15 +306,17 @@
 															<input type="text" class="input" placeholder="Отчество">
 														</div>
 														<div class="form__floor">
-															<strong>Пол:</strong>
-															<label class="radiobox" >
-																<input type="radio" name="floor" checked>
-																<span>Мужчина</span>
-															</label>
-															<label class="radiobox">
-																<input type="radio" name="floor">
-																<span>Женщина</span>
-															</label>
+															<strong class="form__td">Пол:</strong>
+															<div class="form__td">
+																<label class="radiobox" >
+																	<input type="radio" name="floor" checked>
+																	<span>Мужчина</span>
+																</label>
+																<label class="radiobox">
+																	<input type="radio" name="floor">
+																	<span>Женщина</span>
+																</label>
+															</div>
 														</div>
 														<div class="form__date">
 															<strong class="dat-text">Дата рождения:</strong>
@@ -529,6 +545,14 @@
 									<button class="btn btn_middle" type="submit">Дальше</button>
 								</div>
 							</form>
+						</div>
+					</div>
+					<div class="tab__block">
+						<div class="tab__item">
+							<a href="#" class="tab__link">
+								<span class="tab__step">3</span>
+								<span>Мой график</span>
+							</a>
 						</div>
 					</div>
 				</div>

@@ -55,6 +55,8 @@ body
 	font-size: 15px
 	line-height: 22px
 	background: #fff
+	+r(768)
+		font-size: 18px
 	&.is-hidden
 		overflow: hidden
 
@@ -1306,10 +1308,20 @@ a
 .schedule
 	+r400
 	&__top
+		+r(768)
+			padding: 25px 29px 5px
 		& > strong
 			line-height: 26px
 			vertical-align: top
 			display: inline-block
+			+r(768)
+				display: block
+		.radiobox
+			+r(768)
+				margin: 10px 0 0
+				display: block
+				&:first-child
+					margin-top: 0
 	.radiobox
 		margin-left: 20px
 		&:first-child
@@ -1320,9 +1332,14 @@ a
 	+clr
 	.title-small
 		float: left
+		+r(768)
+			margin: 0
+			padding: 0
 	.btn
 		margin: -4px 0
 		float: right
+		+r(768)
+			margin: 10px 0 0
 
 // graph
 .graph
@@ -1331,6 +1348,8 @@ a
 	+box
 	background: $light
 	+clr
+	+r(480)
+		font-size: 18px
 	&:first-child
 		border-top: none
 	&__left
@@ -1339,6 +1358,11 @@ a
 		width: 31%
 		+box
 		+clr
+		+r(1200)
+			width: 26%
+			+r(1024)
+				width: 100%
+				border-bottom: 1px solid $bord_cab
 		&:before
 			position: absolute
 			content: ''
@@ -1347,14 +1371,18 @@ a
 			bottom: 0
 			width: 1px
 			background: $bord_cab
-		+r(1200)
-			width: 26%
+			+r(1200)
+				left: 26%
+			+r(1024)
+				display: none
 	&__right
 		float: right
 		width: 69%
 		+box
 		+r(1200)
 			width: 74%
+			+r(1024)
+				width: 100%
 	&__col
 		float: left
 		width: 56%
@@ -1363,11 +1391,15 @@ a
 		&:first-child
 			width: 44%
 			+r(1200)
-				margin-bottom: 16px
+				margin-bottom: 10px
 				width: 100%
 		.radiobox
 			margin: 16px 0 0
 			display: block
+			+r(768)
+				margin: 10px 0 0
+				&:first-child
+					margin-top: 0
 			&:first-child
 				margin-top: 0
 	&__row
@@ -1394,31 +1426,72 @@ a
 			margin: 0 0 0 18px
 			vertical-align: top
 			display: inline-block
+			+r(768)
+				margin: 10px 0 0
+				display: block
+				&:first-child
+					margin-top: 0
 			&:first-child
 				margin-left: 0
-	&__text
+	.graph__text
 		margin: 0 5px
 		line-height: 38px
 		vertical-align: top
 		display: inline-block
+		&.is-w70
+			& + .datepicker,
+			& + .datepicker + .graph__text + .datepicker
+				+r(768)
+					width: calc(50% - 62px)
 		&:first-child
 			margin-left: 0
+		& + .select,
+		& + .datepicker
+			+r(768)
+				width: calc(50% - 27px)
+		& + .select + .graph__text + .select
+			+r(768)
+				width: calc(50% - 28px)
 	.datepicker
 		width: 118px
+		+r(768)
+			width: 100%
 		& + .btn
 			margin: 3px 0 0 10px
+			+r(768)
+				margin: 10px 0 0
 	.checkbox
 		margin-left: 18px
 		vertical-align: top
 		display: inline-block
+		+r(768)
+			margin-left: 13px
+			&:first-child
+				margin-left: 0
 		&:first-child
 			margin-left: 0
+		&:last-child
+			+r(625)
+				margin: 10px 0 0 0
+				display: block
+			+r(552)
+				display: inline-block
+		&:nth-last-child(2)
+			+r(552)
+				margin: 10px 13px 0 0
 	.select
 		width: 88px
 		vertical-align: top
 		display: inline-block
+		+r(768)
+			width: calc(50% - 19px)
+		& + .graph__text + .select
+			+r(768)
+				width: calc(50% - 18px)
 		& + .btn
 			margin: 3px 0 0 10px
+			+r(768)
+				margin: 10px 0 0
 	.btn
 		min-width: 183px
 

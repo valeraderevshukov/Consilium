@@ -24,29 +24,74 @@
 	+r400
 	font-size: 16px
 	border-radius: 5px
+	+r(768)
+		font-size: 18px
 	&.is-when
 		.graph__left
 			width: 38.4%
+			+r(1200)
+				width: 29.5%
+				+r(1024)
+					width: 100%
+					border-bottom: 1px solid $bord_cab
 			&:before
 				left: 38.4%
+				+r(1200)
+					left: 29.5%
+				+r(1024)
+					display: none
 			.graph__col
 				width: 64%
+				+r(1200)
+					width: 100%
 				&:first-child
 					width: 36%
+					+r(1200)
+						width: 100%
 		.graph__right
 			width: 61.6%
+			+r(1200)
+				width: 70.5%
+				+r(1024)
+					width: 100%
 			.graph__col
 				width: calc(100% - 106px)
+				+r(1024)
+					width: 100%
 				&:first-child
 					width: 106px
+					+r(1024)
+						width: 100%
+			.checkbox
+				+r(1200)
+					margin-left: 13px
+					&:first-child
+						margin-left: 0
+				&:last-child
+					+r(625)
+						margin: 10px 0 0 0
+						display: block
+					+r(552)
+						display: inline-block
+				&:nth-last-child(2)
+					+r(552)
+						margin: 10px 13px 0 0
 		.graph__field
 			margin-top: 28px
+			+r(1024)
+				margin-top: 15px
+				&:first-child
+					margin-top: 0
 			&:first-child
 				margin-top: 0
 		.graph__col
 			width: calc(100% - 125px)
+			+r(1024)
+				width: 100%
 			&:first-child
 				width: 125px
+				+r(1024)
+					width: 100%
 	.field
 		width: 100%
 		color: $c_body
@@ -727,12 +772,18 @@ input[name^='password']
 		border-radius: 5px
 		box-shadow: 0 -1px 7px rgba(0, 0, 0, 0.23)
 		background: #fff
+		+r(1024)
+			left: initial
+			right: -10px
 		&:before
 			position: absolute
 			content: ''
 			left: 155px
 			bottom: -7px
 			+arr(12,7,#fff,b)
+			+r(768)
+				left: initial
+				right: 13px
 	.ico
 		display: block
 

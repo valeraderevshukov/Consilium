@@ -405,8 +405,10 @@ a { text-decoration: none; }
 .graph:first-child { border-top: none; }
 .graph__left { float: left; padding: 25px; width: 31%; box-sizing: border-box; *zoom: 1; }
 .graph__left:after { content: " "; display: table; clear: both; }
+
 .graph__left:before { position: absolute; content: ""; left: 31%; top: 0; bottom: 0; width: 1px; background: #e6e6e6; }
 .graph__right { float: right; width: 69%; box-sizing: border-box; }
+
 .graph__col { float: left; width: 56%; }
 .graph__col:first-child { width: 44%; }
 .graph__col .radiobox { margin: 16px 0 0; display: block; }
@@ -424,8 +426,8 @@ a { text-decoration: none; }
 .graph__in:after { content: " "; display: table; clear: both; }
 .graph__in .radiobox { margin: 0 0 0 18px; vertical-align: top; display: inline-block; }
 .graph__in .radiobox:first-child { margin-left: 0; }
-.graph__text { margin: 0 5px; line-height: 38px; vertical-align: top; display: inline-block; }
-.graph__text:first-child { margin-left: 0; }
+.graph .graph__text { margin: 0 5px; line-height: 38px; vertical-align: top; display: inline-block; }
+.graph .graph__text:first-child { margin-left: 0; }
 .graph .datepicker { width: 118px; }
 .graph .datepicker + .btn { margin: 3px 0 0 10px; }
 .graph .checkbox { margin-left: 18px; vertical-align: top; display: inline-block; }
@@ -524,6 +526,7 @@ a { text-decoration: none; }
 .info__item { float: left; padding-right: 20px; width: 25%; box-sizing: border-box; *zoom: 1; }
 .info__item:after { content: " "; display: table; clear: both; }
 .info__item:first-child .info__img { padding-right: 15px; }
+
 .info__img { float: left; width: 90px; text-align: center; box-sizing: border-box; }
 .info__right { overflow: hidden; }
 .info__title { margin: -2px 0 5px; padding-right: 34px; font-family: "Roboto Condensed", Arial, sans-serif; font-weight: 700; font-size: 22px; line-height: 1.1; }
@@ -578,10 +581,12 @@ a { text-decoration: none; }
 
 .wrapper { margin-top: 20px; border: 1px solid #e6e6e6; font-family: "Roboto Condensed", Arial, sans-serif; font-weight: 400; font-size: 16px; border-radius: 5px; }
 .wrapper.is-when .graph__left { width: 38.4%; }
+
 .wrapper.is-when .graph__left:before { left: 38.4%; }
 .wrapper.is-when .graph__left .graph__col { width: 64%; }
 .wrapper.is-when .graph__left .graph__col:first-child { width: 36%; }
 .wrapper.is-when .graph__right { width: 61.6%; }
+
 .wrapper.is-when .graph__right .graph__col { width: calc(100% - 106px); }
 .wrapper.is-when .graph__right .graph__col:first-child { width: 106px; }
 .wrapper.is-when .graph__field { margin-top: 28px; }
@@ -1024,6 +1029,15 @@ body.is-open-menu .btn-search { opacity: 0; z-index: -1; }
  *{ -webkit-text-size-adjust: none; } }
 @media only screen and (max-width: 1024px){
  .in, .cab__in, .info__in, .amount__in, .center, .breadcrumbs ul, .links__in, .header__in, .filter__in, .drop__in, .footer__in{ padding: 0 30px; }
+ .graph__left:before{ display: none; }
+ .wrapper.is-when .graph__left:before{ display: none; }
+ .wrapper.is-when .graph__right .graph__col{ width: 100%; }
+ .wrapper.is-when .graph__right .graph__col:first-child{ width: 100%; }
+ .wrapper.is-when .graph__field{ margin-top: 15px; }
+ .wrapper.is-when .graph__field:first-child{ margin-top: 0; }
+ .wrapper.is-when .graph__col{ width: 100%; }
+ .wrapper.is-when .graph__col:first-child{ width: 100%; }
+ .alt__block{ left: initial; right: -10px; }
  .header{ border-bottom: 1px solid #e5e5e5; }
  .header__in{ padding-top: 17px; }
  .header__right{ float: none; width: 100%; -webkit-order: 1; -ms-flex-order: 1; order: 1; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-flow: row wrap; -ms-flex-flow: row wrap; flex-flow: row wrap; }
@@ -1043,6 +1057,7 @@ body.is-open-menu .btn-search { opacity: 0; z-index: -1; }
  .dropdown__list{ left: 30px; right: 30px; margin-top: 0; }
  .btn-menu, .btn-search{ display: block; } }
 @media only screen and (max-width: 768px){
+ body{ font-size: 18px; }
  .tab{ padding: 35px 0; }
  .tab.is-data .tab__item{ margin: 0; width: 100%; display: block; }
  .tab__item{ margin: 0; width: 100%; font-size: 18px; text-align: left; border-radius: 0; border-top: 1px solid #86d0cf; display: block; }
@@ -1063,10 +1078,28 @@ body.is-open-menu .btn-search { opacity: 0; z-index: -1; }
  .inform__bott{ margin-top: 0; }
  .inform .inform__foot{ margin: 0; padding: 30px; border-top: none; }
  .inform .title-small{ margin-top: 0; }
+ .schedule__top{ padding: 25px 29px 5px; }
+ .schedule__top > strong{ display: block; }
+ .schedule__top .radiobox{ margin: 10px 0 0; display: block; }
+ .schedule__top .radiobox:first-child{ margin-top: 0; }
+ .add-top .title-small{ margin: 0; padding: 0; }
+ .add-top .btn{ margin: 10px 0 0; }
+ .graph__col .radiobox{ margin: 10px 0 0; }
+ .graph__col .radiobox:first-child{ margin-top: 0; }
+ .graph__in .radiobox{ margin: 10px 0 0; display: block; }
+ .graph__in .radiobox:first-child{ margin-top: 0; }
+ .graph .graph__text.is-w70 + .datepicker, .graph .graph__text.is-w70 + .datepicker + .graph__text + .datepicker{ width: calc(50% - 62px); }
+ .graph .graph__text + .select, .graph .graph__text + .datepicker{ width: calc(50% - 27px); }
+ .graph .graph__text + .select + .graph__text + .select{ width: calc(50% - 28px); }
+ .graph .datepicker{ width: 100%; }
+ .graph .datepicker + .btn{ margin: 10px 0 0; }
+ .graph .checkbox{ margin-left: 13px; }
+ .graph .checkbox:first-child{ margin-left: 0; }
+ .graph .select{ width: calc(50% - 19px); }
+ .graph .select + .graph__text + .select{ width: calc(50% - 18px); }
+ .graph .select + .btn{ margin: 10px 0 0; }
  .info{ padding-bottom: 28px; }
  .info__in{ padding: 0; }
- .info__item{ margin-top: 32px; padding: 30px 60px 0; width: 100%; border-top: 1px solid #597fbb; }
- .info__item:first-child{ padding-top: 0; border-top: none; }
  .info__img{ width: 135px; }
  .info__title{ padding-right: 0; font-size: 24px; }
  .info__text{ font-size: 17px; }
@@ -1075,6 +1108,7 @@ body.is-open-menu .btn-search { opacity: 0; z-index: -1; }
  .necess .title{ margin-bottom: 15px; }
  .video{ padding: 32px 0 80px; }
  .amount__bot{ margin-top: 30px; }
+ .wrapper{ font-size: 18px; }
  .title{ font-size: 50px; }
  .title-small{ font-size: 22px; font-family: "Roboto Condensed", Arial, sans-serif; font-weight: 700; }
  .form__top{ display: table; }
@@ -1083,6 +1117,7 @@ body.is-open-menu .btn-search { opacity: 0; z-index: -1; }
  .form__td .radiobox:first-child{ margin-top: 0; }
  .form .photo{ float: none; margin: -11px auto 0; display: block; }
  .form .photo + .btn{ margin-top: 30px; }
+ .alt__block:before{ left: initial; right: 13px; }
  .is-hide-mob{ display: none !important; }
  .is-show-mob{ display: block !important; }
  .drop__block{ max-height: 200px; }
@@ -1138,9 +1173,10 @@ body.is-open-menu .btn-search { opacity: 0; z-index: -1; }
  .inform__left{ width: 100%; font-size: 0; }
  .inform__right{ margin-top: 23px; width: 100%; }
  .graph__left{ width: 26%; }
+ .graph__left:before{ left: 26%; }
  .graph__right{ width: 74%; }
  .graph__col{ width: 100%; }
- .graph__col:first-child{ margin-bottom: 16px; width: 100%; }
+ .graph__col:first-child{ margin-bottom: 10px; width: 100%; }
  .ad{ padding-left: 10px; }
  .info__item:first-child .info__img{ padding-right: 0; }
  .info__item{ margin: 25px 0 0; width: 50%; }
@@ -1149,6 +1185,13 @@ body.is-open-menu .btn-search { opacity: 0; z-index: -1; }
  .necess__item:first-child{ margin-top: 0; }
  .amount__item{ margin-left: 30px; }
  .out{ min-height: auto; padding-bottom: 0; }
+ .wrapper.is-when .graph__left{ width: 29.5%; }
+ .wrapper.is-when .graph__left:before{ left: 29.5%; }
+ .wrapper.is-when .graph__left .graph__col{ width: 100%; }
+ .wrapper.is-when .graph__left .graph__col:first-child{ width: 100%; }
+ .wrapper.is-when .graph__right{ width: 70.5%; }
+ .wrapper.is-when .graph__right .checkbox{ margin-left: 13px; }
+ .wrapper.is-when .graph__right .checkbox:first-child{ margin-left: 0; }
  .form .alt{ margin-left: 5px; }
  .header{ font-size: 14px; }
  .nav__item{ font-size: 14px; padding: 0 8px; }
@@ -1167,12 +1210,38 @@ body.is-open-menu .btn-search { opacity: 0; z-index: -1; }
 @media only screen and (max-width: 1200px) and (max-width: 768px){
  .inform__right{ margin-top: 0; }
  .info__item:nth-child(2){ margin-top: 32px; }
+ .info__item{ margin-top: 32px; padding: 30px 60px 0; width: 100%; border-top: 1px solid #597fbb; }
+ .info__item:first-child{ padding-top: 0; border-top: none; }
  .footer__right{ margin-top: 0; } }
 @media only screen and (max-width: 900px){
  .inform__col{ margin: 23px 0 0; width: 100%; }
  .inform__col:first-child{ margin-top: 0; } }
 @media only screen and (max-width: 900px) and (max-width: 768px){
  .inform__col{ margin-top: 0; } }
+@media only screen and (max-width: 480px){
+ .graph{ font-size: 18px; }
+ .drop ul{ width: 100%; } }
+@media only screen and (max-width: 1200px) and (max-width: 1024px){
+ .graph__left{ width: 100%; border-bottom: 1px solid #e6e6e6; }
+ .graph__right{ width: 100%; }
+ .amount__item{ margin-left: 10px; }
+ .wrapper.is-when .graph__left{ width: 100%; border-bottom: 1px solid #e6e6e6; }
+ .wrapper.is-when .graph__right{ width: 100%; }
+ .nav__item{ padding: 15px 33px; border-top: 1px solid #e5e5e5; display: block; }
+ .nav__item:first-child{ padding-left: 33px; }
+ .bal .bal__plus{ margin-top: 5px; }
+ .lang, .bal, .cabinet{ padding: 15px 33px; width: 100%; border-top: 1px solid #e5e5e5; display: block; }
+ .filter .drop{ position: relative; margin: 0 0 13px; width: 100%; max-width: 100%; display: block; }
+ .filter .drop__block{ margin-top: 4px; }
+ .filter .btn{ margin: 0; width: 100%; display: block; } }
+@media only screen and (max-width: 625px){
+ .graph .checkbox:last-child{ margin: 10px 0 0 0; display: block; }
+ .wrapper.is-when .graph__right .checkbox:last-child{ margin: 10px 0 0 0; display: block; } }
+@media only screen and (max-width: 552px){
+ .graph .checkbox:last-child{ display: inline-block; }
+ .graph .checkbox:nth-last-child(2){ margin: 10px 13px 0 0; }
+ .wrapper.is-when .graph__right .checkbox:last-child{ display: inline-block; }
+ .wrapper.is-when .graph__right .checkbox:nth-last-child(2){ margin: 10px 13px 0 0; } }
 @media only screen and (max-width: 960px){
  .ad{ padding: 34px 0; font-size: 44px; line-height: 40px; }
  .ad__in{ padding: 0 30px 343px; }
@@ -1191,15 +1260,6 @@ body.is-open-menu .btn-search { opacity: 0; z-index: -1; }
  .video .slick-prev{ left: -50px; }
  .filter .drop{ max-width: 170px; }
  .numb{ margin-left: 50px; } }
-@media only screen and (max-width: 1200px) and (max-width: 1024px){
- .amount__item{ margin-left: 10px; }
- .nav__item{ padding: 15px 33px; border-top: 1px solid #e5e5e5; display: block; }
- .nav__item:first-child{ padding-left: 33px; }
- .bal .bal__plus{ margin-top: 5px; }
- .lang, .bal, .cabinet{ padding: 15px 33px; width: 100%; border-top: 1px solid #e5e5e5; display: block; }
- .filter .drop{ position: relative; margin: 0 0 13px; width: 100%; max-width: 100%; display: block; }
- .filter .drop__block{ margin-top: 4px; }
- .filter .btn{ margin: 0; width: 100%; display: block; } }
 @media only screen and (max-width: 1200px) and (max-width: 960px){
  .amount__item{ margin: 38px auto 0; display: block; } }
 @media only screen and (max-width: 500px){
@@ -1213,8 +1273,6 @@ body.is-open-menu .btn-search { opacity: 0; z-index: -1; }
  .form__date .dat-text{ display: block; }
  .form__date .datepicker{ float: none; margin-top: 9px; width: 100%; }
  .form .alt{ margin-left: 0; } }
-@media only screen and (max-width: 480px){
- .drop ul{ width: 100%; } }
 @media only screen and (max-width: 1280px) and (max-width: 768px){
  .numb{ margin-left: 0; padding-left: 0; } }
 

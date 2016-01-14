@@ -58,6 +58,7 @@ a { text-decoration: none; }
 .tab__block:first-child { margin-top: 0; }
 .tab__block:last-child { margin-bottom: 0; }
 .tab__block .tab__item { box-shadow: none; }
+.tab .title-small { font-family: "Roboto Condensed", Arial, sans-serif; font-weight: 700; }
 .tab strong { font-family: "Roboto Condensed", Arial, sans-serif; font-weight: 700; }
 
 .event { line-height: 1.3; }
@@ -399,24 +400,34 @@ a { text-decoration: none; }
 .add-top .title-small { float: left; }
 .add-top .btn { margin: -4px 0; float: right; }
 
-.graph { border-top: 1px solid #e6e6e6; box-sizing: border-box; background: #fafafa; *zoom: 1; }
+.graph { position: relative; border-top: 1px solid #e6e6e6; box-sizing: border-box; background: #fafafa; *zoom: 1; }
 .graph:after { content: " "; display: table; clear: both; }
 .graph:first-child { border-top: none; }
 .graph__left { float: left; padding: 25px; width: 31%; box-sizing: border-box; *zoom: 1; }
 .graph__left:after { content: " "; display: table; clear: both; }
-.graph__right { float: right; width: 69%; box-sizing: border-box; border-left: 1px solid #e6e6e6; }
+.graph__left:before { position: absolute; content: ""; left: 31%; top: 0; bottom: 0; width: 1px; background: #e6e6e6; }
+.graph__right { float: right; width: 69%; box-sizing: border-box; }
 .graph__col { float: left; width: 56%; }
 .graph__col:first-child { width: 44%; }
 .graph__col .radiobox { margin: 16px 0 0; display: block; }
 .graph__col .radiobox:first-child { margin-top: 0; }
-.graph__row { padding: 18px 29px; border-top: 1px solid #e6e6e6; }
+.graph__row { padding: 18px 29px; border-top: 1px solid #e6e6e6; *zoom: 1; }
+.graph__row:after { content: " "; display: table; clear: both; }
 .graph__row:first-child { border-top: none; }
 .graph__row.is-top { padding: 29px 29px 27px; }
-.graph__field { margin-top: 12px; }
+.graph__field { margin-top: 12px; *zoom: 1; }
+.graph__field:after { content: " "; display: table; clear: both; }
 .graph__field:first-child { margin-top: 0; }
+.graph__tr { margin-top: 10px; }
+.graph__tr:first-child { margin-top: 0; }
+.graph__in { padding: 26px 29px; *zoom: 1; }
+.graph__in:after { content: " "; display: table; clear: both; }
+.graph__in .radiobox { margin: 0 0 0 18px; vertical-align: top; display: inline-block; }
+.graph__in .radiobox:first-child { margin-left: 0; }
 .graph__text { margin: 0 5px; line-height: 38px; vertical-align: top; display: inline-block; }
 .graph__text:first-child { margin-left: 0; }
 .graph .datepicker { width: 118px; }
+.graph .datepicker + .btn { margin: 3px 0 0 10px; }
 .graph .checkbox { margin-left: 18px; vertical-align: top; display: inline-block; }
 .graph .checkbox:first-child { margin-left: 0; }
 .graph .select { width: 88px; vertical-align: top; display: inline-block; }
@@ -566,6 +577,17 @@ a { text-decoration: none; }
 .wrap:after { content: " "; display: table; clear: both; }
 
 .wrapper { margin-top: 20px; border: 1px solid #e6e6e6; font-family: "Roboto Condensed", Arial, sans-serif; font-weight: 400; font-size: 16px; border-radius: 5px; }
+.wrapper.is-when .graph__left { width: 38.4%; }
+.wrapper.is-when .graph__left:before { left: 38.4%; }
+.wrapper.is-when .graph__left .graph__col { width: 64%; }
+.wrapper.is-when .graph__left .graph__col:first-child { width: 36%; }
+.wrapper.is-when .graph__right { width: 61.6%; }
+.wrapper.is-when .graph__right .graph__col { width: calc(100% - 106px); }
+.wrapper.is-when .graph__right .graph__col:first-child { width: 106px; }
+.wrapper.is-when .graph__field { margin-top: 28px; }
+.wrapper.is-when .graph__field:first-child { margin-top: 0; }
+.wrapper.is-when .graph__col { width: calc(100% - 125px); }
+.wrapper.is-when .graph__col:first-child { width: 125px; }
 .wrapper .field { width: 100%; color: #333; transition: background 0.2s, color 0.2s; display: table; }
 .wrapper .field.is-active { color: #fff; background: #61c2c1; }
 .wrapper .field.is-active .btn-text, .wrapper .field.is-active a { color: #fff; }

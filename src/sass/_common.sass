@@ -231,6 +231,7 @@ a
 			.form
 				border-radius: 0
 	.title-small
+		+r700
 		+r(768)
 			padding: 27px 30px 0
 			margin-bottom: 27px
@@ -1325,6 +1326,7 @@ a
 
 // graph
 .graph
+	position: relative
 	border-top: 1px solid $bord_cab
 	+box
 	background: $light
@@ -1337,13 +1339,20 @@ a
 		width: 31%
 		+box
 		+clr
+		&:before
+			position: absolute
+			content: ''
+			left: 31%
+			top: 0
+			bottom: 0
+			width: 1px
+			background: $bord_cab
 		+r(1200)
 			width: 26%
 	&__right
 		float: right
 		width: 69%
 		+box
-		border-left: 1px solid $bord_cab
 		+r(1200)
 			width: 74%
 	&__col
@@ -1364,14 +1373,29 @@ a
 	&__row
 		padding: 18px 29px
 		border-top: 1px solid $bord_cab
+		+clr
 		&:first-child
 			border-top: none
 		&.is-top
 			padding: 29px 29px 27px
 	&__field
 		margin-top: 12px
+		+clr
 		&:first-child
 			margin-top: 0
+	&__tr
+		margin-top: 10px
+		&:first-child
+			margin-top: 0
+	&__in
+		padding: 26px 29px
+		+clr
+		.radiobox
+			margin: 0 0 0 18px
+			vertical-align: top
+			display: inline-block
+			&:first-child
+				margin-left: 0
 	&__text
 		margin: 0 5px
 		line-height: 38px
@@ -1381,6 +1405,8 @@ a
 			margin-left: 0
 	.datepicker
 		width: 118px
+		& + .btn
+			margin: 3px 0 0 10px
 	.checkbox
 		margin-left: 18px
 		vertical-align: top

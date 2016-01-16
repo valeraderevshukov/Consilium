@@ -17,6 +17,8 @@
 // wrap
 .wrap
 	+clr
+	& + .banner
+		margin-top: 45px 
 
 .wrapper
 	margin-top: 20px
@@ -187,6 +189,53 @@
 	float: right
 	width: 25%
 	
+// col-left col-center col-right
+.col-left
+	float: left
+	margin-right: 50px
+	width: 26%
+	.unit
+		padding: 22px 20px
+		& + .unit
+			margin-top: 30px
+	.event + .event
+		margin-top: 12px
+
+.col-center
+	float: left
+	width: calc(46.5% - 50px)
+	line-height: 1.2
+	.title-h2
+		line-height: 1
+		&:first-child
+			margin-top: -5px
+	.title-small
+		margin: 30px 0 22px
+	.video
+		margin-top: 38px
+	p
+		margin-top: 20px
+		&:first-child
+			margin-top: 0
+	a
+		color: $blue
+		border-bottom: 1px solid transparent
+		line-height: 1.2
+		transition: border-color .2s
+		display: inline-block
+		&:hover
+			border-color: $blue
+
+.col-right
+	float: right
+	width: calc(27.4% - 27px)
+	.days
+		border-radius: 5px
+	.title-small
+		margin-bottom: 15px
+		&:first-child
+			margin-top: 7px
+
 // field
 .field
 	padding: 25px 29px
@@ -195,6 +244,26 @@
 	+clr
 	&:first-child
 		border-top: none
+	&__row
+		margin-top: 20px
+		+clr
+		&:first-child
+			margin-top: 0
+	&__col
+		float: left
+		width: 50%
+		p
+			margin-top: 6px
+			line-height: 1.2	
+			&:first-child
+				margin-top: 0
+
+.img
+	max-width: 100%
+	display: block
+	& + .unit
+		margin-top: 31px
+
 // btn
 .btn
 	padding: 0 30px
@@ -245,7 +314,7 @@
 		height: 48px
 		font-size: 16px
 		line-height: 48px
-	&_middle
+	&_middle 
 		height: 45px
 		line-height: 45px
 	&_big
@@ -332,22 +401,25 @@ button.btn
 	+r400
 	font-size: 41px
 	line-height: 57px
+
 .title-h4
 	+r700
 	text-transform: uppercase
 	font-size: 28px
 	line-height: 1.2
+
 .title-h5
 	+r700
 	font-size: 16px
+
 .title-small
-	+r400
+	+r700
 	font-size: 20px
 	text-transform: uppercase
 	line-height: 1.2
+	+clr
 	+r(768)
 		font-size: 22px
-		+r700
 	&.is-gray
 		color: $c_gray
 	&.is-blue
@@ -358,6 +430,11 @@ button.btn
 		display: inline-block
 	.btn.btn_average
 		margin: -9px 0 0 35px
+	.rating
+		float: right
+		margin: -2px 0 -5px
+		font-size: 26px
+		line-height: 1
 .title-cap
 	+r400
 	font-size: 16px
@@ -579,6 +656,10 @@ input[name^='password']
 // list-green
 .list-green
 	line-height: 1.3
+	li
+		margin-top: 5px
+		&:first-child
+			margin-top: 0
 	.ico
 		margin-right: 8px
 
@@ -847,6 +928,8 @@ input[name^='password']
 	background-repeat: no-repeat
 	background-position: 50% 50%
 	background-size: cover
+	& + .reviews
+		margin-top: 38px
 
 // rating
 .rating
@@ -1105,9 +1188,52 @@ input[name^='password']
 		&:first-child
 			margin-left: 0
 
+.row
+	margin-top: 20px
+	.title-small
+		margin-bottom: 5px
+	ul + p
+		margin-top: 4px
+	p
+		margin: 0
+
+.col
+	margin-left: 50px
+	vertical-align: top
+	display: inline-block
+	&:first-child
+		margin-left: 0
+	.title-h5
+		margin-top: 8px
+		&:first-child
+			margin-top: 0
+		& + p
+			margin-top: 2px
+			line-height: 1.2
+			&:first-child
+				margin-top: 0
+		& + ul
+			margin-top: 8px
+
 // text-right
 .text-right
 	text-align: right
+
+// take
+.take
+	margin-top: 8px
+	color: $blue
+	font-size: 13px
+	font-style: italic
+	letter-spacing: -.2px
+	line-height: 1.2
+	display: block
+	&:hover
+		span
+			border-color: $blue
+	span
+		border-bottom: 1px solid transparent
+		transition: border-color .2s
 
 .is-hide-mob
 	+r(768)

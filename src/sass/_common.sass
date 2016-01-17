@@ -90,9 +90,13 @@ a
 				margin-left: 0
 	& + .banner
 		margin: -30px 0 30px
+		+r(768)
+			margin-top: -5px
 	&__list
 		font-size: 0
 		width: 100%
+		+r(768)
+			display: none
 	&__item
 		position: relative
 		margin-left: 0.5%
@@ -126,6 +130,9 @@ a
 				display: none
 		&:active
 			background: #fff
+			.tab__link
+				&:before
+					+arr(13,7,#ccc,t)
 			&:before
 				background: #fff
 			.tab__link
@@ -133,6 +140,8 @@ a
 			.tab__step
 				background: $l_green
 				color: #fff
+				&:before
+					background: #fff
 		+rm(1024)
 			&:hover
 				z-index: 2
@@ -167,9 +176,13 @@ a
 				background: #fff
 			.tab__link
 				color: $c_body
+				&:before
+					+arr(13,7,#ccc,t)
 			.tab__step
 				background: $l_green
 				color: #fff
+				&:before
+					background: #fff
 	&__link
 		height: 46px
 		color: #fff
@@ -180,8 +193,16 @@ a
 			padding: 0 45px 0 30px
 			height: 60px
 			line-height: 60px
+			&:before
+				position: absolute
+				content: ''
+				top: 50%
+				right: 30px
+				margin-top: -3px
+				background: transparent
+				+arr(13,7,#fff,b)
 		span
-			+r(768)
+			+r(768) 
 				vertical-align: middle
 	&__step
 		margin-right: 10px
@@ -195,6 +216,16 @@ a
 		border-radius: 50%
 		background: #fff
 		display: inline-block
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			right: 30px
+			width: 13px
+			height: 13px
+			margin-top: -6px
+			transition: background .2s
+			background: $l_green
 	&__in
 		position: relative
 		padding: 35px 50px 50px
@@ -232,11 +263,6 @@ a
 			border-right: none
 			.form
 				border-radius: 0
-	.title-small
-		+r(768)
-			padding: 27px 30px 0
-			margin-bottom: 27px
-			text-align: left
 	.btn
 		+r(768)
 			height: 45px
@@ -275,6 +301,9 @@ a
 		font-size: 16px
 		vertical-align: top
 		display: inline-block
+		+r(1280)
+			margin: 10px 0 0
+			width: 100% !important
 		&:first-child
 			width: 23.8%
 			margin-left: 0
@@ -287,6 +316,13 @@ a
 			width: 16.4%
 		.btn
 			width: 100%
+			+r(1280)
+				width: auto
+				min-width: 208px
+				+r(1023)
+					margin: 0
+				+r(768)
+					width: 100%
 	&__row
 		font-size: 0
 	&__label
@@ -298,6 +334,12 @@ a
 	&__sel
 		float: right
 		width: calc(100% - 364px)
+		+r(768)
+			float: none
+			margin-top: 10px
+			padding: 0 30px
+			width: 100%
+			+box
 		.search
 			width: 100%
 	&__search
@@ -315,12 +357,38 @@ a
 	.filt__left
 		float: left
 		+clr
+		+r(768)
+			float: none
+			padding: 0 30px
+			width: 100%
+			+box
 		.filt__text
 			margin: 7px 12px 0 0
+			+r(768)
+				display: block
+			& + .datepicker
+				+r(768)
+					margin-top: 0
 		.datepicker
 			float: right
 			margin-left: 5px
 			width: 118px
+			+r(768)
+				margin: 10px 0 0
+				width: 100%
+	.filt__inl
+		float: right
+		+clr
+		+r(768)
+			float: none
+			margin-top: 5px
+		.datepicker
+			float: left
+			+r(768)
+				margin: 0 0 0 8px
+				width: calc(50% - 4px)
+				&:first-child
+					margin-left: 0
 	.select
 		display: block
 	.datepicker
@@ -392,8 +460,21 @@ a
 	&__col
 		float: left
 		width: 50%
+		+r(768)
+			width: 100%
+			& + .res__col
+				margin-top: 24px
 	&__bot
 		margin-top: 32px
+		+r(768)
+			margin: 30px -30px 0
+			padding: 25px 30px 0
+			border-top: 1px solid #e6e6e6
+		.btn
+			+r(1023)
+				min-width: 208px
+			+r(768)
+				width: 100%
 	.event
 		& + .event
 			margin-top: 24px
@@ -489,6 +570,9 @@ a
 // search
 .search
 	position: relative
+	& + .btn
+		+r(768)
+			margin-top: 10px
 	&__field
 		.input
 			padding-right: 35px
@@ -630,6 +714,10 @@ a
 	overflow: hidden
 	border: 1px solid $bord_cab
 	border-radius: 5px
+	+r(768)
+		border-radius: 0
+		border-left: none
+		border-right: none
 	.fc-toolbar
 		margin-bottom: 0
 		background: $bg_head_ful
@@ -673,6 +761,8 @@ a
 		padding: 12px 15px
 		padding-top: 6.5%
 		font-size: 24px
+		+r(768)
+			padding-top: 8.5%
 		&.fc-mon,
 		&.fc-tue,
 		&.fc-wed,
@@ -834,10 +924,18 @@ a
 		margin-bottom: 12px
 
 .days
+	position: relative
 	padding: 35px 49px 40px 45px
 	font-size: 0
 	background: $l_green-2
 	+box
+	.popup
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		margin-top: 53px
+		z-index: 2
 
 // day
 .day
@@ -1142,18 +1240,34 @@ a
 // topper
 .topper
 	+clr
+	+r(768)
+		padding: 25px 30px
 	& + .topper
 		margin-top: 20px
+		+r(768)
+			margin-top: 0
+			padding-top: 0
 	& + .filt
 		margin-top: 17px
+		+r(768)
+			margin-top: 0
 	&__left
 		float: left
+		+r(1024)
+			float: none
 	&__right
 		float: right
+		+r(1024)
+			float: none
+			margin-top: 10px
 		.btn
 			margin-top: -2px
 	.btn
 		margin-left: 2px
+		+r(768)
+			margin: 10px 0 0
+			&:first-child
+				margin-top: 0
 		&:first-child
 			margin-left: 0
 	.name
@@ -1161,31 +1275,62 @@ a
 
 // bill
 .bill
+	.field
+		table-layout: fixed
 	.td
-		width: 195px
+		width: 30%
+		+r(1024)
+			padding-right: 10px
+			width: 25%
+		&:nth-child(2)
+			+r(1024)
+				width: 33%
 		&:nth-child(3)
-			width: 435px
+			width: 66%
+			+r(1024)
+				width: 60%
 		&:nth-child(4)
-			width: 205px
+			width: 32%
 		&:last-child
-			width: 70px
+			width: 11% 
+			+r(1200)
+				width: 70px
+	.date
+		+r400
+		+r(960)
+			display: block
+			+r(768) 
+				font-size: inherit
+				display: inline-block
 
 // hist
 .hist
+	& + .pagin
+		+r(768)
+			margin-bottom: 24px
+	.field
+		table-layout: fixed
 	.td
+		+r(1200)
+			padding-right: 10px
 		&:first-child
-			width: 165px
+			width: 20%
+			+r(1024)
+				width: 130px
 		&:nth-child(2)
-			width: 292px
+			width: 35%
 		&:nth-child(3)
-			width: 302px
+			width: 36%
 		&:nth-child(4)
-			width: 270px
+			width: 32%
 		&:last-child
 			width: 72px
 	.select
 		margin-right: 10px
 		max-width: 248px
+		+r(768)
+			margin-top: 4px
+			max-width: 100%
 
 // patients
 .patients
@@ -1257,6 +1402,9 @@ a
 	.title-small
 		margin-bottom: 27px
 		text-align: center
+		+r(768)
+			padding: 27px 30px 0
+			text-align: left
 	.wrapper
 		+r(768)
 			border-bottom: none
@@ -1326,6 +1474,9 @@ a
 		margin-top: 23px
 		+r(768)
 			margin-top: 0
+			padding: 27px 30px 0
+			margin-bottom: 27px
+			text-align: left
 		&:first-child
 			margin-top: 0
 
@@ -1559,9 +1710,15 @@ a
 		+clr
 	&__left
 		float: left
+		+r(768)
+			float: none
 	&__right
 		float: right
 		text-align: right
+		+r(768)
+			float: none
+			margin-top: 25px
+			text-align: left
 		.btn
 			min-width: 230px
 	.list-green

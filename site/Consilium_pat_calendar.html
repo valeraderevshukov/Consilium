@@ -185,97 +185,102 @@
 	<section class="cab">
 		<div class="cab__in">
 			<!-- tab -->
-			<div class="tab is-data">
+			<div class="tab">
 				<ul class="tab__list">
+					<li class="tab__item">
+						<a href="#" class="tab__link">Регистратура</a>
+					</li>
 					<li class="tab__item is-active">
-						<a href="#" class="tab__link">
-							<span class="tab__step">1</span>
-							<span>Регистрационные данные</span>
-						</a>
+						<a href="#" class="tab__link">Календарь</a>
 					</li>
 					<li class="tab__item">
-						<a href="#" class="tab__link">
-							<span class="tab__step">2</span>
-							<span>Информация о вас</span>
-						</a>
+						<a href="#" class="tab__link">Мой счет</a>
+					</li>
+					<li class="tab__item"> 
+						<a href="#" class="tab__link">Мои файлы</a>
 					</li>
 					<li class="tab__item">
-						<a href="#" class="tab__link">
-							<span class="tab__step">3</span>
-							<span>Мой график</span>
-						</a>
+						<a href="#" class="tab__link">Мои пациенты</a>
+					</li> 
+					<li class="tab__item">
+						<a href="#" class="tab__link">Отзывы</a>
 					</li>
 				</ul>
 				<div class="tab__in">
-					<div class="tab__item is-active is-show-mob">
-						<a href="#" class="tab__link">
-							<span class="tab__step">1</span>
-							<span>Регистрационные данные</span>
-						</a>
+					<div class="tab__block">
+						<div class="tab__item">
+							<a href="#" class="tab__link">Регистратура</a>
+						</div>
 					</div>
-					<div class="tab__cont">
-						<!-- details -->
-						<div class="details">
-							<div class="details__in">
-								<h3 class="title-small">Регистрационные данные</h3>
-								<!-- wrapper -->
-								<div class="wrapper">
-									<form action="" class="form">
-										<div class="form__top">
-											<span class="form__td">Я</span>
-											<div class="form__td">
-												<label class="radiobox">
-													<input type="radio" name="person">
-													<span>Пациент</span>
-												</label>
-												<label class="radiobox">
-													<input type="radio" name="person" checked>
-													<span>Специалист</span>
-												</label>
-												<label class="radiobox">
-													<input type="radio" name="person">
-													<span>Юридическое лицо</span>
-												</label>
-											</div>
+					<div class="tab__item is-active is-show-mob">
+						<a href="#" class="tab__link">Календарь</a>
+					</div>
+					<div class="tab__cont js-tab-cont js-tab2">
+						<div class="title-small is-mob">
+							<span>мои записи</span>
+							<div class="hist">
+								<div class="hist__item">
+									<div class="hist__color is-blue"></div>
+									<div class="hist__name">- Текущий день</div>
+								</div>
+								<div class="hist__item">
+									<div class="hist__color is-pink"></div>
+									<div class="hist__name">- День консультации </div>
+								</div>
+								<div class="hist__item">
+									<div class="hist__color is-green"></div>
+									<div class="hist__name">- Прошедшая консультация</div>
+								</div>
+							</div>
+						</div>
+						<!-- l -->
+						<div class="l">
+							<div class="leftbar">
+								<div class="fullcalendar js-fullcalendar"></div>
+							</div>
+							<div class="rightbar">
+								<!-- block -->
+								<div class="block">
+									<div class="field">
+										<h3 class="title-small is-blue">сегодня, 5 августа 2015</h3>
+										<div class="event">
+											<p>10:00 с <a href="#">Анастасия Палочкина</a></p>
+											<p>Статус: Заявка подтверждена </p>
 										</div>
-										<div class="form__row">
-											<label for="email" class="form__label">Введите email</label>
-											<input type="text" name="email" id="email" placeholder="Email@gmail.com" class="input">
+										<a href="#" class="btn btn_green btn_middle">начать консультацию</a>
+									</div>
+								</div>
+								<!-- block -->
+								<div class="block">
+									<div class="field">
+										<h3 class="title-small is-blue">ближайшие записи</h3>
+										<div class="event">
+											<div class="date">6 августа 2015</div>
+											<p>10:00 с <a href="#">Вадим Сидоров</a></p>
+											<p>Статус: Заявка подтверждена </p>
 										</div>
-										<div class="form__row">
-											<label for="password" class="form__label">Введите пароль</label>
-											<input type="password" name="password" id="password" placeholder="********" class="input">
+										<div class="event">
+											<div class="date">7 августа 2015</div>
+											<p>10:00 с <a href="#">Алексеем Ивановым</a></p>
+											<p>Статус: Заявка подтверждена </p>
 										</div>
-										<div class="form__row">
-											<label for="password_2" class="form__label">Подтвердите пароль</label>
-											<input type="password" name="password_2" id="password_2" placeholder="********" class="input">
-										</div>
-										<div class="form__row">
-											<label class="checkbox is-green">
-												<input type="checkbox" checked>
-												<span>Согласится с офертой</span>
-											</label>
-										</div>
-										<div class="form__butt">
-											<button class="btn btn_middle" type="button">дальше</button>
-										</div>
-									</form>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="tab__block">
 						<div class="tab__item">
-							<a href="#" class="tab__link">
-								<span class="tab__step">2</span>
-								<span>Информация о вас</span>
-							</a>
+							<a href="#" class="tab__link">Мой счет</a>
+						</div>
+						<div class="tab__item"> 
+							<a href="#" class="tab__link">Мои файлы</a>
 						</div>
 						<div class="tab__item">
-							<a href="#" class="tab__link">
-								<span class="tab__step">3</span>
-								<span>Мой график</span>
-							</a>
+							<a href="#" class="tab__link">Мои пациенты</a>
+						</div> 
+						<div class="tab__item">
+							<a href="#" class="tab__link">Отзывы</a>
 						</div>
 					</div>
 				</div>

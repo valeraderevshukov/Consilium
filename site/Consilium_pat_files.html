@@ -1,0 +1,565 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<!-- theme color for android 5.0 -->
+	<meta name="theme-color" content="#fff">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="css/jquery-ui.min.css" >
+	<link rel="stylesheet" media="all" href="css/fullcalendar.css" >
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/app.js"></script>
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	<header class="header js-header">
+		<div class="header__in">
+			<!-- logo -->
+			<a href="#" class="logo"></a>
+			<div class="header__wrap js-header-wrap">
+				<!-- nav -->
+				<ul class="nav">
+					<li class="nav__item"> 
+						<a href="#">О проекте</a>
+					</li>
+					<li class="nav__item">
+						<a href="#">Как это работает?</a>
+					</li>
+					<li class="nav__item">
+						<a href="#">Наши партнеры</a>
+					</li>
+				</ul> 
+				<div class="header__right">
+					<!-- lang -->
+					<div class="lang">
+						<a href="#">Русский</a> / 
+						<a href="#">English</a>
+					</div>
+					<!-- bal -->
+					<div class="bal">
+						<span>Баланс на счету: </span>
+						<div class="bal__many">
+							<span>3 600 ₴</span>
+							<a href="#" class="bal__plus"></a>
+						</div>
+					</div>
+					<!-- cabinet -->
+					<div class="cabinet">
+						<a href="#" class="cabinet__link">Личный кабинет</a>
+					</div>
+				</div>
+			</div>
+			<button class="btn-menu js-btn-menu" type="button"><span></span></button>
+			<button class="btn-search js-btn-search" type="button"><i class="icon icon-search"></i></button>
+		</div>
+	</header>
+	<!-- filter -->
+	<section class="filter">
+		<div class="filter__in js-filter-in">
+			<form>
+				<div class="filter__text">Ищу специалиста</div>
+				<!-- drop -->
+				<div class="drop js-select">
+					<div class="drop__text js-select-text"><span>Специальность</span><i class="drop__arr"></i></div>
+					<select>
+						<option value="Акушер-гинеколог">Акушер-гинеколог</option>
+						<option value="Гастроэнтеролог">Гастроэнтеролог</option>
+						<option value="Гинеколог">Гинеколог</option>
+						<option value="Дерматолог">Дерматолог</option>
+						<option value="Кардиолог">Кардиолог</option>
+						<option value="Маммолог">Маммолог</option>
+						<option value="Невролог">Невролог</option>
+						<option value="Ортодонт">Ортодонт</option>
+						<option value="Ортопед">Ортопед</option>
+						<option value="Отоларинголог (ЛОР)">Отоларинголог (ЛОР)</option>
+						<option value="Офтальмолог">Офтальмолог</option>
+						<option value="Педиатр">Педиатр</option>
+						<option value="Проктолог">Проктолог</option>
+						<option value="Психотерапевт">Психотерапевт</option>
+						<option value="Стоматолог">Стоматолог</option>
+						<option value="Терапевт">Терапевт</option>
+						<option value="УЗИ-специалист">УЗИ-специалист</option>
+						<option value="Уролог">Уролог</option>
+						<option value="Хирург">Хирург</option>
+						<option value="Эндокринолог">Эндокринолог</option>
+						<option value="УЗИ-специалист">УЗИ-специалист</option>
+						<option value="Уролог">Уролог</option>
+						<option value="Хирург">Хирург</option>
+						<option value="Эндокринолог">Эндокринолог</option>
+					</select>
+					<div class="drop__block js-select-list">
+						<div class="drop__in">
+							<div class="drop__title">специальность:</div>
+							<ul>
+								<li data-val="Акушер-гинеколог"><span>Акушер-гинеколог</span></li>
+								<li data-val="Гастроэнтеролог"><span>Гастроэнтеролог</span></li>
+								<li data-val="Гинеколог"><span>Гинеколог</span></li>
+								<li data-val="Дерматолог"><span>Дерматолог</span></li>
+							</ul>
+							<ul>
+								<li data-val="Кардиолог"><span>Кардиолог</span></li>
+								<li data-val="Маммолог"><span>Маммолог</span></li>
+								<li data-val="Невролог"><span>Невролог</span></li>
+								<li data-val="Ортодонт"><span>Ортодонт</span></li>
+							</ul>
+							<ul>
+								<li data-val="Ортопед"><span>Ортопед</span></li>
+								<li data-val="Отоларинголог (ЛОР)"><span>толаринголог (ЛОР)</span></li>
+								<li data-val="Офтальмолог"><span>Офтальмолог</span></li>
+								<li data-val="Педиатр"><span>Педиатр</span></li>
+							</ul>
+							<ul>
+								<li data-val="Проктолог"><span>Проктолог</span></li>
+								<li data-val="Психотерапевт"><span>Психотерапевт</span></li>
+								<li data-val="Стоматолог"><span>Стоматолог</span></li>
+								<li data-val="Терапевт"><span>Терапевт</span></li>
+							</ul>
+							<ul>
+								<li data-val="УЗИ-специалист"><span>УЗИ-специалист</span></li>
+								<li data-val="Уролог"><span>Уролог</span></li>
+								<li data-val="Хирург"><span>Хирург</span></li>
+								<li data-val="Эндокринолог"><span>Эндокринолог</span></li>
+							</ul>
+							<ul>
+								<li data-val="УЗИ-специалист"><span>УЗИ-специалист</span></li>
+								<li data-val="Уролог"><span>Уролог</span></li>
+								<li data-val="Хирург"><span>Хирург</span></li>
+								<li data-val="Эндокринолог"><span>Эндокринолог</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- drop -->
+				<div class="drop js-select">
+					<div class="drop__text js-select-text"><span>Страна</span><i class="drop__arr"></i></div>
+					<select>
+						<option value="item1">item1</option>
+						<option value="item2">item2</option>
+						<option value="item3">item3</option>
+						<option value="item4">item4</option>
+					</select>
+					<div class="drop__block js-select-list">
+						<div class="drop__in">
+							<div class="drop__title">Страна:</div>
+							<ul>
+								<li data-val="item1"><span>item1</span></li>
+								<li data-val="item2"><span>item2</span></li>
+								<li data-val="item3"><span>item3</span></li>
+								<li data-val="item4"><span>item4</span></li> 
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- drop --> 
+				<div class="drop js-select">
+					<div class="drop__text js-select-text"><span>Город</span><i class="drop__arr"></i></div> 
+					<select>
+						<option value="item1">item1</option>
+						<option value="item2">item2</option>
+						<option value="item3">item3</option>
+						<option value="item4">item4</option>
+					</select>
+					<div class="drop__block js-select-list">
+						<div class="drop__in">
+							<div class="drop__title">Город:</div>
+							<ul>
+								<li data-val="item1"><span>item1</span></li>
+								<li data-val="item2"><span>item2</span></li>
+								<li data-val="item3"><span>item3</span></li>
+								<li data-val="item4"><span>item4</span></li> 
+							</ul>
+						</div>
+					</div>
+				</div>
+				<button class="btn" type="submit"><i class="ico ico-search"></i></button>
+			</form>
+		</div>
+	</section>
+	<!-- cab -->
+	<section class="cab">
+		<div class="cab__in">
+			<!-- tab -->
+			<div class="tab">
+				<ul class="tab__list">
+					<li class="tab__item">
+						<a href="#" class="tab__link">Регистратура</a>
+					</li>
+					<li class="tab__item">
+						<a href="#" class="tab__link">Календарь</a>
+					</li>
+					<li class="tab__item">
+						<a href="#" class="tab__link">Мой счет</a>
+					</li>
+					<li class="tab__item is-active"> 
+						<a href="#" class="tab__link">Мои файлы</a>
+					</li>
+					<li class="tab__item">
+						<a href="#" class="tab__link">Мои пациенты</a>
+					</li> 
+					<li class="tab__item">
+						<a href="#" class="tab__link">Отзывы</a>
+					</li>
+				</ul>
+				<div class="tab__in">
+					<div class="tab__block">
+						<div class="tab__item">
+							<a href="#" class="tab__link">Регистратура</a>
+						</div>
+						<div class="tab__item">
+							<a href="#" class="tab__link">Календарь</a>
+						</div>
+						<div class="tab__item">
+							<a href="#" class="tab__link">Мой счет</a>
+						</div>
+					</div>
+					<div class="tab__item is-active is-show-mob"> 
+						<a href="#" class="tab__link">Мои файлы</a>
+					</div>
+					<div class="tab__cont">
+						<!-- topper -->
+						<div class="topper">
+							<div class="topper__left">
+								<h3 class="title-small">история добавленных ФАЙЛОВ</h3>
+							</div>
+							<div class="topper__right is-hide-mob">
+								<button class="btn btn_average btn_pad" type="button">загрузите файл</button>
+							</div>
+						</div>
+						<!-- filt -->
+						<div class="filt">
+							<div class="filt__left">
+								<div class="filt__text">Поиск по дате:</div>
+								<div class="filt__inl">
+									<div class="datepicker">
+										<input type="text" id="from1" value="08.10.2015" placeholder="От">
+									</div>
+									<div class="datepicker">
+										<input type="text" id="to1" value="08.10.2015" placeholder="До">
+									</div>
+								</div>
+							</div>
+							<div class="filt__sel">
+								<div class="search">
+									<div class="search__field"><input type="text" class="input" placeholder="Введите имя специалиста..."></div>
+									<button class="search__btn" type="submit"><i class="ico ico_search-green"></i></button>
+								</div>
+								<button class="btn btn_average btn_pad is-show-mob" type="button">загрузите файл</button>
+							</div>
+						</div>
+						<!-- hist -->
+						<div class="hist">
+							<div class="wrapper">
+								<div class="field is-head">
+									<div class="td">Имя файла</div>
+									<div class="td">Описание</div>
+									<div class="td">Открыть доступ</div>
+									<div class="td">Статус файла</div>
+									<div class="td">Действия</div>
+								</div>
+								<div class="field">
+									<div class="field__row is-mob">
+										<div class="td"></div>
+										<div class="td"></div>
+										<div class="td">
+											<div class="btn-text">
+												<span>Константин Игнатович</span>
+												<a href="#" class="ico ico_remove-red-small"></a>
+											</div>
+										</div>
+										<div class="td"></div>
+										<div class="td"></div>
+									</div>
+									<div class="field__row">
+										<div class="td">
+											<div class="td__title">Имя файла</div>
+											<span class="td__text">09203940920394</span>
+										</div>
+										<div class="td">
+											<div class="td__title">Описание</div>
+											<span class="td__text">Отчет врача из клиники Медлайф</span>
+										</div>
+										<div class="td">
+											<div class="td__title">Открыть доступ</div>
+											<div class="select js-select">
+												<div class="select__text js-select-text">
+													<span>Пациенту</span>
+												</div>
+												<ul class="select__list js-select-list"> 
+													<li data-val="var0">var0</li>
+													<li data-val="var1">var1</li>
+													<li data-val="var2">var2</li>
+													<li data-val="var3">var3</li>
+												</ul>
+												<select>
+													<option value="var0">var0</option>
+													<option value="var1">var1</option>
+													<option value="var2">var2</option>
+													<option value="var3">var3</option>
+												</select>
+											</div>
+											<div class="btn-text is-mob">
+												<span>Константин Игнатович</span>
+												<a href="#" class="ico ico_remove-white-small"></a>
+											</div>
+										</div>
+										<div class="td">
+											<div class="td__title">Статус файла</div>
+											<a href="#" class="stat">Мой</a>
+										</div>
+										<div class="td">
+											<button class="btn-reg" type="button">
+												<i class="ico ico_reg"></i>
+												<span class="btn-reg__hide">редактировать</span>
+											</button>
+											<button class="btn-remove" type="button">
+												<i class="ico ico_remove"></i>
+												<span class="btn-remove__hide">удалить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="field">
+									<div class="field__row is-mob">
+										<div class="td"></div>
+										<div class="td"></div>
+										<div class="td">
+											<div class="btn-text">
+												<span>Константин Игнатович</span>
+												<a href="#" class="ico ico_remove-red-small"></a>
+											</div>
+										</div>
+										<div class="td"></div>
+										<div class="td"></div>
+									</div>
+									<div class="field__row">
+										<div class="td">
+											<div class="td__title">Имя файла</div>
+											<span class="td__text">09203940920394</span>
+										</div>
+										<div class="td">
+											<div class="td__title">Описание</div>
+											<span class="td__text">Отчет врача из клиники Медлайф</span>
+										</div>
+										<div class="td">
+											<div class="td__title">Открыть доступ</div>
+											<div class="select js-select">
+												<div class="select__text js-select-text">
+													<span>Пациенту</span>
+												</div>
+												<ul class="select__list js-select-list"> 
+													<li data-val="var0">var0</li>
+													<li data-val="var1">var1</li>
+													<li data-val="var2">var2</li>
+													<li data-val="var3">var3</li>
+												</ul>
+												<select>
+													<option value="var0">var0</option>
+													<option value="var1">var1</option>
+													<option value="var2">var2</option>
+													<option value="var3">var3</option>
+												</select>
+											</div>
+											<div class="btn-text is-mob">
+												<span>Константин Игнатович</span>
+												<a href="#" class="ico ico_remove-white-small"></a>
+											</div>
+										</div>
+										<div class="td">
+											<div class="td__title">Статус файла</div>
+											<a href="#" class="stat">Открыт доступ Петров</a>
+										</div>
+										<div class="td">
+											<button class="btn-reg" type="button">
+												<i class="ico ico_reg"></i>
+												<span class="btn-reg__hide">редактировать</span>
+											</button>
+											<button class="btn-remove" type="button">
+												<i class="ico ico_remove"></i>
+												<span class="btn-remove__hide">удалить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="field">
+									<div class="field__row is-mob">
+										<div class="td"></div>
+										<div class="td"></div>
+										<div class="td">
+											<div class="btn-text">
+												<span>Константин Игнатович</span>
+												<a href="#" class="ico ico_remove-red-small"></a>
+											</div>
+										</div>
+										<div class="td"></div>
+										<div class="td"></div>
+									</div>
+									<div class="field__row">
+										<div class="td">
+											<div class="td__title">Имя файла</div>
+											<span class="td__text">09203940920394</span>
+										</div>
+										<div class="td">
+											<div class="td__title">Описание</div>
+											<span class="td__text">Отчет врача из клиники Медлайф</span>
+										</div>
+										<div class="td">
+											<div class="td__title">Открыть доступ</div>
+											<div class="select js-select">
+												<div class="select__text js-select-text">
+													<span>Пациенту</span>
+												</div>
+												<ul class="select__list js-select-list"> 
+													<li data-val="var0">var0</li>
+													<li data-val="var1">var1</li>
+													<li data-val="var2">var2</li>
+													<li data-val="var3">var3</li>
+												</ul>
+												<select>
+													<option value="var0">var0</option>
+													<option value="var1">var1</option>
+													<option value="var2">var2</option>
+													<option value="var3">var3</option>
+												</select>
+											</div>
+											<div class="btn-text is-mob">
+												<span>Константин Игнатович</span>
+												<a href="#" class="ico ico_remove-white-small"></a>
+											</div>
+										</div>
+										<div class="td">
+											<div class="td__title">Статус файла</div>
+											<a href="#" class="stat">Мой</a>
+										</div>
+										<div class="td">
+											<button class="btn-reg" type="button">
+												<i class="ico ico_reg"></i>
+												<span class="btn-reg__hide">редактировать</span>
+											</button>
+											<button class="btn-remove" type="button">
+												<i class="ico ico_remove"></i>
+												<span class="btn-remove__hide">удалить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="field">
+									<div class="field__row is-mob">
+										<div class="td"></div>
+										<div class="td"></div>
+										<div class="td">
+											<div class="btn-text">
+												<span>Константин Игнатович</span>
+												<a href="#" class="ico ico_remove-red-small"></a>
+											</div>
+										</div>
+										<div class="td"></div>
+										<div class="td"></div>
+									</div>
+									<div class="field__row">
+										<div class="td">
+											<div class="td__title">Имя файла</div>
+											<span class="td__text">09203940920394</span>
+										</div>
+										<div class="td">
+											<div class="td__title">Описание</div>
+											<span class="td__text">Отчет врача из клиники Медлайф</span>
+										</div>
+										<div class="td">
+											<div class="td__title">Открыть доступ</div>
+											<div class="select js-select">
+												<div class="select__text js-select-text">
+													<span>Пациенту</span>
+												</div>
+												<ul class="select__list js-select-list"> 
+													<li data-val="var0">var0</li>
+													<li data-val="var1">var1</li>
+													<li data-val="var2">var2</li>
+													<li data-val="var3">var3</li>
+												</ul>
+												<select>
+													<option value="var0">var0</option>
+													<option value="var1">var1</option>
+													<option value="var2">var2</option>
+													<option value="var3">var3</option>
+												</select>
+											</div>
+											<div class="btn-text is-mob">
+												<span>Константин Игнатович</span>
+												<a href="#" class="ico ico_remove-white-small"></a>
+											</div>
+										</div>
+										<div class="td">
+											<div class="td__title">Статус файла</div>
+											<a href="#" class="stat">Открыт доступ Петров</a>
+										</div>
+										<div class="td">
+											<button class="btn-reg" type="button">
+												<i class="ico ico_reg"></i>
+												<span class="btn-reg__hide">редактировать</span>
+											</button>
+											<button class="btn-remove" type="button">
+												<i class="ico ico_remove"></i>
+												<span class="btn-remove__hide">удалить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div> 
+						</div>
+						<!-- pagination -->
+						<ul class="pagin">
+							<li><a class="pagin__prev" href="#"></a></li>
+							<li><a href="#">1</a></li>
+							<li><a class="is-active" href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a class="pagin__next" href="#"></a></li>
+						</ul>
+					</div>
+					<div class="tab__block">
+						<div class="tab__item">
+							<a href="#" class="tab__link">Мои пациенты</a>
+						</div> 
+						<div class="tab__item">
+							<a href="#" class="tab__link">Отзывы</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<!-- END out-->
+<!-- footer -->
+<footer class="footer">
+	<div class="footer__in">
+		<div class="footer__left">
+			<!-- copy -->
+			<div class="copy is-hide-mob">Авторские права @ 2015 Консилиум</div>
+			<!-- numb -->
+			<div class="numb">
+				<i class="ico ico_fhone"></i>
+				<div class="numb__tel">8 800 333 4 555</div>
+				<a href="#" class="numb__all">Номера для связи в других городах</a>
+			</div>
+		</div>
+		<div class="footer__right">
+			<a href="mailto:hello@conciliumcenter.com" class="email"><i class="ico ico_email"></i><span>hello@conciliumcenter.com</span></a>
+			<ul class="footer__menu">
+				<li><a href="#">Специалисты</a></li>
+				<li><a href="#">Партнеры</a></li>
+				<li><a href="#">О проекте</a></li>
+			</ul>
+		</div>
+		<div class="copy is-show-mob">Авторские права @ 2015 Консилиум</div>
+	</div>
+</footer>
+</body>
+</html>

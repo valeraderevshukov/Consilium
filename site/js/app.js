@@ -302,6 +302,22 @@ $(document).ready(function() {
 			filtIn.slideUp(300);
 		}
 	});
+
+	$(document).scroll(function() {    
+		var scroll 	= $(this).scrollTop(),
+			hDoc 	= $(document).height(),
+			hWind 	= $(window).height(),
+			hFooter = $('.footer').height(),
+			hCall 	= $('.js-call .call__circle').height(),
+			call 	= $('.js-call'),
+			scroll_position = hDoc - hWind - hFooter - hCall;
+		if (scroll >= scroll_position) {
+			call.addClass('is-go-top');
+		}
+		else{
+			call.removeClass('is-go-top');
+		}
+	});
 	
 	
 });

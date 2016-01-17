@@ -1,0 +1,313 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<!-- theme color for android 5.0 -->
+	<meta name="theme-color" content="#fff">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="css/jquery-ui.min.css" >
+	<link rel="stylesheet" media="all" href="css/fullcalendar.css" >
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/app.js"></script>
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	<header class="header js-header">
+		<div class="header__in">
+			<!-- logo -->
+			<a href="#" class="logo"></a>
+			<div class="header__wrap js-header-wrap">
+				<!-- nav -->
+				<ul class="nav">
+					<li class="nav__item"> 
+						<a href="#">О проекте</a>
+					</li>
+					<li class="nav__item">
+						<a href="#">Как это работает?</a>
+					</li>
+					<li class="nav__item">
+						<a href="#">Наши партнеры</a>
+					</li>
+				</ul> 
+				<div class="header__right">
+					<!-- lang -->
+					<div class="lang">
+						<a href="#">Русский</a> / 
+						<a href="#">English</a>
+					</div>
+					<!-- bal -->
+					<div class="bal">
+						<span>Баланс на счету: </span>
+						<div class="bal__many">
+							<span>3 600 ₴</span>
+							<a href="#" class="bal__plus"></a>
+						</div>
+					</div>
+					<!-- cabinet -->
+					<div class="cabinet">
+						<a href="#" class="cabinet__link">Личный кабинет</a>
+					</div>
+				</div>
+			</div>
+			<button class="btn-menu js-btn-menu" type="button"><span></span></button>
+			<button class="btn-search js-btn-search" type="button"><i class="icon icon-search"></i></button>
+		</div>
+	</header>
+	<!-- links -->
+	<section class="links">
+		<div class="links__in">
+			<a href="#" class="links__item">Практика для врачей</a>
+			<a href="#" class="links__item">Зачем это?</a>
+			<a href="#" class="links__item">Как добиться успеха?</a>
+		</div>
+	</section>
+	<!-- cab -->
+	<section class="cab">
+		<div class="cab__in">
+			<!-- banner -->
+			<div class="banner" style="background-image: url('img/banner.png')"></div>
+			<!-- tab -->
+			<div class="tab">
+				<ul class="tab__list">
+					<li class="tab__item is-active">
+						<a href="#" class="tab__link">Регистратура</a>
+					</li>
+					<li class="tab__item">
+						<a href="#" class="tab__link">Календарь</a>
+					</li>
+					<li class="tab__item">
+						<a href="#" class="tab__link">Мой счет</a>
+					</li>
+					<li class="tab__item"> 
+						<a href="#" class="tab__link">Мои файлы</a>
+					</li>
+					<li class="tab__item">
+						<a href="#" class="tab__link">Мои пациенты</a>
+					</li> 
+					<li class="tab__item">
+						<a href="#" class="tab__link">Отзывы</a>
+					</li>
+				</ul>
+				<div class="tab__in">
+					<div class="tab__item is-active is-show-mob">
+						<a href="#" class="tab__link">Регистратура</a>
+					</div>
+					<div class="tab__cont"> 
+						<h3 class="title-small is-gray is-mob">Добрый день!</h3>
+						<h3 class="title-small is-mob">Петров Андрей Александрович <a href="#" class="btn btn_average">мой профиль</a></h3>
+						<!-- l -->
+						<div class="l">
+							<div class="l-col1">
+								<div class="field">
+									<h3 class="title-small is-blue">ближайшие записи</h3>
+								</div>
+								<div class="field">
+									<div class="event">
+										<div class="date">Сегодня, 5 августа 2015</div>
+										<p>10:00 с <a href="#">Анастасия Палочкина</a></p>
+										<p>Статус: Заявка подтверждена </p>
+									</div>
+									<a href="#" class="btn btn_green">начать консультацию</a>
+								</div>
+								<div class="field">
+									<div class="event">
+										<div class="date">6 августа 2015</div>
+										<p>10:00 с <a href="#">Вадим Сидоров</a></p>
+										<p>Статус: Заявка подтверждена </p>
+									</div>
+								</div>
+								<div class="field">
+									<div class="event">
+										<div class="date">7 августа 2015</div>
+										<p>10:00 с <a href="#">Алексеем Ивановым</a></p>
+										<p>Статус: Заявка подтверждена</p>
+									</div>
+								</div>
+								<div class="field"><a href="#" class="btn">все записи</a></div>
+							</div>
+							<div class="l-col2">
+								<div class="field">
+									<h3 class="title-small is-blue">история записей</h3>
+									<!-- filt -->
+									<div class="filt">
+										<form>
+											<div class="filt__col">
+												<div class="filt__label">Пациент</div>
+												<div class="select js-select">
+													<div class="select__text js-select-text">
+														<span>Выберите пациента</span>
+													</div>
+													<ul class="select__list js-select-list">
+														<li data-val="var0">var0</li>
+														<li data-val="var1">var1</li>
+														<li data-val="var2">var2</li>
+														<li data-val="var3">var3</li>
+													</ul>
+													<select>
+														<option value="var0">var0</option>
+														<option value="var1">var1</option>
+														<option value="var2">var2</option>
+														<option value="var3">var3</option>
+													</select>
+												</div>
+											</div>
+											<div class="filt__col is-date">
+												<div class="filt__label">Дата</div>
+												<div class="filt__row">
+													<div class="datepicker">
+														<input type="text" id="from" value="08.10.2015" placeholder="От">
+													</div>
+													<div class="datepicker">
+														<input type="text" id="to" value="08.10.2015" placeholder="До">
+													</div>
+												</div>
+											</div>
+											<div class="filt__col is-stat">
+												<div class="filt__label">Статус</div>
+												<div class="select js-select">
+													<div class="select__text js-select-text">
+														<span>Статус консультации</span>
+													</div>
+													<ul class="select__list js-select-list">
+														<li data-val="var0">var0</li>
+														<li data-val="var1">var1</li>
+														<li data-val="var2">var2</li>
+														<li data-val="var3">var3</li>
+													</ul>
+													<select>
+														<option value="var0">var0</option>
+														<option value="var1">var1</option>
+														<option value="var2">var2</option>
+														<option value="var3">var3</option>
+													</select>
+												</div>
+											</div>
+											<div class="filt__col is-btn">
+												<button class="btn" type="submit">найти</button>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="field">
+									<!-- res -->
+									<div class="res">
+										<h3 class="res__title">Результаты поиска:</h3>
+										<div class="res__in">
+											<div class="res__col">
+												<div class="event">
+													<div class="event__row">
+														<div class="date">7 августа 2015,</div>10:00 с <a href="#">Алексеем Ивановым</a>
+													</div>
+													<p>Статус: Заявка подтверждена</p>
+												</div>
+												<div class="event">
+													<div class="event__row">
+														<div class="date">7 августа 2015,</div>10:00 с <a href="#">Алексеем Ивановым</a>
+													</div>
+													<p>Статус: Заявка подтверждена</p>
+												</div>
+												<div class="event">
+													<div class="event__row">
+														<div class="date">7 августа 2015,</div>10:00 с <a href="#">Алексеем Ивановым</a>
+													</div>
+													<p>Статус: Заявка подтверждена</p>
+												</div>
+												<div class="event">
+													<div class="event__row">
+														<div class="date">7 августа 2015,</div>10:00 с <a href="#">Алексеем Ивановым</a>
+													</div>
+													<p>Статус: Заявка подтверждена</p>
+												</div>
+											</div>
+											<div class="res__col">
+												<div class="event">
+													<div class="event__row">
+														<div class="date">7 августа 2015,</div>10:00 с <a href="#">Алексеем Ивановым</a>
+													</div>
+													<p>Статус: Заявка подтверждена</p>
+												</div>
+												<div class="event">
+													<div class="event__row">
+														<div class="date">7 августа 2015,</div>10:00 с <a href="#">Алексеем Ивановым</a>
+													</div>
+													<p>Статус: Заявка подтверждена</p>
+												</div>
+												<div class="event">
+													<div class="event__row">
+														<div class="date">7 августа 2015,</div>10:00 с <a href="#">Алексеем Ивановым</a>
+													</div>
+													<p>Статус: Заявка подтверждена</p>
+												</div>
+												<div class="event">
+													<div class="event__row">
+														<div class="date">7 августа 2015,</div>10:00 с <a href="#">Алексеем Ивановым</a>
+													</div>
+													<p>Статус: Заявка подтверждена</p>
+												</div>
+											</div>
+										</div>
+										<div class="res__bot">
+											<button class="btn">ПОКАЗАТЬ ЕЩЕ<i class="ico ico_down"></i></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab__block">
+						<div class="tab__item">
+							<a href="#" class="tab__link">Календарь</a>
+						</div>
+						<div class="tab__item">
+							<a href="#" class="tab__link">Мой счет</a>
+						</div>
+						<div class="tab__item"> 
+							<a href="#" class="tab__link">Мои файлы</a>
+						</div>
+						<div class="tab__item">
+							<a href="#" class="tab__link">Мои пациенты</a>
+						</div> 
+						<div class="tab__item">
+							<a href="#" class="tab__link">Отзывы</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- banner -->
+			<div class="banner" style="background-image: url('img/banner.png')"></div>
+		</div>
+	</section>
+</div>
+<!-- END out-->
+<!-- footer -->
+<footer class="footer">
+	<div class="footer__in">
+		<div class="footer__left">
+			<!-- copy -->
+			<div class="copy is-hide-mob">Авторские права @ 2015 Консилиум</div>
+			<!-- numb -->
+			<div class="numb">
+				<i class="ico ico_fhone"></i>
+				<div class="numb__tel">8 800 333 4 555</div>
+				<a href="#" class="numb__all">Номера для связи в других городах</a>
+			</div>
+		</div>
+		<div class="footer__right">
+			<a href="mailto:hello@conciliumcenter.com" class="email"><i class="ico ico_email"></i><span>hello@conciliumcenter.com</span></a>
+			<ul class="footer__menu">
+				<li><a href="#">Специалисты</a></li>
+				<li><a href="#">Партнеры</a></li>
+				<li><a href="#">О проекте</a></li>
+			</ul>
+		</div>
+		<div class="copy is-show-mob">Авторские права @ 2015 Консилиум</div>
+	</div>
+</footer>
+</body>
+</html>

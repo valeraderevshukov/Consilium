@@ -13,6 +13,8 @@
 .center
 	padding: 28px 8px 33px
 	@extend %in
+	.profile
+		padding-top: 12px
 
 // wrap
 .wrap
@@ -27,6 +29,7 @@
 	font-size: 16px
 	border-radius: 5px
 	+r(768)
+		margin-top: 30px
 		font-size: 18px
 	&.is-when
 		.graph__left
@@ -99,6 +102,8 @@
 		color: $c_body
 		transition: background .2s, color .2s
 		display: table
+		+r(960)
+			display: block
 		&.is-active
 			color: #fff
 			background: #61c2c1
@@ -114,6 +119,10 @@
 		&.is-head
 			padding: 14px 29px
 			background: #f2f2f2
+			+r(960)
+				display: none
+				& + .field
+					border-top: none
 			&:hover
 				color: $c_body
 		&.is-foot
@@ -126,11 +135,20 @@
 				display: block
 		.field__row
 			display: table-row
+			+r(960)
+				display: block
 		.btn-text,
 		a
 			transition: color .2s
 	.td
 		display: table-cell
+		+r(960)
+			margin-top: 16px
+			padding-right: 0
+			width: 100% !important
+			display: block
+			&:first-child
+				margin-top: 0
 		&.td_title
 			float: left
 			width: auto
@@ -139,10 +157,21 @@
 		&.td_all
 			float: right
 			width: 70px
+			+r(960)
+				margin-top: 0
+		.td__title
+			margin-bottom: 2px
+			color: #999
+			+r400
+			display: none
+			+r(960)
+				display: block
 	.btn-reg,
 	.btn-remove
 		margin-left: 4px
 		vertical-align: middle
+		+r(768)
+			margin: 10px 0 0
 		&:first-child
 			margin-left: 0
 	.btn-open
@@ -170,24 +199,59 @@
 	width: 25%
 	border: 1px solid $bord_cab
 	border-radius: 5px
+	+r(1280)
+		width: 34%
+		+r(1023)
+			float: none
+			width: 100%
+	+r(768)
+		border-radius: 0 
+		border-left: none
+		border-right: none
 	.btn
 		width: 100%
+		+r(1023)
+			width: auto
+			min-width: 208px
+			+r(768)
+				width: 100%
 .l-col2
 	float: right
 	width: 73%
 	border: 1px solid $bord_cab
 	border-radius: 5px
+	+r(1280)
+		width: 64%
+		+r(1023)
+			float: none
+			margin-top: 25px
+			width: 100%
+	+r(768)
+		border-radius: 0 
+		border-left: none
+		border-right: none
 	.title-small
 		margin-bottom: 17px
 // leftbar
 .leftbar
 	float: left
 	width: 73%
+	+r(1280)
+		width: 65%
+		+r(1024)
+			float: none
+			width: 100%
 
 // rightbar
 .rightbar
 	float: right
 	width: 25%
+	+r(1280)
+		width: 33%
+		+r(1024)
+			float: none
+			margin-top: 25px
+			width: 100%
 	
 // col-left col-center col-right
 .col-left
@@ -200,8 +264,18 @@
 			margin-top: 30px
 	.event + .event
 		margin-top: 12px
+	.form
+		background: #fff
+		&__row
+		&__label
+			margin-bottom: 5px
+		.btn
+			min-width: 183px
+	.title-small
+		margin-top: 25px
 
-.col-center
+.col-center,
+.col-float
 	float: left
 	width: calc(46.5% - 50px)
 	line-height: 1.2
@@ -225,6 +299,52 @@
 		display: inline-block
 		&:hover
 			border-color: $blue
+.col-center,
+.col-float,
+.content
+	.btn
+		line-height: 37px
+		color: #fff
+		+dr($l_green,15%)
+		&:hover
+			border-color: transparent
+		&_blue
+			background: $blue
+			+dr($blue,15%)
+		&_red
+			background: $red
+			+dr($red,15%)
+		&_green
+			background: $bg_btn_green
+			+dr($bg_btn_green,15%)
+		&_small
+			line-height: 19px
+		&_average
+			line-height: 31px
+		&_h38
+			line-height: 38px
+		&_h48
+			line-height: 48px
+		&_big
+			line-height: 59px
+.col-float
+	width: calc(72.6% - 50px)
+	.profile
+		&__col
+			width: 31%
+		.title-small
+			margin-bottom: 12px
+		.row 
+			& + p
+				margin-top: 14px
+			.btn + .btn
+				margin-left: 2px
+		.price
+			color: $blue
+		.list-green li
+			margin-top: 2px
+			&:first-child
+				margin-top: 0
 
 .col-right
 	float: right
@@ -235,6 +355,45 @@
 		margin-bottom: 15px
 		&:first-child
 			margin-top: 7px
+
+// content
+.content
+	padding: 35px 0 13px
+	+clr
+	.leftbar
+		width: 38%
+	.rightbar
+		padding-right: 17.2%
+		width: calc(62% - 50px)
+		+box
+	.img
+		& + .title-small	
+			margin-top: 38px
+	.title-small
+		margin: 40px 0 20px
+		& + .title-h5
+			margin-top: -5px
+	.title-h2
+		margin: -9px 0 5px
+		line-height: 1.1
+	.title-h5	
+		margin: 35px 0 10px
+		& + p
+			margin-top: 10px
+	.date
+		color: $l_green-2
+		+r400
+	p
+		margin-top: 17px
+		line-height: 1.2
+	a
+		color: $blue
+		line-height: 1.3
+		transition: border-color .2s
+		border-bottom: 1px solid transparent
+		display: inline-block
+		&:hover
+			border-color: $blue
 
 // field
 .field
@@ -247,6 +406,11 @@
 	&__row
 		margin-top: 20px
 		+clr
+		+r(960)
+			margin-top: 0
+		&.is-mob
+			+r(960)
+				display: none !important
 		&:first-child
 			margin-top: 0
 	&__col
@@ -361,6 +525,25 @@ button.btn
 	color: $blue
 	+r400
 	font-size: 12px
+	&.is-mob
+		margin: 10px 5px 0 0
+		padding: 0 10px
+		height: 28px
+		color: #fff
+		font-size: 14px
+		+r400
+		line-height: 28px
+		background-color: #61c2c1
+		border-radius: 5px
+		display: none
+		+r(960)
+			display: inline-block
+		.ico
+			margin-left: 15px
+			vertical-align: middle
+			opacity: 1
+		span
+			line-height: 1.2
 	.ico
 		margin-left: 2px
 		will-chenge: opacity
@@ -375,19 +558,40 @@ button.btn
 	position: relative
 	height: 30px
 	width: 30px
+	color: #fff
+	font-size: 14px
+	+r700
+	text-transform: uppercase
 	transition: background .2s
 	border-radius: 50%
+	+r(960)
+		padding: 0 20px
+		height: 38px
+		line-height: 38px
+		min-width: 188px
+		border-radius: 5px
+		+r(768)
+			width: 100%
+			height: 48px
+			line-height: 48px
+			font-size: 18px
+	&__hide
+		display: none
+		+r(960)
+			display: inline-block
 	.ico
 		position: absolute
 		top: 50%
 		left: 50%
 		transform: translate(-50%,-50%)
+		+r(960)
+			display: none
 .btn-reg
-	background: $l_red
-	+dr($l_red,15%)
-.btn-remove
 	background: $bg_btn_green
 	+dr($bg_btn_green,15%)
+.btn-remove
+	background: $l_red
+	+dr($l_red,15%)
 
 // title
 .title
@@ -401,6 +605,10 @@ button.btn
 	+r400
 	font-size: 41px
 	line-height: 57px
+	+clr
+	.btn
+		float: right
+		margin: 5px 0 -5px
 
 .title-h4
 	+r700
@@ -420,16 +628,30 @@ button.btn
 	+clr
 	+r(768)
 		font-size: 22px
+		& + .title-small
+			padding-top: 0
 	&.is-gray
 		color: $c_gray
 	&.is-blue
 		color: $blue
+	&.is-mob
+		+r(768)
+			padding: 27px 30px 0
+			margin-bottom: 10px
+			text-align: left
+			& + .title-small
+				padding-top: 0
 	.hist
 		margin: 5px 0 0 25px
 		vertical-align: top
 		display: inline-block
+		+r(960)
+			margin: 5px 0 0
+			display: block
 	.btn.btn_average
 		margin: -9px 0 0 35px
+		+r(768)
+			margin: 20px 0 0
 	.rating
 		float: right
 		margin: -2px 0 -5px
@@ -606,7 +828,7 @@ input[name^='password']
 
 .radiobox
 	position: relative
-	line-height: 24px
+	line-height: 26px
 	cursor: pointer
 	user-select: none
 	vertical-align: top
@@ -630,10 +852,9 @@ input[name^='password']
 				&:after
 					transform: scale(1)
 	span
-		position: relative
 		padding-left: 38px
-		line-height: 26px
-		display: block
+		line-height: 1.2
+		display: inline-block
 		&:before
 			content: ''
 			transition: background .2s, border-color .2s
@@ -760,6 +981,10 @@ input[name^='password']
 				display: block
 				&:first-child
 					margin-top: 0
+	&__textarea
+		margin-top: 25px
+	&__subm
+		margin-top: 18px
 	.radiobox
 		margin-left: 18px
 	.photo
@@ -1021,9 +1246,11 @@ input[name^='password']
 .hist
 	font-size: 14px
 	&__item
-		margin-left: 15px
+		margin-right: 15px
 		vertical-align: top
 		display: inline-block
+		+r(960)
+			margin-top: 5px
 		&:first-child
 			margin-left: 0
 	&__name
@@ -1046,13 +1273,21 @@ input[name^='password']
 .block
 	border: 1px solid $bord_cab
 	border-radius: 5px
+	+r(768)
+		border-radius: 0
+		border-left: none
+		border-right: none
 	& + .block
 		margin-top: 9px
+		+r(1024)
+			margin-top: 25px
 	.title-small
 		margin-bottom: 15px
 	.btn
 		margin-top: 12px
 		width: 100%
+		+r(1024)
+			width: auto
 		&:first-child
 			margin-top: 0
 	.messages
@@ -1066,6 +1301,8 @@ input[name^='password']
 	display: inline-block
 	& + .btn
 		margin-left: 15px
+		+r(1024)
+			margin-left: 10px
 	&__item,
 	&__text,
 	&__bal
@@ -1096,13 +1333,20 @@ input[name^='password']
 .bott
 	position: relative
 	+clr
+	+r(768)
+		padding: 0 30px 30px
 	.btn
 		float: right
 		margin-top: 20px
+		+r(768)
+			margin: 24px 0 0
 	.pagin
 		float: left
 		margin-left: 130px
 		width: calc(100% - 260px)
+		+r(768)
+			margin-left: 0
+			width: 100%
 
 // stat
 .stat
@@ -1182,6 +1426,11 @@ input[name^='password']
 		border-radius: 5px
 		background: #7499d2
 		display: inline-block
+		+r(768)
+			margin: 10px 0 0
+			width: 100%
+			&:first-child
+				margin-top: 0
 		&:hover
 			color: $blue
 			background: #fff
@@ -1190,6 +1439,8 @@ input[name^='password']
 
 .row
 	margin-top: 20px
+	&.is-mod
+		margin-top: 10px
 	.title-small
 		margin-bottom: 5px
 	ul + p
@@ -1234,6 +1485,102 @@ input[name^='password']
 	span
 		border-bottom: 1px solid transparent
 		transition: border-color .2s
+
+// call
+.call
+	position: fixed
+	left: 0
+	right: 0
+	bottom: 30px
+	+r700
+	font-size: 12px
+	transition: bottom .3s
+	text-transform: uppercase
+	text-align: center
+	&.is-go-top
+		bottom: 172px
+	&__in
+		position: relative
+		@extend %in
+	&__circle
+		position: absolute
+		bottom: 0
+		right: 10px
+		height: 90px
+		width: 90px
+		color: #fff 
+		line-height: 90px
+		z-index: 10
+		border-radius: 50%
+		background-color: #7ad232
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.48)
+		&:hover
+			+rm(1024)
+				.call__text
+					transform: scale(1) translateX(0)
+				.call__ico
+					transform: scale(0) translateX(-100%)
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			right: -11px
+			margin-top: -8px
+			+arr(13,17,#7ad232,r)
+	&__ico
+		position: absolute
+		height: 40px
+		width: 40px
+		top: 50%
+		left: 50%
+		margin: -20px 0 0 -18px
+		transition: transform .3s
+		&:after
+			position: absolute
+			top: 0
+			left: 0
+			content: '' 
+			animation: call .8s infinite ease-in-out
+			+s(cellular_phone)
+	&__text
+		line-height: 1.4
+		vertical-align: middle
+		transition: transform .3s
+		transform: scale(0) translateX(100%)
+		display: inline-block
+
+@keyframes call
+	0%
+		transform: rotate(10deg) scale(1.15)
+	50%
+		transform: rotate(0) scale(1)
+	100%
+		transform: rotate(10deg) scale(1.15)
+
+// popup
+.popup
+	color: $c_body
+	display: none
+	&.is-active
+		display: block
+	.form
+		font-size: 16px
+		+r400
+		border-radius: 5px
+		box-shadow: 0 0 7.8px 0.2px rgba(0, 0, 0, 0.36)
+		background: #fff
+	.time
+		display: inline-block
+	.date,
+	.time
+		color: $blue
+		+r400
+	.radiobox
+		margin: 0
+		display: block
+	.btn
+		width: 100%
+		display: block
 
 .is-hide-mob
 	+r(768)

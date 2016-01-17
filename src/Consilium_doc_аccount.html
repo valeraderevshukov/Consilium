@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+<head>
+	//= partials/head.html
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	//= partials/header.html
+	//= partials/links.html
+	<!-- cab -->
+	<section class="cab">
+		<div class="cab__in">
+			<!-- banner -->
+			<div class="banner" style="background-image: url('img/banner.png')"></div>
+			<!-- tab -->
+			<div class="tab">
+				<ul class="tab__list">
+					<li class="tab__item">
+						<a href="#" class="tab__link">Регистратура</a>
+					</li>
+					<li class="tab__item">
+						<a href="#" class="tab__link">Календарь</a>
+					</li>
+					<li class="tab__item is-active">
+						<a href="#" class="tab__link">Мой счет</a>
+					</li>
+					<li class="tab__item"> 
+						<a href="#" class="tab__link">Мои файлы</a>
+					</li>
+					<li class="tab__item">
+						<a href="#" class="tab__link">Мои пациенты</a>
+					</li> 
+					<li class="tab__item">
+						<a href="#" class="tab__link">Отзывы</a>
+					</li>
+				</ul> 
+				<div class="tab__in">
+					<div class="tab__block">
+						<div class="tab__item">
+							<a href="#" class="tab__link">Регистратура</a>
+						</div>
+						<div class="tab__item">
+							<a href="#" class="tab__link">Календарь</a>
+						</div>
+					</div>
+					<div class="tab__item is-active is-show-mob">
+						<a href="#" class="tab__link">Мой счет</a>
+					</div>
+					<div class="tab__cont">
+						<!-- topper -->
+						<div class="topper">
+							<div class="topper__left">
+								<h3 class="title-small">история транзакций</h3>
+							</div>
+							<div class="topper__right">
+								<div class="count">
+									<div class="count__item">
+										<div class="count__text">Баланс</div>
+										<div class="count__bal">$ 1.500</div>
+									</div>
+								</div>
+								<a href="#" class="btn btn_green btn_average">Сделать запрос на выдачу</a>
+								<a href="#" class="btn btn_green btn_average">пополнить</a>
+								<a href="#" class="btn btn_average">платные услуги</a>
+							</div>
+						</div>
+						<!-- up -->
+						<div class="up">
+							<button class="up__close" type="button"></button>
+							<h3 class="title-h4">Повысьте свой рейтинг - получите больше клиентов!</h3>
+							<div class="up__wrap">
+								<div class="up__left">
+									<p>Вы можете отображаться на первой странице <br>в каталоге по своей специализации.</p>
+									<ul class="list-green">
+										<li>
+											<i class="ico ico_check-green"></i>
+											Пациенты будут видеть вас сразу при попадании на страницу вашей специализации
+										</li>
+										<li>
+											<i class="ico ico_check-green"></i>
+											Вы получите больше клиентов!
+										</li>
+										<li>
+											<i class="ico ico_check-green"></i>
+											Вы заработаете больше!
+										</li>
+									</ul>
+								</div>
+								<div class="up__right">
+									<div class="price">всего 100.00 <span>₽</span></div>
+									<button class="btn btn_green btn_h48" type="button">повысить рейтинг</button>
+								</div>
+							</div>
+						</div>
+						<!-- filt -->
+						<div class="filt">
+							<div class="filt__left">
+								<div class="filt__text">Поиск по дате:</div>
+								<div class="filt__inl">
+									<div class="datepicker">
+										<input type="text" id="from1" value="08.10.2015" placeholder="От">
+									</div>
+									<div class="datepicker">
+										<input type="text" id="to1" value="08.10.2015" placeholder="До">
+									</div>
+								</div>
+							</div>
+							<div class="filt__sel">
+								<div class="select js-select">
+									<div class="select__text js-select-text">
+										<span>Пополнение счета</span>
+									</div>
+									<ul class="select__list js-select-list">
+										<li data-val="var0">var0</li>
+										<li data-val="var1">var1</li>
+										<li data-val="var2">var2</li>
+										<li data-val="var3">var3</li>
+									</ul>
+									<select>
+										<option value="var0">var0</option>
+										<option value="var1">var1</option>
+										<option value="var2">var2</option>
+										<option value="var3">var3</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<!-- bill --> 
+						<div class="bill">
+							<div class="wrapper">
+								<div class="field is-head">
+									<div class="td">Дата</div>
+									<div class="td">Код операции</div>
+									<div class="td">Описание</div>
+									<div class="td">Статус</div>
+									<div class="td">Сумма</div>
+								</div>
+								<div class="field">
+									<div class="td">
+										<div class="td__title">Дата</div>
+										<date class="date">05.08.2015</date> <span class="time">10:56</span>
+									</div>
+									<div class="td">
+										<div class="td__title">Код операции</div>
+										<span>09203940920394</span>
+									</div>
+									<div class="td">
+										<div class="td__title">Описание</div>
+										<span>Пополнение баланса</span>
+									</div>
+									<div class="td">
+										<div class="td__title">Статус</div>
+										<span>Успешно</span>
+									</div>
+									<div class="td">
+										<div class="td__title">Сумма</div>
+										<span>$ 1.500.00</span>
+									</div>
+								</div>
+								<div class="field">
+									<div class="td">
+										<div class="td__title">Дата</div>
+										<date class="date">05.08.2015</date> <span class="time">10:56</span>
+									</div>
+									<div class="td">
+										<div class="td__title">Код операции</div>
+										<span>09203940920394</span>
+									</div>
+									<div class="td">
+										<div class="td__title">Описание</div>
+										<span>Резервирование средств</span>
+									</div>
+									<div class="td">
+										<div class="td__title">Статус</div>
+										<span>Успешно</span>
+									</div>
+									<div class="td">
+										<div class="td__title">Сумма</div>
+										<span>$ 1.500.00</span>
+									</div>
+								</div>
+								<div class="field">
+									<div class="td">
+										<div class="td__title">Дата</div>
+										<date class="date">05.08.2015</date> <span class="time">10:56</span>
+									</div>
+									<div class="td">
+										<div class="td__title">Код операции</div>
+										<span>09203940920394</span>
+									</div>
+									<div class="td">
+										<div class="td__title">Описание</div>
+										<span>Покупка пакета “Доступ к профессорам”</span>
+									</div>
+									<div class="td">
+										<div class="td__title">Статус</div>
+										<span>Успешно</span>
+									</div>
+									<div class="td">
+										<div class="td__title">Сумма</div>
+										<span>$ 1.500.00</span>
+									</div>
+								</div>
+								<div class="field is-active">
+									<div class="td">
+										<div class="td__title">Дата</div>
+										<date class="date">05.08.2015</date> <span class="time">10:56</span>
+									</div>
+									<div class="td">
+										<div class="td__title">Код операции</div>
+										<span>09203940920394</span>
+									</div>
+									<div class="td">
+										<div class="td__title">Описание</div>
+										<span>Пополнение баланса</span>
+									</div>
+									<div class="td">
+										<div class="td__title">Статус</div>
+										<span>Успешно</span>
+									</div>
+									<div class="td">
+										<div class="td__title">Сумма</div>
+										<span>$ 1.500.00</span>
+									</div>
+								</div>
+								<div class="field">
+									<div class="td">
+										<div class="td__title">Дата</div>
+										<date class="date">05.08.2015</date> <span class="time">10:56</span>
+									</div>
+									<div class="td">
+										<div class="td__title">Код операции</div>
+										<span>09203940920394</span>
+									</div>
+									<div class="td">
+										<div class="td__title">Описание</div>
+										<span>Попролнение баланса</span>
+									</div>
+									<div class="td">
+										<div class="td__title">Статус</div>
+										<span>Успешно</span>
+									</div>
+									<div class="td">
+										<div class="td__title">Сумма</div>
+										<span>$ 1.500.00</span>
+									</div>
+								</div>
+								<div class="field is-foot">
+									<div class="td td_title">остаток за предыдущий месяц</div>
+									<div class="td td_all">$ 200.00</div>
+								</div>
+							</div>
+						</div>
+						<!-- bott -->
+						<div class="bott">
+							<!-- pagination -->
+							<ul class="pagin">
+								<li><a class="pagin__prev" href="#"></a></li>
+								<li><a href="#">1</a></li>
+								<li><a class="is-active" href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li><a class="pagin__next" href="#"></a></li>
+							</ul>
+							<button class="btn btn_green btn_average" type="button">Скачать историю</button>
+						</div>
+					</div>
+					<div class="tab__block">
+						<div class="tab__item"> 
+							<a href="#" class="tab__link">Мои файлы</a>
+						</div>
+						<div class="tab__item">
+							<a href="#" class="tab__link">Мои пациенты</a>
+						</div> 
+						<div class="tab__item">
+							<a href="#" class="tab__link">Отзывы</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- banner -->
+			<div class="banner" style="background-image: url('img/banner.png')"></div>
+		</div>
+	</section>
+</div>
+<!-- END out-->
+//= partials/footer.html
+</body>
+</html>

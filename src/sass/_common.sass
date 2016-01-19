@@ -344,16 +344,31 @@ a
 			width: 100%
 	&__search
 		float: left
-		margin-right: 9px
+		margin: 28px 9px 0 0
 		width: 413px
+		+r(960)
+			float: none
+			width: 100%
 	&__in
 		+clr
+		+r(768)
+			padding: 0 30px
 	.filt__right
 		float: right
 		width: calc(100% - 422px)
+		+clr
+		+r(960)
+			float: none
+			margin-top: 10px
+			width: 100%
 		.datepicker
 			margin-left: 5px
 			width: 118px
+			+r(960)
+				margin-left: 2%
+				width: 49%
+				&:first-child
+					margin-left: 0
 	.filt__left
 		float: left
 		+clr
@@ -366,6 +381,8 @@ a
 			margin: 7px 12px 0 0
 			+r(768)
 				display: block
+				&:first-child
+					margin-top: 0
 			& + .datepicker
 				+r(768)
 					margin-top: 0
@@ -1346,14 +1363,25 @@ a
 			&:hover
 				color: darken($blue, 15%) !important
 	.td
+		padding-right: 10px
 		&:first-child
-			width: 176px
+			width: 23.5%
 		&:nth-child(2)
-			width: 214px
+			width: 28.6%
 		&:nth-child(3)
-			width: 294px
+			width: 39.3%
 		&:last-child
+			padding-right: 0
 			width: 72px
+			+r(1200)
+				width: 34px
+	.btn-open
+		+r(960)
+			min-width: 218px
+			height: 45px
+			line-height: 45px
+			+r(768)
+				width: 100%
 
 // reviews
 .reviews
@@ -1372,18 +1400,44 @@ a
 			&:nth-child(3)
 				padding-left: 26px
 				width: 860px
+	& > .date
+		+r(768)
+			padding: 0 30px
+			text-transform: uppercase
+			font-size: 16px
+	& + .pagin
+		+r(768)
+			margin-bottom: 24px
 	.title-small
 		margin-bottom: 22px
+		+r(768)
+			padding: 27px 30px 0
+			margin-bottom: 20px
+			text-align: left
+			& + .title-small
+				padding-top: 0
 	.wrapper
 		margin: 10px 0 25px
 	.td
 		vertical-align: top
+		+r(1200)
+			padding-right: 10px
 		&:first-child
 			width: 110px
+			+r(960)
+				float: left
+				padding-right: 28px
+				width: 81px !important
 		&:nth-child(2)
 			width: 232px
+			+r(960)
+				margin-top: 0
+				width: calc(100% - 109px)
 		&:nth-child(3)
 			width: 675px
+			+r(960)
+				padding: 0 0 0 109px
+				+box
 		&:last-child
 			vertical-align: middle
 		.date
@@ -1391,7 +1445,8 @@ a
 	.rating
 		margin-top: 12px
 		font-size: 16px
-
+		+r(960)
+			margin-top: 8px
 // details
 .details
 	&__in

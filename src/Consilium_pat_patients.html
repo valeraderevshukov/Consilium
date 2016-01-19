@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+<head>
+	//= partials/head.html
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	//= partials/header.html
+	//= partials/filter.html
+	<!-- cab -->
+	<section class="cab">
+		<div class="cab__in">
+			<!-- tab -->
+			<div class="tab">
+				<ul class="tab__list">
+					<li class="tab__item">
+						<a href="#" class="tab__link">Регистратура</a>
+					</li>
+					<li class="tab__item">
+						<a href="#" class="tab__link">Календарь</a>
+					</li>
+					<li class="tab__item">
+						<a href="#" class="tab__link">Мой счет</a>
+					</li>
+					<li class="tab__item"> 
+						<a href="#" class="tab__link">Мои файлы</a>
+					</li>
+					<li class="tab__item is-active">
+						<a href="#" class="tab__link">Мои пациенты</a>
+					</li> 
+					<li class="tab__item">
+						<a href="#" class="tab__link">Отзывы</a>
+					</li>
+				</ul> 
+				<div class="tab__in">
+					<div class="tab__block"> 
+						<div class="tab__item">
+							<a href="#" class="tab__link">Регистратура</a>
+						</div>
+						<div class="tab__item">
+							<a href="#" class="tab__link">Календарь</a>
+						</div>
+						<div class="tab__item">
+							<a href="#" class="tab__link">Мой счет</a>
+						</div>
+						<div class="tab__item"> 
+							<a href="#" class="tab__link">Мои файлы</a>
+						</div>
+					</div>
+					<div class="tab__item is-active is-show-mob">
+						<a href="#" class="tab__link">Мои пациенты</a>
+					</div> 
+					<div class="tab__cont">
+						<div class="title-small is-mob">мои специалисты</div>
+						<!-- filt -->
+						<div class="filt">
+							<div class="filt__in">
+								<div class="filt__search">
+									<div class="search">
+										<div class="search__field"><input type="text" class="input" placeholder="Введите имя специалиста..."></div>
+										<button class="search__btn" type="submit"><i class="ico ico_search-green"></i></button>
+									</div>
+								</div>
+								<div class="filt__right">
+									<div class="filt__text">Дата</div>
+									<div class="wrap">
+										<div class="datepicker">
+											<input type="text" id="from1" value="08.10.2015" placeholder="От">
+										</div>
+										<div class="datepicker">
+											<input type="text" id="to1" value="08.10.2015" placeholder="До">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- l -->
+						<div class="l l_patients">
+							<div class="leftbar">
+								<!-- patient -->
+								<div class="patients">
+									<div class="wrapper">
+										<div class="field is-head">
+											<div class="td">Имя Специалиста</div>
+											<div class="td">Последняя консультация</div>
+											<div class="td">Последний комментарий</div>
+											<div class="td"></div>
+										</div>
+										<div class="field">
+											<div class="td">
+												<a href="#">Игорь Тараев</a>
+											</div>
+											<div class="td">24.05.2015 в 10:00</div>
+											<div class="td">Жалобы на головные боли и боли в пояснице при физических нагрузках</div>
+											<div class="td">
+												<button class="btn-open" type="button"></button>
+											</div>
+										</div>
+										<div class="field">
+											<div class="td">
+												<a href="#">Анастасия Сидорова</a>
+											</div>
+											<div class="td">24.05.2015 в 10:00</div>
+											<div class="td">Жалобы на головные боли и боли в пояснице при физических нагрузках</div>
+											<div class="td">
+												<button class="btn-open is-active" type="button"></button>
+											</div>
+										</div>
+										<div class="field">
+											<div class="td">
+												<a href="#">Максим Игольников</a>
+											</div>
+											<div class="td">24.05.2015 в 10:00</div>
+											<div class="td">Жалобы на головные боли и боли в пояснице при физических нагрузках</div>
+											<div class="td">
+												<button class="btn-open" type="button"></button>
+											</div>
+										</div>
+										<div class="field">
+											<div class="td">
+												<a href="#">Алексей Иванов</a>
+											</div>
+											<div class="td">24.05.2015 в 10:00</div>
+											<div class="td">Жалобы на головные боли и боли в пояснице при физических нагрузках</div>
+											<div class="td">
+												<button class="btn-open" type="button"></button>
+											</div>
+										</div>
+										<div class="field">
+											<div class="td">
+												<a href="#">Игорь Тараев</a>
+											</div>
+											<div class="td">24.05.2015 в 10:00</div>
+											<div class="td">Жалобы на головные боли и боли в пояснице при физических нагрузках</div>
+											<div class="td">
+												<button class="btn-open" type="button"></button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="rightbar">
+								<!-- block -->
+								<div class="block">
+									<div class="field">
+										<!-- messages -->
+										<div class="messages">
+											<a href="#" class="title-cap is-blue">Анастасия Абрамовна</a>
+											<div class="message">
+												<a href="#" class="i-am">Я</a>
+												<div class="message__text">Жалобы на головные боли и в пояснице</div>
+											</div>
+											<div class="message">
+												<a href="#" class="patient">Игорь Тараев</a>
+												<div class="message__text">Жалобы на головные боли и в пояснице</div>
+											</div>
+											<div class="message">
+												<a href="#" class="i-am">Я</a>
+												<div class="message__text">Жалобы на головные боли и в пояснице</div>
+											</div>
+											<div class="message">
+												<a href="#" class="patient">Игорь Тараев</a>
+												<div class="message__text">Жалобы на головные боли и в пояснице</div>
+											</div>
+											<div class="message">
+												<a href="#" class="i-am">Я</a>
+												<div class="message__text">Жалобы на головные боли и в пояснице</div>
+											</div>
+											<div class="message">
+												<a href="#" class="patient">Игорь Тараев</a>
+												<div class="message__text">Жалобы на головные боли и в пояснице</div>
+											</div>
+											<div class="message">
+												<a href="#" class="i-am">Я</a>
+												<div class="message__text">Жалобы на головные боли и в пояснице</div>
+											</div>
+											<div class="message">
+												<a href="#" class="patient">Игорь Тараев</a>
+												<div class="message__text">Жалобы на головные боли и в пояснице</div>
+											</div>
+										</div>
+										
+									</div>
+									<div class="field">
+										<div class="title-cap is-blue">21.05.2015</div>
+										<div class="message">
+											<a href="#" class="i-am">Я</a>
+											<div class="message__text">Жалобы на головные боли и в пояснице</div>
+										</div>
+										<div class="message">
+											<a href="#" class="patient">Игорь Тараев</a>
+											<div class="message__text">Жалобы на головные боли и в пояснице</div>
+										</div>
+										<a href="#" class="btn btn_h38">ПОсмотреть всю переписку</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="wrap">
+							<div class="leftbar">
+								<!-- pagination -->
+								<ul class="pagin">
+									<li><a class="pagin__prev" href="#"></a></li>
+									<li><a href="#">1</a></li>
+									<li><a class="is-active" href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li><a class="pagin__next" href="#"></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="tab__block">
+						<div class="tab__item">
+							<a href="#" class="tab__link">Отзывы</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<!-- END out-->
+//= partials/footer.html
+</body>
+</html>

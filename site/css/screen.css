@@ -86,10 +86,11 @@ a { text-decoration: none; }
 .filt__text { font-family: "Roboto Condensed", Arial, sans-serif; font-weight: 400; font-size: 16px; display: inline-block; }
 .filt__sel { float: right; width: calc(100% - 364px); }
 .filt__sel .search { width: 100%; }
-.filt__search { float: left; margin-right: 9px; width: 413px; }
+.filt__search { float: left; margin: 28px 9px 0 0; width: 413px; }
 .filt__in { *zoom: 1; }
 .filt__in:after { content: " "; display: table; clear: both; }
-.filt .filt__right { float: right; width: calc(100% - 422px); }
+.filt .filt__right { float: right; width: calc(100% - 422px); *zoom: 1; }
+.filt .filt__right:after { content: " "; display: table; clear: both; }
 .filt .filt__right .datepicker { margin-left: 5px; width: 118px; }
 .filt .filt__left { float: left; *zoom: 1; }
 .filt .filt__left:after { content: " "; display: table; clear: both; }
@@ -362,10 +363,11 @@ a { text-decoration: none; }
 .patients .wrapper .field:hover { color: #333; background: transparent; }
 .patients .wrapper .field:hover a { color: #4671b3; }
 .patients .wrapper a:hover { color: #304e7c !important; }
-.patients .td:first-child { width: 176px; }
-.patients .td:nth-child(2) { width: 214px; }
-.patients .td:nth-child(3) { width: 294px; }
-.patients .td:last-child { width: 72px; }
+.patients .td { padding-right: 10px; }
+.patients .td:first-child { width: 23.5%; }
+.patients .td:nth-child(2) { width: 28.6%; }
+.patients .td:nth-child(3) { width: 39.3%; }
+.patients .td:last-child { padding-right: 0; width: 72px; }
 
 .reviews.is-mod .td:nth-child(2) { position: relative; }
 .reviews.is-mod .td:nth-child(2):before { position: absolute; content: ""; top: -25px; right: 0; bottom: -25px; width: 1px; background: #e6e6e6; }
@@ -622,6 +624,7 @@ a { text-decoration: none; }
 .wrap { *zoom: 1; }
 .wrap:after { content: " "; display: table; clear: both; }
 .wrap + .banner { margin-top: 45px; }
+.wrap .pagin { margin-bottom: 24px; }
 
 .wrapper { margin-top: 20px; border: 1px solid #e6e6e6; font-family: "Roboto Condensed", Arial, sans-serif; font-weight: 400; font-size: 16px; border-radius: 5px; }
 .wrapper.is-when .graph__left { width: 38.4%; }
@@ -1217,6 +1220,8 @@ body.is-open-menu .btn-search { opacity: 0; z-index: -1; }
  .wrapper.is-when .graph__field:first-child{ margin-top: 0; }
  .wrapper.is-when .graph__col{ width: 100%; }
  .wrapper.is-when .graph__col:first-child{ width: 100%; }
+ .l_patients .leftbar{ width: 100%; }
+ .l_patients .rightbar{ width: 100%; }
  .alt__block{ left: initial; right: -10px; }
  .block + .block{ margin-top: 25px; }
  .block .btn{ width: auto; }
@@ -1259,8 +1264,10 @@ body.is-open-menu .btn-search { opacity: 0; z-index: -1; }
  .tab .wrapper .form{ border-radius: 0; }
  .tab .btn{ height: 45px; width: 100%; line-height: 45px; font-size: 18px; }
  .filt__sel{ float: none; margin-top: 10px; padding: 0 30px; width: 100%; box-sizing: border-box; }
+ .filt__in{ padding: 0 30px; }
  .filt .filt__left{ float: none; padding: 0 30px; width: 100%; box-sizing: border-box; }
  .filt .filt__left .filt__text{ display: block; }
+ .filt .filt__left .filt__text:first-child{ margin-top: 0; }
  .filt .filt__left .filt__text + .datepicker{ margin-top: 0; }
  .filt .filt__left .datepicker{ margin: 10px 0 0; width: 100%; }
  .filt .filt__inl{ float: none; margin-top: 5px; }
@@ -1280,6 +1287,10 @@ body.is-open-menu .btn-search { opacity: 0; z-index: -1; }
  .topper .btn:first-child{ margin-top: 0; }
  .hist + .pagin{ margin-bottom: 24px; }
  .hist .select{ margin-top: 4px; max-width: 100%; }
+ .reviews > .date{ padding: 0 30px; text-transform: uppercase; font-size: 16px; }
+ .reviews + .pagin{ margin-bottom: 24px; }
+ .reviews .title-small{ padding: 27px 30px 0; margin-bottom: 20px; text-align: left; }
+ .reviews .title-small + .title-small{ padding-top: 0; }
  .details__in{ width: 100%; }
  .details .title-small{ padding: 27px 30px 0; text-align: left; }
  .details .wrapper{ border-bottom: none; }
@@ -1416,12 +1427,53 @@ body.is-open-menu .btn-search { opacity: 0; z-index: -1; }
 @media only screen and (max-width: 1280px) and (max-width: 768px){
  .filt__col .btn{ width: 100%; }
  .numb{ margin-left: 0; padding-left: 0; } }
+@media only screen and (max-width: 960px){
+ .filt__search{ float: none; width: 100%; }
+ .filt .filt__right{ float: none; margin-top: 10px; width: 100%; }
+ .filt .filt__right .datepicker{ margin-left: 2%; width: 49%; }
+ .filt .filt__right .datepicker:first-child{ margin-left: 0; }
+ .bill .date{ display: block; }
+ .patients .btn-open{ min-width: 218px; height: 45px; line-height: 45px; }
+ .reviews .td:first-child{ float: left; padding-right: 28px; width: 81px !important; }
+ .reviews .td:nth-child(2){ margin-top: 0; width: calc(100% - 109px); }
+ .reviews .td:nth-child(3){ padding: 0 0 0 109px; box-sizing: border-box; }
+ .reviews .rating{ margin-top: 8px; }
+ .ad{ padding: 34px 0; font-size: 44px; line-height: 40px; }
+ .ad__in{ padding: 0 30px 343px; }
+ .ad__block{ margin: 0 auto; }
+ .ad__hand{ right: 50%; margin-right: -125px; width: 247px; height: 428px; }
+ .ad__bot .btn{ width: 100%; }
+ .video__in{ padding: 0 30px; }
+ .video .slick-arrow{ display: none !important; }
+ .amount{ padding: 44px 0 51px; }
+ .amount__item:first-child{ margin: 0 auto; }
+ .amount__text{ margin: 16px -70px 0; }
+ .wrapper .field{ display: block; }
+ .wrapper .field.is-head{ display: none; }
+ .wrapper .field.is-head + .field{ border-top: none; }
+ .wrapper .field .field__row{ display: block; }
+ .wrapper .td{ margin-top: 16px; padding-right: 0; width: 100% !important; display: block; }
+ .wrapper .td:first-child{ margin-top: 0; }
+ .wrapper .td.td_all{ margin-top: 0; }
+ .wrapper .td .td__title{ display: block; }
+ .field__row{ margin-top: 0; }
+ .field__row.is-mob{ display: none !important; }
+ .btn-text.is-mob{ display: inline-block; }
+ .btn-reg, .btn-remove{ padding: 0 20px; height: 38px; line-height: 38px; min-width: 188px; border-radius: 5px; }
+ .btn-reg__hide, .btn-remove__hide{ display: inline-block; }
+ .btn-reg .ico, .btn-remove .ico{ display: none; }
+ .title-small .hist{ margin: 5px 0 0; display: block; }
+ .hist__item{ margin-top: 5px; }
+ .drop__block{ max-height: 404px; overflow-y: auto; }
+ .drop ul{ width: 33%; } }
 @media only screen and (max-width: 1023px){
  .res__bot .btn{ min-width: 208px; }
  .l-col1 .btn{ width: auto; min-width: 208px; } }
 @media only screen and (max-width: 1200px){
  .bill .td:last-child{ width: 70px; }
  .hist .td{ padding-right: 10px; }
+ .patients .td:last-child{ width: 34px; }
+ .reviews .td{ padding-right: 10px; }
  .inform__left{ width: 100%; font-size: 0; }
  .inform__right{ margin-top: 23px; width: 100%; }
  .graph__left{ width: 26%; }
@@ -1459,38 +1511,9 @@ body.is-open-menu .btn-search { opacity: 0; z-index: -1; }
  .footer__left{ float: none; text-align: center; }
  .footer__right{ float: none; margin-top: 15px; text-align: center; }
  .numb__tel{ margin-right: 10px; display: inline-block; } }
-@media only screen and (max-width: 960px){
- .bill .date{ display: block; }
- .ad{ padding: 34px 0; font-size: 44px; line-height: 40px; }
- .ad__in{ padding: 0 30px 343px; }
- .ad__block{ margin: 0 auto; }
- .ad__hand{ right: 50%; margin-right: -125px; width: 247px; height: 428px; }
- .ad__bot .btn{ width: 100%; }
- .video__in{ padding: 0 30px; }
- .video .slick-arrow{ display: none !important; }
- .amount{ padding: 44px 0 51px; }
- .amount__item:first-child{ margin: 0 auto; }
- .amount__text{ margin: 16px -70px 0; }
- .wrapper .field{ display: block; }
- .wrapper .field.is-head{ display: none; }
- .wrapper .field.is-head + .field{ border-top: none; }
- .wrapper .field .field__row{ display: block; }
- .wrapper .td{ margin-top: 16px; padding-right: 0; width: 100% !important; display: block; }
- .wrapper .td:first-child{ margin-top: 0; }
- .wrapper .td.td_all{ margin-top: 0; }
- .wrapper .td .td__title{ display: block; }
- .field__row{ margin-top: 0; }
- .field__row.is-mob{ display: none !important; }
- .btn-text.is-mob{ display: inline-block; }
- .btn-reg, .btn-remove{ padding: 0 20px; height: 38px; line-height: 38px; min-width: 188px; border-radius: 5px; }
- .btn-reg__hide, .btn-remove__hide{ display: inline-block; }
- .btn-reg .ico, .btn-remove .ico{ display: none; }
- .title-small .hist{ margin: 5px 0 0; display: block; }
- .hist__item{ margin-top: 5px; }
- .drop__block{ max-height: 404px; overflow-y: auto; }
- .drop ul{ width: 33%; } }
 @media only screen and (max-width: 960px) and (max-width: 768px){
  .bill .date{ font-size: inherit; display: inline-block; }
+ .patients .btn-open{ width: 100%; }
  .btn-reg, .btn-remove{ width: 100%; height: 48px; line-height: 48px; font-size: 18px; } }
 @media only screen and (max-width: 1200px) and (max-width: 768px){
  .inform__right{ margin-top: 0; }

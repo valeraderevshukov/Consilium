@@ -22,13 +22,15 @@ body
 	color: $c_gray
 	+r400
 	font-size: 16px
+	+r(1024)
+		height: 80px
 	&:before
 		position: fixed
 		content: ''
 		left: 0
 		right: 0
 		bottom: 0
-		top: 57px
+		top: 81px
 		background: #000
 		visibility: hidden
 		opacity: 0
@@ -48,7 +50,7 @@ body
 		+box
 		+clr
 		+r(1024)
-			padding-top: 17px
+			padding-top: 30px
 	&__right
 		float: right
 		+r(1024)
@@ -70,7 +72,7 @@ body
 	&__wrap
 		+r(1024)
 			position: fixed
-			top: 57px
+			top: 81px
 			left: 0
 			right: 0
 			overflow-x: auto
@@ -97,6 +99,8 @@ body
 	+r(1024)
 		margin: 6px 0 0 30px
 		+svg(logo_mob,160,44)
+		+r(1024)
+			margin-top: 18px
 
 // nav
 .nav
@@ -526,7 +530,7 @@ body
 	&:before
 		position: absolute
 		content: '' 
-		bottom: -16px
+		bottom: -27px
 		right: 0
 		transform: translate3d(0,0,0)
 		transition: transform .3s

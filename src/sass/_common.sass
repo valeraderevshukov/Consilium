@@ -67,11 +67,15 @@ a
 
 // cab
 .cab
-	background: $light
+	background: darken($light, 5%)
 	&__in
 		@extend %in
 	.banner 
 		margin: 30px 0 0
+		&:first-child
+			position: relative
+			top: 30px
+			margin: 0 0 30px
 
 // tab
 .tab
@@ -89,9 +93,11 @@ a
 			&:first-child
 				margin-left: 0
 	& + .banner
-		margin: -30px 0 30px
+		position: relative
+		margin: 0
+		bottom: 30px
 		+r(768)
-			margin-top: -5px
+			margin-top: 25px
 	&__list
 		font-size: 0
 		width: 100%
@@ -226,6 +232,9 @@ a
 			margin-top: -6px
 			transition: background .2s
 			background: $l_green
+			display: none
+			+r(768)
+				display: block
 	&__in
 		position: relative
 		padding: 35px 50px 50px
@@ -553,6 +562,26 @@ a
 		& + p
 			margin-top: 20px
 
+// invited
+.invited
+	a
+		color: $blue
+		line-height: 18px
+		transition: border-color .2s
+		border-bottom: 1px solid transparent
+		&:active
+			border-color: $blue
+		+rm(1024)
+			&:hover
+				border-color: $blue
+	&__remove
+		position: relative
+		top: -1px
+		font-size: 0
+		margin-left: 2px
+		background: transparent
+		display: inline-block
+
 // catal
 .catal
 	float: right
@@ -778,6 +807,7 @@ a
 		padding: 12px 15px
 		padding-top: 6.5%
 		font-size: 24px
+		cursor: pointer
 		+r(768)
 			padding-top: 8.5%
 		&.fc-mon,
@@ -831,6 +861,7 @@ a
 	margin-top: 9px
 	overflow: hidden
 	border-radius: 5px
+	transform: translate3d(0,0,0)
 	box-shadow: 0 2px 5.7px 0.3px rgba(0, 0, 0, 0.2)
 	+clr
 	&:first-child
@@ -854,6 +885,7 @@ a
 			position: absolute
 			top: 50%
 			left: 50%
+			transform: translate3d(0,0,0)
 			transform: translate(-50%,-50%)
 			display: block
 	&__price
@@ -1234,6 +1266,7 @@ a
 	right: 0
 	z-index: 100
 	overflow: hidden
+	background: #000
 	display: none
 	&.is-active
 		display: block
@@ -1294,6 +1327,12 @@ a
 .bill
 	.field
 		table-layout: fixed
+		&:hover
+			color: #fff
+			background: #61c2c1
+			.btn-text,
+			a
+				color: #fff
 	.td
 		width: 30%
 		+r(1024)

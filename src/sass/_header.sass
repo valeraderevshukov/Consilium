@@ -22,8 +22,6 @@ body
 	color: $c_gray
 	+r400
 	font-size: 16px
-	+r(1024)
-		height: 80px
 	&:before
 		position: fixed
 		content: ''
@@ -39,8 +37,9 @@ body
 		will-change: opacity
 		transition: opacity .3s, visibility .3s
 	+r(1200)
-		font-size: 14px
+		font-size: 13px
 	+r(1024)
+		height: 80px
 		border-bottom: 1px solid #e5e5e5
 	&__in
 		position: relative
@@ -117,7 +116,7 @@ body
 		vertical-align: top
 		display: inline-block
 		+r(1200)
-			font-size: 14px
+			font-size: 13px
 			padding: 0 8px
 			+r(1024) 
 				padding: 15px 33px
@@ -135,9 +134,9 @@ body
 			content: ''
 			top: 50%
 			left: 0
-			transform: translate(0,-50%)
+			margin-top: calc(-9px / 2)
 			height: 9px
-			border-left: 1px dotted $bd_nav
+			border-left: 1px solid $bd_nav
 			+r(1024)
 				display: none
 	a
@@ -229,9 +228,9 @@ body
 		content: ''
 		top: 50%
 		left: 0
-		transform: translate(0,-50%)
+		margin-top: calc(-9px / 2)
 		height: 9px
-		border-left: 1px dotted $bd_nav
+		border-left: 1px solid $bd_nav
 		+r(1024)
 			display: none
 
@@ -406,10 +405,11 @@ body
 // dropdown
 .dropdown
 	.dropdown__text
-		padding: 0 28px 0 0
+		margin: 0 28px 0 0
 		cursor: pointer
 		color: $d_blue
-		border: none
+		&:hover
+			border-color: $d_blue
 		+r(1024)
 			display: block
 	&__arr
@@ -418,6 +418,7 @@ body
 		right: 0
 		width: 19px
 		height: 19px
+		cursor: pointer
 		background: #d6dbdf
 		border-radius: 3px
 		+r(1024)

@@ -55,7 +55,7 @@ $(document).ready(function() {
 	});
 
 	// dropdown
-	$('.js-dropdown-text').on('click', function(event){
+	$('.js-dropdown-arr').on('click', function(event){
 		var this_ 	= $(this),
 			parent 	= this_.parents('.js-dropdown'),
 			list 	= parent.find('.js-dropdown-list');
@@ -117,6 +117,11 @@ $(document).ready(function() {
 	}
 	tab();
 
+	function LastDayOfMonth(Year, Month)
+	{
+	    return(new Date((new Date(Year, Month+1,1))+1)).getDate();
+	}
+
 	// datepicker
 	$('[id^="from"]').datepicker({
 		showOn			: "both",
@@ -124,25 +129,46 @@ $(document).ready(function() {
 		buttonImageOnly	: true,
 		numberOfMonths	: 1,
 		dateFormat		: "dd.mm.yy",
+		dayNamesMin: ['Пн','Вт','Ср','Чт','Пт','Сб','Вс'],
+		monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+            'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
 		onClose: function( selectedDate ) {
 			$("#to").datepicker("option", "minDate", selectedDate);
-		}
+		},
+		beforeShowDay: function (date) {
+        if (date.getDate() == LastDayOfMonth(date.getFullYear(),date.getMonth())) {
+            return [true, ''];
+        }
+        return [false, ''];
+    }
 	});
 	$('[id^="to"]').datepicker({
 		showOn			: "both",
 		buttonImage 	: "img/calendar.png",
 		buttonImageOnly	: true,
-		numberOfMonths	: 1,
+		numberOfMonths	: +1,
 		dateFormat		: "dd.mm.yy",
+		dayNamesMin: ['Пн','Вт','Ср','Чт','Пт','Сб','Вс'],
+		monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+            'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
 		onClose: function( selectedDate ) {
 			$("#from").datepicker("option", "maxDate", selectedDate);
-		}
+		},
+		beforeShowDay: function (date) {
+        if (date.getDate() == LastDayOfMonth(date.getFullYear(),date.getMonth())) {
+            return [true, ''];
+        }
+        return [false, ''];
+    }
 	}); 
 	$('.js-datepicker').datepicker({
 		showOn			: "both",
 		buttonImage 	: "img/calendar.png",
 		buttonImageOnly	: true,
 		numberOfMonths	: 1,
+		dayNamesMin: ['Пн','Вт','Ср','Чт','Пт','Сб','Вс'],
+		monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+            'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
 		dateFormat		: "dd.mm.yy"
 	});
 

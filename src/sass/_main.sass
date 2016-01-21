@@ -128,10 +128,12 @@
 		+r(768)
 			padding: 0 30px
 	&__row
+		position: relative
 		text-align: center
 		font-size: 0
 		+clr
 	&__item
+		position: static
 		margin-left: 1.5%
 		padding: 28px 35px 32px 27px
 		width: 32%
@@ -140,13 +142,32 @@
 		+box
 		border-radius: 5px
 		vertical-align: top
-		background: $l_green
+		transition: background .2s
 		display: inline-block
+		&:before
+			position: absolute
+			content: ''
+			top: 0
+			bottom: 0
+			width: 32%
+			margin-left: -27px
+			border-radius: 5px
+			transition: background .2s
+			background: $l_green
+			z-index: -1
+			+r(1200)
+				display: none
+		&:hover
+			+r(1200)
+				background: darken($l_green, 15%)
+			&:before
+				background: darken($l_green, 15%)
 		&:first-child
 			margin-left: 0
 		+r(1200)
 			margin: 15px 0 0
 			width: 100%
+			background: $l_green
 			&:first-child
 				margin-top: 0
 	&__img
@@ -171,6 +192,20 @@
 		margin-bottom: 25px
 		+r(768)
 			margin-bottom: 15px
+
+.ff
+	.necess__item
+		&:before
+			margin-left: -181px
+
+.ie8,
+.ie9
+	.necess__item
+		background: $l_green
+		&:before
+			display: none
+		&:hover
+			background: darken($l_green, 15%)
 
 // video
 .video

@@ -127,6 +127,8 @@
 					border-top: none
 			&:hover
 				color: $c_body
+			a
+				color: inherit
 		&.is-foot
 			display: block
 			border-radius: 0 0 5px 5px
@@ -436,7 +438,7 @@
 
 // btn
 .btn
-	padding: 0 30px
+	padding: 0 28px
 	height: 38px
 	min-width: 113px
 	line-height: 37px
@@ -512,14 +514,19 @@ button.btn
 	&.is-active
 		background-color: $l_green
 		border-color: $l_green
+		&:before,
+		&:after
+			background: #fff
 	&:before,
 	&:after
 		position: absolute
 		content: ''
 		top: 50%
 		left: 50%
+		transform: translate3d(0,0,0)
 		transform: translate(-50%,-50%)
-		background: #fff
+		transition: background .2s
+		background: #bbb
 	&:before
 		width: 2px
 		height: 10px
@@ -651,6 +658,11 @@ button.btn
 		margin: 5px 0 0 25px
 		vertical-align: top
 		display: inline-block
+		& + .btn.btn_average
+			+r(1200)
+				margin: 0 0 0 5px
+				+r(1024)
+					margin: 15px 0 0
 		+r(960)
 			margin: 5px 0 0
 			display: block

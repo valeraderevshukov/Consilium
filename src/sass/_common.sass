@@ -529,6 +529,16 @@ a
 					border-color: $blue
 	&__but
 		margin-top: 17px
+		.btn
+			+r(1279)
+				padding: 0 18px
+				font-size: 11px
+				+r(1024)
+					padding: 0 28px
+					font-size: 14px
+					width: auto
+					+r(768)
+						width: 100%
 	&__inst
 		margin-top: 18px
 		a
@@ -586,6 +596,9 @@ a
 .catal
 	float: right
 	width: 73.5%
+	+r(1024)
+		margin-top: 30px
+		width: 100%
 	&__filter
 		+clr
 		.select,
@@ -593,6 +606,11 @@ a
 			float: left
 			margin-left: 1%
 			width: 23.55%
+			+r(768)
+				margin: 10px 0 0
+				width: 100%
+				&:first-child
+					margin-top: 0
 			&:first-child
 				margin-left: 0
 		.search
@@ -612,6 +630,9 @@ a
 	&__bot
 		margin-top: 31px
 		text-align: center
+		.btn
+			+r(768)
+				width: 100%
 
 // search
 .search
@@ -691,9 +712,9 @@ a
 			content: ''
 			top: 50%
 			left: 0
-			transform: translate(0,-50%)
+			margin-top: calc(-9px / 2)
 			height: 9px
-			border-left: 1px dotted $bd_nav
+			border-left: 1px solid $bd_nav
 	a
 		position: relative
 		padding-right: 19px
@@ -716,11 +737,19 @@ a
 	line-height: 1.25
 	box-shadow: (inset 0 0 0 1px $bord_select)
 	border-radius: 5px
+	+r(1279)
+		font-size: 11px
+		+r(768)
+			padding: 0 59px
+			font-size: 18px
 	.calendar__day
 		padding: 8px 10px
 		height: 47px
 		box-shadow: (1px 0 0 $bord_select)
 		+box
+		+r(768)
+			padding: 10px 15px
+			height: 60px
 		&:first-child
 			border-left: none
 	.slick-prev,
@@ -729,6 +758,9 @@ a
 		margin: 0
 		height: 47px
 		width: 43px
+		+r(768)
+			height: 59px
+			width: 59px
 		&:active
 			&:before
 				opacity: .5
@@ -750,10 +782,14 @@ a
 		box-shadow: (1px 0 0 $bord_select)
 		&:before
 			+arr(5,9,#ccc,l)
+			+r(768)
+				+arr(8,15,#ccc,l)
 	.slick-next
 		box-shadow: (-1px 0 0 $bord_select)
 		&:before
 			+arr(5,9,#ccc,r)
+			+r(768)
+				+arr(8,15,#ccc,r)
 
 // fullcalendar
 .fullcalendar
@@ -864,6 +900,8 @@ a
 	transform: translate3d(0,0,0)
 	box-shadow: 0 2px 5.7px 0.3px rgba(0, 0, 0, 0.2)
 	+clr
+	+r(768)
+		overflow: initial
 	&:first-child
 		margin-top: 0
 	&__left
@@ -871,6 +909,11 @@ a
 		padding: 40px 0 30px
 		width: 30.14%
 		text-align: center
+		+r(768)
+			float: none
+			padding: 43px 10px 40px
+			width: 100%
+			+box
 	&__img
 		position: relative
 		height: 197px
@@ -892,6 +935,11 @@ a
 		margin-top: 30px
 		font-size: 18px
 		+r400
+		+r(960)
+			font-size: 16px
+			+r(768)
+				margin-top: 16px
+				font-size: 22px
 	&__cost
 		color: $blue
 		font-weight: 700
@@ -901,10 +949,19 @@ a
 		width: 34.446%
 		padding: 33px 25px 30px 0
 		+box
+		+r(960)
+			padding-left: 5px
+			+r(768)
+				float: none
+				padding: 22px 30px
+				width: 100%
+				border-top: 1px solid #e5e5e5
 	&__stat
 		color: $blue
 		font-size: 16px
 		+r400
+		+r(768)
+			font-size: 18px
 	&__inf
 		margin-top: 12px
 		font-size: 0
@@ -920,6 +977,8 @@ a
 		font-size: 16px
 		vertical-align: top
 		display: inline-block
+		+r(768)
+			font-size: 18px
 		&:first-child
 			padding-left: 0
 			&:before
@@ -953,6 +1012,8 @@ a
 		color: $c_doc
 		line-height: 1.2
 		letter-spacing: -.2px
+		+r(768)
+			font-size: 17px
 	&__right
 		position: absolute
 		top: 0
@@ -963,6 +1024,8 @@ a
 		font-size: 0
 		background: $l_green-2
 		+box
+		+r(768)
+			display: none
 		.days
 			position: absolute
 			top: 50%
@@ -972,24 +1035,49 @@ a
 	.title-small
 		margin-bottom: 12px
 
+// doc-calendar
+.doc-calendar
+	margin: 25px 0
+	display: none
+	+r(768)
+		display: block
+	.calendar
+		margin-bottom: 10px
+		color: #767676
+	.days
+		padding: 35px 60px 40px
+		border-radius: 5px
+	.day
+		font-size: 20px
+	.btn
+		font-size: 18px
+		height: 32px
+		line-height: 25px
+
 .days
 	position: relative
 	padding: 35px 49px 40px 45px
 	font-size: 0
 	background: $l_green-2
 	+box
+	+clr
+	+r(1279)
+		padding: 35px 29px 40px 25px
 	.popup
 		position: absolute
 		top: 100%
-		left: 0
+		width: 100%
 		right: 0
 		margin-top: 53px
 		z-index: 2
+		+r(768)
+			top: 0
+			margin-top: 0
 
 // day
 .day
 	margin-left: 6.96%
-	width: 28.7%
+	width: 28.6%
 	+r400
 	font-size: 15px
 	color: #fff
@@ -1019,29 +1107,65 @@ a
 	border-radius: 5px
 	border: 1px solid $bord_cab
 	+clr
+	+r(1024)
+		margin: 30px 0 50px
 	&__left
 		float: left
 		width: 20%
+		+clr
+		+r(1024)
+			width: 100%
+	.chat__top
+		+r(1024)
+			float: left
+			margin-right: 30px
+			+r(768)
+				float: none
+				margin: 0
+		& + .request
+			margin: 0
+			overflow: hidden
+			+r(768)
+				margin-top: 25px
+				.btn
+					width: 100%
+			.input
+				width: calc(100% - 20px)
 	&__right
 		float: right
 		padding: 0 0 0 20px
 		width: 75%
+		+r(1024)
+			margin-top: 30px
+			width: 100%
 	&__wrap
 		+clr
 	&__row
 		margin-bottom: 6%
 		font-size: 0
 		&.is-big
+			+r(1024)
+				margin-bottom: 0
 			.sub
-				width: 30.8%
+				width: 30.7%
 				&:nth-child(4n+4)
 					margin-left: 0
+					+r(768)
+						margin: 0 0 3.4% 3.4%
+				+r(768)
+					width: 47%
+					&:nth-child(odd)
+						margin-left: 0
 		.sub
 			margin: 0 0 3.4% 3.4%
 			width: 22%
 			font-size: 14px
 			vertical-align: top
 			display: inline-block
+			+r(768)
+				width: 47%
+				&:nth-child(odd)
+					margin-left: 0
 			&:first-child
 				margin-left: 0
 			a
@@ -1054,9 +1178,13 @@ a
 	&__talk
 		margin-top: 25px
 		+clr
-		.btn
+		& > .btn
 			float: right
 			margin-left: 25px
+			+r(768)
+				float: none
+				margin: 0 0 25px
+				width: 100%
 		.talk
 			overflow: hidden
 	.request
@@ -1070,8 +1198,13 @@ a
 	overflow: hidden
 	border-radius: 5px
 	width: 180px
+	+r(768)
+		width: 100%
 	&__video
 		height: 155px
+		background: #000
+		+r(768)
+			height: auto
 		img
 			width: 100%
 			display: block
@@ -1123,6 +1256,8 @@ a
 	overflow: hidden
 	border-radius: 5px
 	border: 1px solid $bord_cab
+	+r(1024)
+		max-width: 100%
 	&__video
 		position: relative
 		&:hover
@@ -1436,9 +1571,24 @@ a
 					bottom: -25px
 					width: 1px
 					background: $bord_cab
+					+r(960)
+						display: none
 			&:nth-child(3)
 				padding-left: 26px
-				width: 860px
+				width: 855px
+				+r(960)
+					padding: 0 0 0 109px
+					+box
+		.title-small,
+		.date
+			+r(768)
+				padding-left: 0
+		.title-small
+			+r(768)
+				margin-bottom: 10px
+			&:first-child
+				+r(768)
+					padding-top: 0
 	& > .date
 		+r(768)
 			padding: 0 30px
@@ -1873,13 +2023,34 @@ a
 	&__left
 		float: left
 		margin-right: 50px
+		+r(1024)
+			margin-right: 30px
+			+r(768)
+				float: none
+				margin: 0
+				width: 100%
 		img
 			display: block
+			+r(768)
+				width: 100%
 	&__right
 		overflow: hidden
+		+r(768)
+			margin: 30px 0 0
+			width: 100%
 		& > .title-h2
 			margin: -4px 0 50px
 			line-height: 1
+			+r(1024)
+				margin-bottom: 30px
+		.profile__col
+			+r(1279)
+				width: 30%
+				+r(1024)
+					margin: 25px 0 0
+					width: 100%
+					&:first-child
+						margin-top: 0
 	&__row
 		margin-top: 22px
 		+clr

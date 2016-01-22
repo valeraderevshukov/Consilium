@@ -15,6 +15,13 @@
 	@extend %in
 	.profile
 		padding-top: 12px
+		+r(1024)
+	& > .profile
+		+r(1024)
+			padding-top: 30px 
+	& > .title-h2
+		+r(768)
+			margin-top: 30px
 
 // wrap
 .wrap
@@ -266,8 +273,48 @@
 	float: left
 	margin-right: 50px
 	width: 26%
+	+clr
+	+r(1024)
+		margin-top: 30px
+		width: 100%
+		overflow: hidden
+		border-radius: 5px
+		box-shadow: 0 2px 5.7px 0.3px rgba(0, 0, 0, 0.2)
+		+r(768)
+			box-shadow: none
+			overflow: initial
+		& > img
+			float: left
+			+r(768)
+				float: none
+				width: 100%
+		.unit 
+			margin: 0
+			overflow: hidden
+			box-shadow: none
+			+r(768)
+				margin-top: 26px
+				box-shadow: 0 2px 5.7px 0.3px rgba(0, 0, 0, 0.2)
+			.title-small
+				margin-top: 0
+		.wrapper
+			margin-top: 0
+			overflow: hidden
+			border: none
+			+r(768)
+				margin-top: 15px
+				border: 1px solid #e6e6e6
+			.title-small
+				&:first-child
+					margin-top: 0
+					+r(768)
+						& + .form__row
+							margin-top: 0
 	.unit
 		padding: 22px 20px
+		margin-top: 30px
+		&:first-child
+			margin-top: 0
 		& + .unit
 			margin-top: 30px
 	.event + .event
@@ -275,12 +322,18 @@
 	.form
 		background: #fff
 		&__row
+			&:first-child
+				margin-top: 0
 		&__label
 			margin-bottom: 5px
 		.btn
 			min-width: 183px
 	.title-small
 		margin-top: 25px
+	.title-h2
+		+r(768)
+			margin-top: 22px
+			line-height: 1
 
 .col-center,
 .col-float
@@ -293,10 +346,14 @@
 			margin-top: -5px
 	.title-small
 		margin: 30px 0 22px
+		+r(768)
+			margin-bottom: 12px
 	.video
 		margin-top: 38px
 	p
 		margin-top: 20px
+		+r(768)
+			margin-top: 12px
 		&:first-child
 			margin-top: 0
 	a
@@ -335,28 +392,72 @@
 			line-height: 48px
 		&_big
 			line-height: 59px
+
+.col-center
+	+r(1024)
+		margin-top: 30px
+		width: calc(63.5% - 50px)
+		+r(768)
+			margin-top: 12px
+			width: 100%
+
 .col-float
 	width: calc(72.6% - 50px)
+	+r(1024)
+		margin-top: 30px
+		width: 100%
+	.title-h2
+		+r(1279)
+			span
+				display: block
+			.btn
+				float: none
+				margin: 15px 0 0
 	.profile
+		+r(768)
+			margin-top: 18px
 		&__col
 			width: 31%
+			+r(768)
+				margin: 30px 0 0
+				width: 100%
+				&:first-child
+					margin-top: 0
 		.title-small
 			margin-bottom: 12px
 		.row 
+			&:first-child
+				+r(768)
+					margin-top: 0
 			& + p
 				margin-top: 14px
-			.btn + .btn
-				margin-left: 2px
+			.btn 
+				& + .btn
+					margin-left: 2px
+					+r(1279)
+						margin: 10px 11px 0 0
+			.title-small
+				&:first-child
+					+r(768)
+						margin-top: 0
 		.price
 			color: $blue
 		.list-green li
 			margin-top: 2px
 			&:first-child
 				margin-top: 0
+	.btn 
+		+r(768)
+			width: 100%
 
 .col-right
 	float: right
 	width: calc(27.4% - 27px)
+	+r(1024)
+		margin-top: 30px
+		width: calc(42.4% - 27px)
+		+r(768)
+			width: 100%
 	.days
 		border-radius: 5px
 	.title-small
@@ -368,17 +469,33 @@
 .content
 	padding: 35px 0 13px
 	+clr
+	+r(1024)
+		padding-bottom: 50px 
 	.leftbar
 		width: 38%
+		+r(1024)
+			float: left
+			width: 41%
+			+r(768)
+				float: none
+				width: 100%
 	.rightbar
 		padding-right: 17.2%
 		width: calc(62% - 50px)
 		+box
+		+r(1024)
+			float: right
+			padding-right: 0
+			+r(768)
+				float: none
+				width: 100%
 	.img
 		& + .title-small	
 			margin-top: 38px
 	.title-small
 		margin: 40px 0 20px
+		+r(768)
+			margin-top: 25px
 		& + .title-h5
 			margin-top: -5px
 	.title-h2
@@ -386,11 +503,15 @@
 		line-height: 1.1
 	.title-h5	
 		margin: 35px 0 10px
+		+r(765)
+			margin-top: 25px
 		& + p
 			margin-top: 10px
 	.date
 		color: $l_green-2
 		+r400
+		& + img
+			margin-top: 30px
 	p
 		margin-top: 17px
 		line-height: 1.2
@@ -675,6 +796,8 @@ button.btn
 		margin: -2px 0 -5px
 		font-size: 26px
 		line-height: 1
+		+r(1279)
+			font-size: 22px
 .title-cap
 	+r400
 	font-size: 16px
@@ -1003,6 +1126,8 @@ input[name^='password']
 		margin-top: 25px
 	&__subm
 		margin-top: 18px
+		.btn + .btn
+			margin-top: 10px
 	.radiobox
 		margin-left: 18px
 	.photo
@@ -1459,6 +1584,14 @@ input[name^='password']
 	margin-top: 20px
 	&.is-mod
 		margin-top: 10px
+	&.is-btn
+		.btn,
+		& + .btn
+			+r(1279)
+				margin: 10px 0 0
+				width: 100%
+				&:first-child
+					margin-top: 0
 	.title-small
 		margin-bottom: 5px
 	ul + p
@@ -1517,6 +1650,8 @@ input[name^='password']
 	text-align: center
 	&.is-go-top
 		bottom: 172px
+		+r(768)
+			bottom: 472px
 	&__in
 		position: relative
 		@extend %in
@@ -1578,6 +1713,7 @@ input[name^='password']
 // popup
 .popup
 	color: $c_body
+	min-width: 314px
 	display: none
 	&.is-active
 		display: block
@@ -1599,6 +1735,25 @@ input[name^='password']
 	.btn
 		width: 100%
 		display: block
+
+// add-review
+.add-review
+	+r(768)
+		margin-top: 30px
+		.title-small
+			padding-top: 0
+			padding-left: 0
+
+.is-hide-tab
+	+r(1024)
+		display: none
+		+r(768)
+			display: block
+.is-show-tab
+	+r(1024)
+		display: block
+		+r(768)
+			display: none
 
 .is-hide-mob
 	+r(768)

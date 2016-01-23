@@ -400,7 +400,7 @@ a { text-decoration: none; }
 .reviews .td:first-child { width: 110px; }
 .reviews .td:nth-child(2) { width: 232px; }
 .reviews .td:nth-child(3) { width: 675px; }
-.reviews .td:last-child { vertical-align: middle; }
+.reviews .td:last-child { vertical-align: middle; min-width: 70px; }
 .reviews .td .date { font-family: "Roboto Condensed", Arial, sans-serif; font-weight: 400; }
 .reviews .rating { margin-top: 12px; font-size: 16px; }
 
@@ -1566,6 +1566,7 @@ body.is-open-menu .btn-search { opacity: 0; z-index: -1; }
  .reviews .td:first-child{ float: left; padding-right: 28px; width: 81px !important; }
  .reviews .td:nth-child(2){ margin-top: 0; width: calc(100% - 109px); }
  .reviews .td:nth-child(3){ padding: 0 0 0 109px; box-sizing: border-box; }
+ .reviews .td:last-child{ text-align: center; }
  .reviews .rating{ margin-top: 8px; }
  .attend .td span{ vertical-align: top; }
  .attend .td{ line-height: 1.4; }

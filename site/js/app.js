@@ -237,7 +237,7 @@ $(document).ready(function() {
 		speed 			: 500,
 		cssEase 		: 'linear',
 		slidesToShow 	: 3,
-		slidesToScroll 	: 1
+		slidesToScroll 	: 3
 	});
 
 	// video slider

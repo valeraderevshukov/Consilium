@@ -798,6 +798,17 @@ button.btn
 		line-height: 1
 		+r(1279)
 			font-size: 22px
+
+a.title-small
+	color: $c_body
+	display: block
+	&:hover
+		span
+			border-color: $c_body
+	span
+		transition: border-color .2s
+		border-bottom: 1px solid transparent
+
 .title-cap
 	+r400
 	font-size: 16px
@@ -1296,6 +1307,7 @@ input[name^='password']
 	background-repeat: no-repeat
 	background-position: 50% 50%
 	background-size: cover
+	display: block
 	& + .reviews
 		margin-top: 38px
 
@@ -1641,7 +1653,7 @@ input[name^='password']
 .call
 	position: fixed
 	left: 0
-	right: 0
+	right: 10px
 	bottom: 30px
 	+r700
 	font-size: 12px
@@ -1654,7 +1666,7 @@ input[name^='password']
 			bottom: 472px
 	&__in
 		position: relative
-		@extend %in
+		width: 100%
 	&__circle
 		position: absolute
 		bottom: 0

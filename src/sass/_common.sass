@@ -677,8 +677,11 @@ a
 		background: #e5e5e5
 	&__list
 		padding-top: 12px
-		max-height: 218px
+		height: 540px
 		overflow-y: auto
+		+r(1024)
+			height: auto
+			max-height: 218px
 		&::-webkit-scrollbar
 			width: 7px
 		&::-webkit-scrollbar-thumb
@@ -703,6 +706,10 @@ a
 		font-size: 16px
 		vertical-align: top
 		display: inline-block
+		&.is-active
+			a
+				&:before
+					+rotate(180)
 		&:first-child
 			padding-left: 0
 			&:before
@@ -726,6 +733,7 @@ a
 			top: 50%
 			right: 0
 			margin-top: -3px
+			transition: transform .2s
 			+arr(9,5,#ccc,b)
 
 // calendar
@@ -940,6 +948,14 @@ a
 			+r(768)
 				margin-top: 16px
 				font-size: 22px
+	&__addres
+		margin-top: 5px
+		font-size: 18px
+		+r400
+		+r(960)
+			font-size: 16px
+			+r(768)
+				font-size: 22px
 	&__cost
 		color: $blue
 		font-weight: 700
@@ -960,8 +976,15 @@ a
 		color: $blue
 		font-size: 16px
 		+r400
+		display: block
+		&:hover
+			span
+				border-color: $blue
 		+r(768)
 			font-size: 18px
+		span
+			transition: border-color .2s
+			border-bottom: 1px solid transparent
 	&__inf
 		margin-top: 12px
 		font-size: 0
@@ -1111,7 +1134,7 @@ a
 		margin: 30px 0 50px
 	&__left
 		float: left
-		width: 20%
+		width: 22.8%
 		+clr
 		+r(1024)
 			width: 100%
@@ -1123,7 +1146,7 @@ a
 				float: none
 				margin: 0
 		& + .request
-			margin: 0
+			margin: 14px 0 0 
 			overflow: hidden
 			+r(768)
 				margin-top: 25px
@@ -1199,7 +1222,8 @@ a
 	border-radius: 5px
 	width: 180px
 	+r(768)
-		width: 100%
+		margin: 0 auto
+		width: 50%
 	&__video
 		height: 155px
 		background: #000
@@ -1223,6 +1247,10 @@ a
 
 // request
 .request
+	padding: 16px
+	border: 1px solid #e6e6e6
+	border-radius: 5px
+	background: #fafafa
 	&__title
 		+hlb
 	&__wrap
@@ -1262,7 +1290,7 @@ a
 		position: relative
 		&:hover
 			.sub__control
-				background: rgba(#000, .5)
+				background: rgba(#000, .8)
 		img
 			width: 100%
 			display: block
@@ -1271,15 +1299,33 @@ a
 		left: 0
 		right: 0
 		bottom: 0
-		padding: 7px 7px 0 5px
+		padding: 12px 12px 3px 12px
 		z-index: 10
 		transition: background .2s
-		background: rgba(#000, .2)
+		background: rgba(#000, .5)
 		text-align: right
+		+clr
+		.mute
+			float: left
 	&__name
 		border-top: 1px solid $bord_cab
 		+hlb
 		padding: 5px 10px
+
+// mute
+.mute
+	color: #fff
+	font-size: 0
+	cursor: pointer
+	user-select: none
+	&:hover
+		.icon
+			transform: scale(1.25)
+			opacity: 1
+	.icon
+		font-size: 20px
+		transition: transform .2s
+		opacity: .4
 
 // volume
 .volume
@@ -1294,7 +1340,7 @@ a
 			opacity: 1
 			visibility: visible
 	&__ico
-		font-size: 14px
+		font-size: 20px
 		cursor: pointer
 		transform: translate3d(0,0,0)
 		will-change: transform, opacity
@@ -1315,7 +1361,7 @@ a
 		vertical-align: top
 		display: inline-block
 	&__progress
-		margin-top: 3px
+		margin-top: 6px
 		width: 50px
 		height: 6px
 		cursor: pointer
@@ -1324,7 +1370,7 @@ a
 		width: 4px
 		height: 14px
 		position: absolute
-		top: -1px
+		top: 2px
 		border-radius: 4px
 		cursor: pointer
 		background: #fff
@@ -1334,7 +1380,7 @@ a
 .increase
 	margin-left: 5px
 	color: #fff
-	font-size: 14px
+	font-size: 20px
 	line-height: 1
 	vertical-align: top
 	cursor: pointer
@@ -1380,6 +1426,9 @@ a
 	&__butt
 		margin-top: 25px
 		+clr
+	&__popup
+		position: relative
+		float: right
 	.btn
 		float: right
 		margin: 0
@@ -1391,6 +1440,44 @@ a
 		border-bottom: none
 		border-left: none
 		border-right: none
+
+// wind
+.wind
+	position: absolute
+	right: 0
+	bottom: 100%
+	margin-bottom: 10px
+	border: 1px solid #e6e6e6
+	border-radius: 5px
+	z-index: 2
+	background: #fff
+	display: none
+	&:before,
+	&:after
+		position: absolute
+		content: ''
+		top: 100%
+	&:before
+		right: 19px
+		+arr(12,6,#e6e6e6,b)
+	&:after
+		right: 20px
+		z-index: 1
+		+arr(10,5,#fff,b)
+	&__in
+		padding: 10px
+		max-height: 160px
+		width: 320px
+		overflow-y: auto
+	&__item
+		margin-top: 3px
+		span
+			cursor: pointer
+			user-select: none
+			transition: border-color .2s
+			border-bottom: 1px solid transparent
+			&:hover
+				border-color: $c_body
 
 // full
 .full
@@ -1407,7 +1494,7 @@ a
 		display: block
 	&:hover
 		.full__control
-			background: rgba(#000, .5)
+			background: rgba(#000, .8)
 	img
 		width: 100%
 	// &__name
@@ -1416,11 +1503,14 @@ a
 		bottom: 0
 		left: 0
 		right: 0
-		padding: 7px 7px 0
+		padding: 12px 12px 3px 12px
 		z-index: 10
 		transition: background .2s
-		background: rgba(#000, .2)
+		background: rgba(#000, .5)
 		text-align: right
+		+clr
+		.mute
+			float: left
 
 // topper
 .topper

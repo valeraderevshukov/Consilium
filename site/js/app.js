@@ -62,12 +62,15 @@ $(document).ready(function() {
 	var drop 		= $('.js-dropdown'),
 		allList 	= $('.js-dropdown-list'),
 		select 		= $('.js-select'),
-		selectList 	= $('.js-select-list');
+		selectList 	= $('.js-select-list'),
+		wind 		= $('.js-wind');
 
 
 	$('body').on('click', function() {
 		select.removeClass("is-active");
 		selectList.slideUp(200);
+		$('.js-talk-popup').removeClass('is-active');
+		wind.fadeOut(300);
 	});
 
 	// select list
@@ -257,6 +260,18 @@ $(document).ready(function() {
 		]
 	});
 
+	$('.js-ad-slide').slick({
+		dots 			: true,
+		speed 			: 800,
+        arrows			: false,
+		fade 			: true,
+		// autoplay		: true,
+		// autoplaySpeed	: 4000,
+		cssEase			: 'linear',
+		slidesToShow 	: 1,
+		slidesToScroll 	: 1
+	});
+
 	// init calendar
 	$('.js-fullcalendar').each(function(){
 		var calendar 	= $(this),
@@ -351,5 +366,43 @@ $(document).ready(function() {
 		}
 	});
 	
+	// sub copy img
+	$('.js-increase').on('click', function(){
+		var this_ 		= $(this),
+			wrap 		= this_.parents('.js-sub-wrap'),
+			videoSmall 	= this_.parents('.js-sub-small'),
+			srcSmall 	= videoSmall.data('src'),
+			videoAct 	= wrap.find('.js-sub-active'),
+			srcAct 		= videoAct.find('img');
+		srcAct.attr('src', srcSmall);;
+	});
+
+	// open talk popup
+	$('.js-open-wind').on('click', function(event){
+		var this_ 	= $(this),
+			parent 	= this_.parents('.js-talk-popup'),
+			wind 	= parent.find('.js-wind');
+		if (!parent.hasClass('is-active')) {
+			parent.addClass('is-active');
+			wind.fadeIn(300);
+		}
+		else {
+			parent.removeClass('is-active');
+			wind.fadeOut(300);
+		}
+		event.stopPropagation();
+	});
+
+	// sorting
+	$('.js-sorting-item').on('click', function(){
+
+		$(this).parents('.js-sorting')
+		.find('.js-sorting-item')
+		.removeClass('is-active');
+
+		$(this).toggleClass('is-active');
+
+		return false;
+	});
 	
 });

@@ -1,19 +1,25 @@
 // ad
 .ad
-	padding: 96px 0 110px
 	color: #fff
 	+r400
 	font-size: 58px
 	line-height: 56px
 	+font-smoothing(antialiased)
-	background: url(../img/bg-ad.png) no-repeat 50% 0
-	background-size: cover
-	+r(1200)
-		padding-left: 10px
 	+r(960)
-		padding: 34px 0 
 		font-size: 44px
 		line-height: 40px
+	&__slide
+		padding: 96px 0 110px
+		min-height: 512px
+		background-repeat: no-repeat
+		background-position: 50% 0
+		background-size: cover
+		+box
+		+r(1200)
+			padding-left: 10px
+		+r(960)
+			padding: 34px 0 
+			min-height: 629px
 	&__in
 		position: relative
 		margin: 0 auto
@@ -50,6 +56,22 @@
 		.btn
 			+r(960)
 				width: 100%
+	.slick-dots
+		bottom: 30px
+		line-height: 1
+		font-size: 0
+		li
+			&.slick-active
+				button
+					opacity: 1
+					background: #fff
+			button
+				height: 15px
+				width: 15px
+				transition: background .3s
+				border: 2px solid #fff
+				box-shadow: none
+				background: transparent
 
 // info
 .info
@@ -283,8 +305,8 @@
 					opacity: 1
 					background: #fff
 			button
-				height: 10px
-				width: 10px
+				height: 15px
+				width: 15px
 				transition: background .3s
 				border: 2px solid #fff
 				box-shadow: none

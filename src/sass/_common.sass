@@ -508,19 +508,19 @@ a
 	// .ui-state-highlight,
 	// .ui-state-hover
 	// 	color: #fff
-	.ui-state-active,
-	.ui-datepicker-current-day
-		background: #61c2c1
-		color: #fff
-		span,
-		a
-			background: #61c2c1
-			color: #fff,
 	td[data-handler="selectDay"]
 		background: transparent
 		span,
 		a
 			background: transparent
+	td.ui-state-active,
+	td.ui-datepicker-current-day
+		background: #61c2c1
+		color: #fff
+		span,
+		a
+			background: #61c2c1
+			color: #fff
 	.ui-corner-all
 		cursor: pointer
 	table
@@ -1688,10 +1688,12 @@ a
 		+r(1200)
 			padding-right: 10px
 		&:first-child
+			padding-right: 10px
 			width: 20%
 			+r(1024)
 				width: 130px
 		&:nth-child(2)
+			padding-right: 10px
 			width: 35%
 		&:nth-child(3)
 			width: 36%

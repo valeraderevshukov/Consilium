@@ -29,7 +29,8 @@
 	& + .banner
 		margin-top: 45px 
 	.pagin
-		margin-bottom: 24px
+		+r(768)
+			margin-bottom: 24px
 
 .wrapper
 	margin-top: 20px
@@ -106,6 +107,18 @@
 				width: 125px
 				+r(1024)
 					width: 100%
+	&.is-reg
+		.input
+			position: relative
+			left: -12px
+			transition: border-color .2s
+			border-color: transparent
+			text-overflow: ellipsis
+		.field.is-reg
+			.input
+				border-color: #d8dadd
+				+r(960)
+					left: auto
 	.field
 		width: 100%
 		color: $c_body
@@ -1447,6 +1460,8 @@ input[name^='password']
 			margin-top: 0
 	.messages
 		margin: 0 -20px -10px 0
+		+r(768)
+			margin: 0
 
 // count
 .count
@@ -1509,18 +1524,36 @@ input[name^='password']
 
 // messages 
 .messages
-	max-height: 210px
-	overflow-y: auto
-	&::-webkit-scrollbar
-		width: 7px
-	&::-webkit-scrollbar-thumb
-		border-radius: 4px
-		background: #bcc2c2
-		+dr(#bcc2c2,15)
+	&.is-open
+		.messages__in
+			height: 485px
+			overflow-y: auto
+			+r(1024)
+				height: 200px
+		.messages__bot
+			display: none
+	.message + .title-cap
+		margin-top: 20px
+	.title-cap
+		display: block
+	&__in
+		height: 427px
+		overflow: hidden
+		+r(1024)
+			height: 125px
+		&::-webkit-scrollbar
+			width: 7px
+		&::-webkit-scrollbar-thumb
+			border-radius: 4px
+			background: #bcc2c2 
+			+dr(#bcc2c2,15)
+	&__bot
+		margin-top: 20px
+
 
 // message
 .message
-	margin-top: 18px
+	margin-top: 17px
 	& + .btn
 		margin-top: 20px
 
@@ -1755,6 +1788,15 @@ input[name^='password']
 		.title-small
 			padding-top: 0
 			padding-left: 0
+
+// yet
+.yet
+	margin-top: 30px
+	text-align: center
+	+r(768)
+		padding: 0 30px
+		& + .pagin
+			margin-bottom: 24px
 
 .is-hide-tab
 	+r(1024)

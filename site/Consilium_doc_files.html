@@ -144,7 +144,7 @@
 							</div>
 							<div class="filt__sel">
 								<div class="search">
-									<div class="search__field"><input type="text" class="input" placeholder="Введите имя специалиста..."></div>
+									<div class="search__field"><input type="text" class="input" placeholder="Введите информацию по файлу..."></div>
 									<button class="search__btn" type="submit"><i class="ico ico_search-green"></i></button>
 								</div>
 								<button class="btn btn_average btn_pad is-show-mob" type="button">загрузите файл</button>
@@ -152,15 +152,27 @@
 						</div>
 						<!-- hist -->
 						<div class="hist">
-							<div class="wrapper">
+							<div class="wrapper is-reg">
 								<div class="field is-head">
 									<div class="td">Имя файла</div>
 									<div class="td">Описание</div>
-									<div class="td">Открыл доступ</div>
+									<div class="td">Управление доступами</div>
 									<div class="td">Статус файла</div>
 									<div class="td">Действия</div>
 								</div>
-								<div class="field">
+								<div class="field js-field">
+									<div class="field__row is-mob">
+										<div class="td"></div>
+										<div class="td"></div>
+										<div class="td">
+											<div class="btn-text">
+												<span>Константин Игнатович</span>
+												<a href="#" class="ico ico_remove-red-small"></a>
+											</div>
+										</div>
+										<div class="td"></div>
+										<div class="td"></div>
+									</div>
 									<div class="field__row is-mob">
 										<div class="td"></div>
 										<div class="td"></div>
@@ -176,14 +188,14 @@
 									<div class="field__row">
 										<div class="td">
 											<div class="td__title">Имя файла</div>
-											<span class="td__text">09203940920394</span>
+											<input type="text" class="td__text input js-td-input" value="09203940920394" readonly="readonly">
 										</div>
 										<div class="td">
 											<div class="td__title">Описание</div>
-											<span class="td__text">Отчет врача из клиники Медлайф</span>
+											<input type="text" class="td__text input js-td-input" value="Отчет врача из клиники Медлайф" readonly="readonly">
 										</div>
 										<div class="td">
-											<div class="td__title">Открыть доступ</div>
+											<div class="td__title">Управление доступами</div>
 											<div class="select js-select">
 												<div class="select__text js-select-text">
 													<span>Пациенту</span>
@@ -211,18 +223,18 @@
 											<a href="#" class="stat">Мой</a>
 										</div>
 										<div class="td">
-											<button class="btn-reg" type="button">
+											<button class="btn-reg js-reg-inf" type="button">
 												<i class="ico ico_reg"></i>
 												<span class="btn-reg__hide">редактировать</span>
 											</button>
-											<button class="btn-remove" type="button">
+											<button class="btn-remove js-del-field" type="button">
 												<i class="ico ico_remove"></i>
 												<span class="btn-remove__hide">удалить</span>
 											</button>
 										</div>
 									</div>
 								</div>
-								<div class="field">
+								<div class="field js-field">
 									<div class="field__row is-mob">
 										<div class="td"></div>
 										<div class="td"></div>
@@ -245,7 +257,7 @@
 											<span class="td__text">Отчет врача из клиники Медлайф</span>
 										</div>
 										<div class="td">
-											<div class="td__title">Открыл доступ</div>
+											<div class="td__title">Управление доступами</div>
 											<div class="select js-select">
 												<div class="select__text js-select-text">
 													<span>Пациенту</span>
@@ -270,21 +282,17 @@
 										</div>
 										<div class="td">
 											<div class="td__title">Статус файла</div>
-											<a href="#" class="stat">Открыт доступ Петров</a>
+											<a href="#" class="stat">Открыл доступ Петров</a>
 										</div>
 										<div class="td">
-											<button class="btn-reg" type="button">
-												<i class="ico ico_reg"></i>
-												<span class="btn-reg__hide">редактировать</span>
-											</button>
-											<button class="btn-remove" type="button">
+											<button class="btn-remove js-del-field" type="button">
 												<i class="ico ico_remove"></i>
 												<span class="btn-remove__hide">удалить</span>
 											</button>
 										</div>
 									</div>
 								</div>
-								<div class="field">
+								<div class="field js-field">
 									<div class="field__row is-mob">
 										<div class="td"></div>
 										<div class="td"></div>
@@ -300,14 +308,14 @@
 									<div class="field__row">
 										<div class="td">
 											<div class="td__title">Имя файла</div>
-											<span class="td__text">09203940920394</span>
+											<input type="text" class="td__text input js-td-input" value="09203940920394" readonly="readonly">
 										</div>
 										<div class="td">
 											<div class="td__title">Описание</div>
-											<span class="td__text">Отчет врача из клиники Медлайф</span>
+											<input type="text" class="td__text input js-td-input" value="Отчет врача из клиники Медлайф" readonly="readonly">
 										</div>
 										<div class="td">
-											<div class="td__title">Открыть доступ</div>
+											<div class="td__title">Управление доступами</div>
 											<div class="select js-select">
 												<div class="select__text js-select-text">
 													<span>Пациенту</span>
@@ -335,18 +343,18 @@
 											<a href="#" class="stat">Мой</a>
 										</div>
 										<div class="td">
-											<button class="btn-reg" type="button">
+											<button class="btn-reg js-reg-inf" type="button">
 												<i class="ico ico_reg"></i>
 												<span class="btn-reg__hide">редактировать</span>
 											</button>
-											<button class="btn-remove" type="button">
+											<button class="btn-remove js-del-field" type="button">
 												<i class="ico ico_remove"></i>
 												<span class="btn-remove__hide">удалить</span>
 											</button>
 										</div>
 									</div>
 								</div>
-								<div class="field">
+								<div class="field js-field">
 									<div class="field__row is-mob">
 										<div class="td"></div>
 										<div class="td"></div>
@@ -369,7 +377,7 @@
 											<span class="td__text">Отчет врача из клиники Медлайф</span>
 										</div>
 										<div class="td">
-											<div class="td__title">Открыть доступ</div>
+											<div class="td__title">Управление доступами</div>
 											<div class="select js-select">
 												<div class="select__text js-select-text">
 													<span>Пациенту</span>
@@ -394,14 +402,10 @@
 										</div>
 										<div class="td">
 											<div class="td__title">Статус файла</div>
-											<a href="#" class="stat">Открыт доступ Петров</a>
+											<a href="#" class="stat">Открыл доступ Петров</a>
 										</div>
 										<div class="td">
-											<button class="btn-reg" type="button">
-												<i class="ico ico_reg"></i>
-												<span class="btn-reg__hide">редактировать</span>
-											</button>
-											<button class="btn-remove" type="button">
+											<button class="btn-remove js-del-field" type="button">
 												<i class="ico ico_remove"></i>
 												<span class="btn-remove__hide">удалить</span>
 											</button>
@@ -409,6 +413,10 @@
 									</div>
 								</div>
 							</div> 
+						</div>
+						<!-- yet -->
+						<div class="yet">
+							<button type="button" class="btn">Еще<i class="ico ico_down"></i></button>
 						</div>
 						<!-- pagination -->
 						<ul class="pagin">

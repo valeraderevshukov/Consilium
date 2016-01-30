@@ -178,13 +178,38 @@ $(document).ready(function() {
 	}
 	tab();
 
-	function LastDayOfMonth(Year, Month)
-	{
-	    return(new Date((new Date(Year, Month+1,1))+1)).getDate();
-	}
-
 	// datepicker
 	$('[id^="from"]').datepicker({
+		showOn			: "both",
+		buttonImage 	: "img/calendar.png",
+		buttonImageOnly	: true,
+		numberOfMonths	: 1,
+		dateFormat		: "dd.mm.yy",
+		dayNamesMin: ['Пн','Вт','Ср','Чт','Пт','Сб','Вс'],
+		monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+            'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+		onClose: function( selectedDate ) {
+			$("#to").datepicker("option", "minDate", selectedDate);
+		}
+	});
+	$('[id^="to"]').datepicker({
+		showOn			: "both",
+		buttonImage 	: "img/calendar.png",
+		buttonImageOnly	: true,
+		numberOfMonths	: +1,
+		dateFormat		: "dd.mm.yy",
+		dayNamesMin: ['Пн','Вт','Ср','Чт','Пт','Сб','Вс'],
+		monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+            'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+		onClose: function( selectedDate ) {
+			$("#from").datepicker("option", "maxDate", selectedDate);
+		}
+	}); 
+
+	function LastDayOfMonth(Year, Month) {
+	    return(new Date((new Date(Year, Month+1,1))+1)).getDate();
+	}
+	$('[id^="with"]').datepicker({
 		showOn			: "both",
 		buttonImage 	: "img/calendar.png",
 		buttonImageOnly	: true,
@@ -198,12 +223,12 @@ $(document).ready(function() {
 		},
 		beforeShowDay: function (date) {
         if (date.getDate() == LastDayOfMonth(date.getFullYear(),date.getMonth())) {
-            return [true, ''];
-        }
-        return [false, ''];
-    }
+            	return [true, ''];
+	        }
+	        return [false, ''];
+	    }
 	});
-	$('[id^="to"]').datepicker({
+	$('[id^="before"]').datepicker({
 		showOn			: "both",
 		buttonImage 	: "img/calendar.png",
 		buttonImageOnly	: true,
@@ -217,10 +242,10 @@ $(document).ready(function() {
 		},
 		beforeShowDay: function (date) {
         if (date.getDate() == LastDayOfMonth(date.getFullYear(),date.getMonth())) {
-            return [true, ''];
-        }
-        return [false, ''];
-    }
+            	return [true, ''];
+	        }
+	        return [false, ''];
+	    }
 	}); 
 	$('.js-datepicker').datepicker({
 		showOn			: "both",
@@ -445,5 +470,47 @@ $(document).ready(function() {
 
 		return false;
 	});
+
+	// reg text
+	$('.js-reg-inf').on('click', function(){
+		var this_ 	= $(this),
+			parent 	= this_.parents('.js-field'),
+			input 	= parent.find('.js-td-input');
+		if (!parent.hasClass('is-reg')){
+			parent.addClass('is-reg');
+			input.removeAttr('readonly');
+		}
+		else {
+			parent.removeClass('is-reg');
+			input.attr('readonly');
+		}
+		return false;
+	});
+
+	// delete field
+	$('.js-del-field').on('click', function(){
+		$(this).parents('.js-field').remove();
+		return false;
+	});
 	
+	// messages open
+	$('.js-open-messeges').on('click', function(){
+		$(this).parents('.js-messages').addClass('is-open');
+		return false;
+	});
+
+	// scroll to chat
+	$('.js-scroll-to').on('click', function(){
+		if ($(window).width() > 960) {
+			return false;
+		}
+		else {
+			var page = $(this).attr("href");
+				$('html, body').animate({
+					scrollTop: $(page).offset().top - 30
+				}, 600);
+				return false;
+		}
+	});
+
 });

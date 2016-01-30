@@ -243,6 +243,47 @@ $(document).ready(function() {
 		slidesToScroll 	: 3
 	});
 
+	// days
+	$('.js-slider-days').slick({
+		dots 			: false,
+		speed 			: 500,
+		infinite 		: false,
+		cssEase			: 'linear',
+		slidesToShow 	: 1,
+		slidesToScroll 	: 1
+	});
+
+	// trigger
+	$('.js-calendar .slick-next').on('click', function(){
+		if ($(window).width() > 768) {
+			$('.js-doc-right .js-slider-days .slick-next').trigger( "click" );
+		};
+	});
+	$('.js-calendar .slick-prev').on('click', function(){
+		if ($(window).width() > 768) {
+			$('.js-doc-right .js-slider-days .slick-prev').trigger( "click" );
+		};
+	});
+	
+	$('.js-doc-calendar .js-calendar .slick-next').on('click', function(){
+		$(this).parents('.js-doc-calendar')
+		.find('.js-slider-days .slick-next')
+		.trigger( "click" );
+	});
+	$('.js-doc-calendar .js-calendar .slick-prev').on('click', function(){
+		$(this).parents('.js-doc-calendar')
+		.find('.js-slider-days .slick-prev')
+		.trigger( "click" );
+	});
+
+	// oprn day
+	$('.js-open-day').on('click',function(){
+		$(this).parents('.js-slider-days')
+		.addClass('is-open');
+
+		return false;
+	});
+
 	// video slider
 	$('.js-video-slider').slick({
 		dots 			: false,

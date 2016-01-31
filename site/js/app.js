@@ -71,6 +71,7 @@ $(document).ready(function() {
 		selectList.slideUp(200);
 		$('.js-talk-popup').removeClass('is-active');
 		wind.fadeOut(300);
+		$('.js-popup').removeClass('is-active');
 	});
 
 	// select list
@@ -301,6 +302,28 @@ $(document).ready(function() {
 		.trigger( "click" );
 	});
 
+	// wrap calendar
+	$('.js-wrap-calendar .js-calendar .slick-next').on('click', function(){
+		$('.js-slider-days .slick-next').trigger( "click" );
+	});
+	$('.js-wrap-calendar .js-calendar .slick-prev').on('click', function(){
+		$('.js-slider-days .slick-prev').trigger( "click" );
+	});
+
+	$('.js-wrap-calendar .day__in a').on('click', function(){
+		$(this).parents('.js-wrap-calendar')
+		.find('.js-popup')
+		.toggleClass('is-active');
+		return false;
+	});
+
+	$('.js-close-popup').on('click', function(){
+		$(this).parents('.js-popup').removeClass('is-active');
+	});
+	$('.js-popup').on('click', function(event){
+		event.stopPropagation();
+	});
+
 	// oprn day
 	$('.js-open-day').on('click',function(){
 		$(this).parents('.js-slider-days')
@@ -512,5 +535,48 @@ $(document).ready(function() {
 				return false;
 		}
 	});
+
+	// add remove wrapper
+	$('body').on('click', '.js-btn-add-wrap', function(){
+		var this_ 	= $(this),
+			parent 	= this_.parents('.js-add-wrapper'),
+			wrap 	= parent.find('.js-wrapper'),
+			wrapIn 	= parent.find('.js-wrapper-in');
+		if (parent.hasClass('is-mod')) {
+			wrap.clone().appendTo(wrapIn)
+			.removeClass('is-hide')
+			.removeClass('js-wrapper');
+		}
+		else {
+			wrap.clone().appendTo(parent)
+			.removeClass('is-hide')
+			.removeClass('js-wrapper');
+		}
+	});
+	$('body').on('click', '.js-remove-wrapper', function(){
+		$(this).parent().remove();
+	});
+
+	// item remove
+	$('.js-remove-item').on('click', function(){
+		$(this).parents('.js-item').remove();
+		return false;
+	});
+
+	// add remove graph
+	$('body').on('click', '.js-add-graph', function(){
+		var this_ 	= $(this),
+			parent 	= this_.parents('.js-graph-wrap'),
+			wrap 	= parent.find('.js-graph'),
+			wrapIn 	= parent.find('.js-graph-wrap-in');
+		wrap.clone().appendTo(wrapIn)
+		.removeClass('is-hide')
+		.removeClass('js-wrapper');
+	});
+
+	$('body').on('click', '.js-btn-add-graph', function(){
+		$(this).parents('.graph').remove();
+	});
+	
 
 });

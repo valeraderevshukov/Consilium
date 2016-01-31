@@ -207,6 +207,37 @@
 		border-radius: 5px
 	a
 		color: $blue
+.remove-item
+	position: relative
+	width: 20px
+	height: 20px
+	background: transparent
+	&:before,
+	&:after
+		position: absolute
+		content: ''
+		left: 0
+		height: 2px
+		width: 20px
+		background: $c_body
+	&:before
+		top: 10px
+		+rotate(-45)
+	&:after
+		bottom: 8px
+		+rotate(45)
+
+// add-wrapper 
+.add-wrapper 
+	.wrapper
+		position: relative
+		&:first-child
+			.remove-item
+				display: none
+	.remove-item
+		position: absolute
+		top: 5px
+		right: 5px
 
 // l
 .l
@@ -222,6 +253,15 @@
 			width: 28%
 			+r(1024)
 				width: 100%
+	&__in
+		+clr
+	&__bot
+		padding-left: 36%
+		+r(1024)
+			padding-left: 0
+		.pagin
+			+r(768)
+				margin-bottom: 24px
 .l-col1
 	float: left
 	width: 25%
@@ -801,7 +841,7 @@ button.btn
 			margin: 5px 0 0
 			display: block
 	.btn.btn_average
-		margin: -9px 0 0 35px
+		margin: -9px 0 0 20px
 		+r(768)
 			margin: 20px 0 0
 	.rating
@@ -811,6 +851,10 @@ button.btn
 		line-height: 1
 		+r(1279)
 			font-size: 22px
+	&__right
+		float: right
+		+r(768)
+			float: none
 
 a.title-small
 	color: $c_body
@@ -1059,6 +1103,11 @@ input[name^='password']
 		+clr
 		&:first-child
 			margin-top: 0
+		&.is-rel
+			position: relative
+			.remove-item
+				top: 8px
+				right: -24px
 	&__label
 		margin-bottom: 8px
 		letter-spacing: -.14px
@@ -1797,6 +1846,15 @@ input[name^='password']
 		padding: 0 30px
 		& + .pagin
 			margin-bottom: 24px
+
+// rem-it
+.rem-it
+	margin: -2px 0 0 2px
+	display: inline-block
+
+// is-hide
+.is-hide
+	display: none
 
 .is-hide-tab
 	+r(1024)

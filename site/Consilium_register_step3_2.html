@@ -384,44 +384,86 @@
 																</select>
 															</div>
 														</div>
-														<div class="graph__tr">
-															<span class="graph__text">с</span>
-															<div class="select js-select">
-																<div class="select__text js-select-text">
-																	<span>10:00</span>
+														<div class="add-wrapper js-add-wrapper">
+															<div class="graph__tr is-rel is-hide js-wrapper">
+																<span class="graph__text">с</span>
+																<div class="select js-select">
+																	<div class="select__text js-select-text">
+																		<span>10:00</span>
+																	</div>
+																	<ul class="select__list js-select-list">
+																		<li data-val="var0">var0</li>
+																		<li data-val="var1">var1</li>
+																		<li data-val="var2">var2</li>
+																		<li data-val="var3">var3</li>
+																	</ul>
+																	<select>
+																		<option value="var0">var0</option>
+																		<option value="var1">var1</option>
+																		<option value="var2">var2</option>
+																		<option value="var3">var3</option>
+																	</select>
 																</div>
-																<ul class="select__list js-select-list">
-																	<li data-val="var0">var0</li>
-																	<li data-val="var1">var1</li>
-																	<li data-val="var2">var2</li>
-																	<li data-val="var3">var3</li>
-																</ul>
-																<select>
-																	<option value="var0">var0</option>
-																	<option value="var1">var1</option>
-																	<option value="var2">var2</option>
-																	<option value="var3">var3</option>
-																</select>
-															</div>
-															<span class="graph__text">до</span>
-															<div class="select js-select">
-																<div class="select__text js-select-text">
-																	<span>19:00</span>
+																<span class="graph__text">до</span>
+																<div class="select js-select">
+																	<div class="select__text js-select-text">
+																		<span>19:00</span>
+																	</div>
+																	<ul class="select__list js-select-list">
+																		<li data-val="var0">var0</li>
+																		<li data-val="var1">var1</li>
+																		<li data-val="var2">var2</li>
+																		<li data-val="var3">var3</li>
+																	</ul>
+																	<select>
+																		<option value="var0">var0</option>
+																		<option value="var1">var1</option>
+																		<option value="var2">var2</option>
+																		<option value="var3">var3</option>
+																	</select>
 																</div>
-																<ul class="select__list js-select-list">
-																	<li data-val="var0">var0</li>
-																	<li data-val="var1">var1</li>
-																	<li data-val="var2">var2</li>
-																	<li data-val="var3">var3</li>
-																</ul>
-																<select>
-																	<option value="var0">var0</option>
-																	<option value="var1">var1</option>
-																	<option value="var2">var2</option>
-																	<option value="var3">var3</option>
-																</select>
+																<button class="btn btn_average js-btn-add-wrap" type="button">добавить время</button>
+																<button class="remove-item js-remove-wrapper" type="button"></button>
 															</div>
-															<button class="btn btn_average" type="button">добавить время</button>
+															<div class="graph__tr">
+																<span class="graph__text">с</span>
+																<div class="select js-select">
+																	<div class="select__text js-select-text">
+																		<span>10:00</span>
+																	</div>
+																	<ul class="select__list js-select-list">
+																		<li data-val="var0">var0</li>
+																		<li data-val="var1">var1</li>
+																		<li data-val="var2">var2</li>
+																		<li data-val="var3">var3</li>
+																	</ul>
+																	<select>
+																		<option value="var0">var0</option>
+																		<option value="var1">var1</option>
+																		<option value="var2">var2</option>
+																		<option value="var3">var3</option>
+																	</select>
+																</div>
+																<span class="graph__text">до</span>
+																<div class="select js-select">
+																	<div class="select__text js-select-text">
+																		<span>19:00</span>
+																	</div>
+																	<ul class="select__list js-select-list">
+																		<li data-val="var0">var0</li>
+																		<li data-val="var1">var1</li>
+																		<li data-val="var2">var2</li>
+																		<li data-val="var3">var3</li>
+																	</ul>
+																	<select>
+																		<option value="var0">var0</option>
+																		<option value="var1">var1</option>
+																		<option value="var2">var2</option>
+																		<option value="var3">var3</option>
+																	</select>
+																</div>
+																<button class="btn btn_average js-btn-add-wrap" type="button">добавить время</button>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -439,11 +481,20 @@
 												<strong>Дата</strong>
 											</div>
 											<div class="graph__col">
-												<div class="graph__tr">
-													<div class="datepicker">
-														<input type="text" class="js-datepicker" value="08.10.2015">
+												<div class="add-wrapper js-add-wrapper">
+													<div class="graph__tr">
+														<div class="datepicker">
+															<input type="text" class="js-datepicker" value="08.10.2015">
+														</div>
+														<button class="btn btn_average js-btn-add-wrap" type="button">добавить дату</button>
 													</div>
-													<button class="btn btn_average" type="button">добавить дату</button>
+													<div class="graph__tr is-rel is-hide js-wrapper">
+														<div class="datepicker">
+															<input type="text" class="js-datepicker" value="08.10.2015">
+														</div>
+														<button class="btn btn_average js-btn-add-wrap" type="button">добавить дату</button>
+														<button class="remove-item js-remove-wrapper" type="button"></button>
+													</div>
 												</div>
 												<div class="graph__tr">
 													<label class="radiobox">
@@ -455,43 +506,84 @@
 														<span>В такое время</span>
 													</label>
 												</div>
-												<div class="graph__tr">
-													<div class="select js-select">
-														<div class="select__text js-select-text">
-															<span>10:00</span>
+												<div class="add-wrapper js-add-wrapper">
+													<div class="graph__tr">
+														<div class="select js-select">
+															<div class="select__text js-select-text">
+																<span>10:00</span>
+															</div>
+															<ul class="select__list js-select-list">
+																<li data-val="var0">var0</li>
+																<li data-val="var1">var1</li>
+																<li data-val="var2">var2</li>
+																<li data-val="var3">var3</li>
+															</ul>
+															<select>
+																<option value="var0">var0</option>
+																<option value="var1">var1</option>
+																<option value="var2">var2</option>
+																<option value="var3">var3</option>
+															</select>
 														</div>
-														<ul class="select__list js-select-list">
-															<li data-val="var0">var0</li>
-															<li data-val="var1">var1</li>
-															<li data-val="var2">var2</li>
-															<li data-val="var3">var3</li>
-														</ul>
-														<select>
-															<option value="var0">var0</option>
-															<option value="var1">var1</option>
-															<option value="var2">var2</option>
-															<option value="var3">var3</option>
-														</select>
-													</div>
-													<span class="graph__text">до</span>
-													<div class="select js-select">
-														<div class="select__text js-select-text">
-															<span>19:00</span>
+														<span class="graph__text">до</span>
+														<div class="select js-select">
+															<div class="select__text js-select-text">
+																<span>19:00</span>
+															</div>
+															<ul class="select__list js-select-list">
+																<li data-val="var0">var0</li>
+																<li data-val="var1">var1</li>
+																<li data-val="var2">var2</li>
+																<li data-val="var3">var3</li>
+															</ul>
+															<select>
+																<option value="var0">var0</option>
+																<option value="var1">var1</option>
+																<option value="var2">var2</option>
+																<option value="var3">var3</option>
+															</select>
 														</div>
-														<ul class="select__list js-select-list">
-															<li data-val="var0">var0</li>
-															<li data-val="var1">var1</li>
-															<li data-val="var2">var2</li>
-															<li data-val="var3">var3</li>
-														</ul>
-														<select>
-															<option value="var0">var0</option>
-															<option value="var1">var1</option>
-															<option value="var2">var2</option>
-															<option value="var3">var3</option>
-														</select>
+														<button class="btn btn_average js-btn-add-wrap" type="button">добавить время</button>
 													</div>
-													<button class="btn btn_average" type="button">добавить время</button>
+													<div class="graph__tr is-rel is-hide js-wrapper">
+														<div class="select js-select">
+															<div class="select__text js-select-text">
+																<span>10:00</span>
+															</div>
+															<ul class="select__list js-select-list">
+																<li data-val="var0">var0</li>
+																<li data-val="var1">var1</li>
+																<li data-val="var2">var2</li>
+																<li data-val="var3">var3</li>
+															</ul>
+															<select>
+																<option value="var0">var0</option>
+																<option value="var1">var1</option>
+																<option value="var2">var2</option>
+																<option value="var3">var3</option>
+															</select>
+														</div>
+														<span class="graph__text">до</span>
+														<div class="select js-select">
+															<div class="select__text js-select-text">
+																<span>19:00</span>
+															</div>
+															<ul class="select__list js-select-list">
+																<li data-val="var0">var0</li>
+																<li data-val="var1">var1</li>
+																<li data-val="var2">var2</li>
+																<li data-val="var3">var3</li>
+															</ul>
+															<select>
+																<option value="var0">var0</option>
+																<option value="var1">var1</option>
+																<option value="var2">var2</option>
+																<option value="var3">var3</option>
+															</select>
+														</div>
+														<button class="btn btn_average js-btn-add-wrap" type="button">добавить время</button>
+														<button class="remove-item js-remove-wrapper" type="button"></button>
+													</div>
 												</div>
 											</div>
 										</div>

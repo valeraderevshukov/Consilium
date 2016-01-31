@@ -69,97 +69,130 @@
 								</label>
 							</div>
 							<!-- wrapper -->
-							<div class="wrapper">
-								<form action="">
-									<div class="field">	
-										<div class="add-top">
-											<h3 class="title-small">У меня гибкий график</h3>
-											<button class="btn btn_average" type="button">добавить блок гибкого графика</button>
+							<div class="wrapper js-graph-wrap">
+								<div class="graph is-hide js-graph">
+									<div class="graph__left">
+										<div class="graph__col">
+											<strong>Частота приемов</strong>
+										</div>
+										<div class="graph__col">
+											<label class="radiobox">
+												<input type="radio" name="frequency1">
+												<span>Каждые 20 мин</span>
+											</label>
+											<label class="radiobox">
+												<input type="radio" name="frequency1" checked>
+												<span>Каждые 40 мин</span>
+											</label>
+											<label class="radiobox">
+												<input type="radio" name="frequency1">
+												<span>Каждый час</span>
+											</label>
 										</div>
 									</div>
-									<div class="graph">
-										<div class="graph__left">
-											<div class="graph__col">
-												<strong>Частота приемов</strong>
+									<div class="graph__right">
+										<div class="graph__row is-top">
+											<span class="graph__text is-w70">Работаю с</span>
+											<div class="datepicker">
+												<input type="text" id="from" value="08.10.2015" placeholder="От">
 											</div>
-											<div class="graph__col">
+											<span class="graph__text">по</span>
+											<div class="datepicker">
+												<input type="text" id="to" value="08.10.2015" placeholder="До">
+											</div>
+										</div>
+										<div class="graph__row">
+											<div class="graph__field">
 												<label class="radiobox">
-													<input type="radio" name="frequency">
-													<span>Каждые пол часа</span>
+													<input type="radio" name="days1">
+													<span>Каждый день</span>
 												</label>
 												<label class="radiobox">
-													<input type="radio" name="frequency" checked>
-													<span>Каждый час</span>
+													<input type="radio" name="days1" checked>
+													<span>Только в такие дни</span>
 												</label>
-												<label class="radiobox">
-													<input type="radio" name="frequency">
-													<span>Каждые 2 часа</span>
+											</div>
+											<div class="graph__field">
+												<label class="checkbox is-green">
+													<input type="checkbox">
+													<span>Пн</span>
+												</label>
+												<label class="checkbox is-green">
+													<input type="checkbox" checked>
+													<span>Вт</span>
+												</label>
+												<label class="checkbox is-green">
+													<input type="checkbox">
+													<span>Ср</span>
+												</label>
+												<label class="checkbox is-green">
+													<input type="checkbox">
+													<span>Чт</span>
+												</label>
+												<label class="checkbox is-green">
+													<input type="checkbox">
+													<span>Пт</span>
+												</label>
+												<label class="checkbox is-green">
+													<input type="checkbox">
+													<span>Сб</span>
+												</label>
+												<label class="checkbox is-green">
+													<input type="checkbox">
+													<span>Вс</span>
 												</label>
 											</div>
 										</div>
-										<div class="graph__right">
-											<div class="graph__row is-top">
-												<span class="graph__text is-w70">Работаю с</span>
-												<div class="datepicker">
-													<input type="text" id="from" value="08.10.2015" placeholder="От">
-												</div>
-												<span class="graph__text">по</span>
-												<div class="datepicker">
-													<input type="text" id="to" value="08.10.2015" placeholder="До">
-												</div>
+										<div class="graph__row">
+											<div class="graph__field">
+												<label class="radiobox">
+													<input type="radio" name="days_3">
+													<span>Весь день</span>
+												</label>
+												<label class="radiobox">
+													<input type="radio" name="days_3" checked>
+													<span>В такое время</span>
+												</label>
 											</div>
-											<div class="graph__row">
-												<div class="graph__field">
-													<label class="radiobox">
-														<input type="radio" name="days">
-														<span>Каждый день</span>
-													</label>
-													<label class="radiobox">
-														<input type="radio" name="days" checked>
-														<span>Только в такие дни</span>
-													</label>
-												</div>
-												<div class="graph__field">
-													<label class="checkbox is-green">
-														<input type="checkbox">
-														<span>Пн</span>
-													</label>
-													<label class="checkbox is-green">
-														<input type="checkbox" checked>
-														<span>Вт</span>
-													</label>
-													<label class="checkbox is-green">
-														<input type="checkbox">
-														<span>Ср</span>
-													</label>
-													<label class="checkbox is-green">
-														<input type="checkbox">
-														<span>Чт</span>
-													</label>
-													<label class="checkbox is-green">
-														<input type="checkbox">
-														<span>Пт</span>
-													</label>
-													<label class="checkbox is-green">
-														<input type="checkbox">
-														<span>Сб</span>
-													</label>
-													<label class="checkbox is-green">
-														<input type="checkbox">
-														<span>Вс</span>
-													</label>
-												</div>
-											</div>
-											<div class="graph__row">
-												<div class="graph__field">
-													<label class="radiobox">
-														<input type="radio" name="days_2">
-														<span>Весь день</span>
-													</label>
-													<label class="radiobox">
-														<input type="radio" name="days_2" checked>
-														<span>В такое время</span>
-													</label>
+											<div class="add-wrapper js-add-wrapper">
+												<div class="graph__field is-rel is-hide js-wrapper">
+													<button class="remove-item js-remove-wrapper" type="button"></button>
+													<div class="select js-select">
+														<div class="select__text js-select-text">
+															<span>10:00</span>
+														</div>
+														<ul class="select__list js-select-list">
+															<li data-val="var0">var0</li>
+															<li data-val="var1">var1</li>
+															<li data-val="var2">var2</li>
+															<li data-val="var3">var3</li>
+														</ul>
+														<select>
+															<option value="var0">var0</option>
+															<option value="var1">var1</option>
+															<option value="var2">var2</option>
+															<option value="var3">var3</option>
+														</select>
+													</div>
+													<span class="graph__text">до</span>
+													<div class="select js-select">
+														<div class="select__text js-select-text">
+															<span>19:00</span>
+														</div>
+														<ul class="select__list js-select-list">
+															<li data-val="var0">var0</li>
+															<li data-val="var1">var1</li>
+															<li data-val="var2">var2</li>
+															<li data-val="var3">var3</li>
+														</ul>
+														<select>
+															<option value="var0">var0</option>
+															<option value="var1">var1</option>
+															<option value="var2">var2</option>
+															<option value="var3">var3</option>
+														</select>
+													</div>
+													<button class="btn btn_average js-btn-add-wrap" type="button">добавить время</button>
 												</div>
 												<div class="graph__field">
 													<div class="select js-select">
@@ -197,10 +230,192 @@
 															<option value="var3">var3</option>
 														</select>
 													</div>
-													<button class="btn btn_average" type="button">добавить время</button>
+													<button class="btn btn_average js-btn-add-wrap" type="button">добавить время</button>
 												</div>
 											</div>
 										</div>
+										<div class="graph__row">
+											<div class="graph__field">
+												<bytton class="btn btn_average js-btn-add-graph">Удалить блок гибкого графика</bytton>
+											</div>
+										</div>
+									</div>
+								</div>
+								<form action="">
+									<div class="field">	
+										<div class="add-top">
+											<h3 class="title-small">У меня гибкий график</h3>
+											<button class="btn btn_average js-add-graph" type="button">добавить блок гибкого графика</button>
+										</div>
+									</div>
+									<div class="graph-wrap js-graph-wrap-in">
+										<div class="graph">
+											<div class="graph__left">
+												<div class="graph__col">
+													<strong>Частота приемов</strong>
+												</div>
+												<div class="graph__col">
+													<label class="radiobox">
+														<input type="radio" name="frequency">
+														<span>Каждые 20 мин</span>
+													</label>
+													<label class="radiobox">
+														<input type="radio" name="frequency" checked>
+														<span>Каждые 40 мин</span>
+													</label>
+													<label class="radiobox">
+														<input type="radio" name="frequency">
+														<span>Каждый час</span>
+													</label>
+												</div>
+											</div>
+											<div class="graph__right">
+												<div class="graph__row is-top">
+													<span class="graph__text is-w70">Работаю с</span>
+													<div class="datepicker">
+														<input type="text" id="from" value="08.10.2015" placeholder="От">
+													</div>
+													<span class="graph__text">по</span>
+													<div class="datepicker">
+														<input type="text" id="to" value="08.10.2015" placeholder="До">
+													</div>
+												</div>
+												<div class="graph__row">
+													<div class="graph__field">
+														<label class="radiobox">
+															<input type="radio" name="days">
+															<span>Каждый день</span>
+														</label>
+														<label class="radiobox">
+															<input type="radio" name="days" checked>
+															<span>Только в такие дни</span>
+														</label>
+													</div>
+													<div class="graph__field">
+														<label class="checkbox is-green">
+															<input type="checkbox">
+															<span>Пн</span>
+														</label>
+														<label class="checkbox is-green">
+															<input type="checkbox" checked>
+															<span>Вт</span>
+														</label>
+														<label class="checkbox is-green">
+															<input type="checkbox">
+															<span>Ср</span>
+														</label>
+														<label class="checkbox is-green">
+															<input type="checkbox">
+															<span>Чт</span>
+														</label>
+														<label class="checkbox is-green">
+															<input type="checkbox">
+															<span>Пт</span>
+														</label>
+														<label class="checkbox is-green">
+															<input type="checkbox">
+															<span>Сб</span>
+														</label>
+														<label class="checkbox is-green">
+															<input type="checkbox">
+															<span>Вс</span>
+														</label>
+													</div>
+												</div>
+												<div class="graph__row">
+													<div class="graph__field">
+														<label class="radiobox">
+															<input type="radio" name="days_2">
+															<span>Весь день</span>
+														</label>
+														<label class="radiobox">
+															<input type="radio" name="days_2" checked>
+															<span>В такое время</span>
+														</label>
+													</div>
+													<div class="add-wrapper js-add-wrapper">
+														<div class="graph__field is-rel is-hide js-wrapper">
+															<button class="remove-item js-remove-wrapper" type="button"></button>
+															<div class="select js-select">
+																<div class="select__text js-select-text">
+																	<span>10:00</span>
+																</div>
+																<ul class="select__list js-select-list">
+																	<li data-val="var0">var0</li>
+																	<li data-val="var1">var1</li>
+																	<li data-val="var2">var2</li>
+																	<li data-val="var3">var3</li>
+																</ul>
+																<select>
+																	<option value="var0">var0</option>
+																	<option value="var1">var1</option>
+																	<option value="var2">var2</option>
+																	<option value="var3">var3</option>
+																</select>
+															</div>
+															<span class="graph__text">до</span>
+															<div class="select js-select">
+																<div class="select__text js-select-text">
+																	<span>19:00</span>
+																</div>
+																<ul class="select__list js-select-list">
+																	<li data-val="var0">var0</li>
+																	<li data-val="var1">var1</li>
+																	<li data-val="var2">var2</li>
+																	<li data-val="var3">var3</li>
+																</ul>
+																<select>
+																	<option value="var0">var0</option>
+																	<option value="var1">var1</option>
+																	<option value="var2">var2</option>
+																	<option value="var3">var3</option>
+																</select>
+															</div>
+															<button class="btn btn_average js-btn-add-wrap" type="button">добавить время</button>
+														</div>
+														<div class="graph__field">
+															<div class="select js-select">
+																<div class="select__text js-select-text">
+																	<span>10:00</span>
+																</div>
+																<ul class="select__list js-select-list">
+																	<li data-val="var0">var0</li>
+																	<li data-val="var1">var1</li>
+																	<li data-val="var2">var2</li>
+																	<li data-val="var3">var3</li>
+																</ul>
+																<select>
+																	<option value="var0">var0</option>
+																	<option value="var1">var1</option>
+																	<option value="var2">var2</option>
+																	<option value="var3">var3</option>
+																</select>
+															</div>
+															<span class="graph__text">до</span>
+															<div class="select js-select">
+																<div class="select__text js-select-text">
+																	<span>19:00</span>
+																</div>
+																<ul class="select__list js-select-list">
+																	<li data-val="var0">var0</li>
+																	<li data-val="var1">var1</li>
+																	<li data-val="var2">var2</li>
+																	<li data-val="var3">var3</li>
+																</ul>
+																<select>
+																	<option value="var0">var0</option>
+																	<option value="var1">var1</option>
+																	<option value="var2">var2</option>
+																	<option value="var3">var3</option>
+																</select>
+															</div>
+															<button class="btn btn_average js-btn-add-wrap" type="button">добавить время</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
 									</div>
 									<div class="field">
 										<div class="text-right">

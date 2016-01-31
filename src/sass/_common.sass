@@ -637,6 +637,15 @@ a
 	.field
 		margin: 25px -20px -20px
 		padding: 20px
+		&__col
+			float: none
+			margin-top: 5px
+			width: 100%
+			&:first-child
+				margin-top: 0
+			+r(1024)
+				float: left
+				width: 50%
 	.title-small
 		& + p
 			margin-top: 20px
@@ -814,6 +823,8 @@ a
 	line-height: 1.25
 	box-shadow: (inset 0 0 0 1px $bord_select)
 	border-radius: 5px
+	& + .days
+		margin-top: 20px
 	+r(1279)
 		font-size: 11px
 		+r(768)
@@ -867,6 +878,19 @@ a
 			+arr(5,9,#ccc,r)
 			+r(768)
 				+arr(8,15,#ccc,r)
+
+.calendar-wrap
+	position: relative
+	.popup
+		position: absolute
+		top: 100%
+		width: 100%
+		right: 0
+		margin-top: 53px
+		z-index: 2
+		+r(768)
+			top: 0
+			margin-top: 0
 
 // fullcalendar
 .fullcalendar
@@ -1949,6 +1973,10 @@ a
 		+r(768)
 			margin: 10px 0 0
 
+// graph-wrap
+.graph-wrap
+	border-top: 1px solid $bord_cab
+
 // graph
 .graph
 	position: relative
@@ -2021,10 +2049,25 @@ a
 	&__field
 		margin-top: 12px
 		+clr
+		&.is-rel
+			position: relative
+			.remove-item
+				top: 8px
+				right: -24px
 		&:first-child
 			margin-top: 0
+		& + div
+			margin-top: 12px
 	&__tr
 		margin-top: 10px
+		& + .add-wrapper
+			margin-top: 10px
+		&.is-rel
+			position: relative
+			margin-top: 10px
+			.remove-item
+				top: 8px
+				right: -24px
 		&:first-child
 			margin-top: 0
 	&__in

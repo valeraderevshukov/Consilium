@@ -1343,7 +1343,7 @@ body.is-open-menu .btn-search { opacity: 0; z-index: -1; }
 
 .sidebar { float: left; width: 23.2%; font-size: 16px; font-family: "Roboto Condensed", Arial, sans-serif; font-weight: 400; }
 
-.sidebar .btn { width: 100%; }
+.sidebar .btn { padding: 0 18px; width: 100%; }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }

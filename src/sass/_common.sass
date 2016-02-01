@@ -881,16 +881,6 @@ a
 
 .calendar-wrap
 	position: relative
-	.popup
-		position: absolute
-		top: 100%
-		width: 100%
-		right: 0
-		margin-top: 53px
-		z-index: 2
-		+r(768)
-			top: 0
-			margin-top: 0
 
 // fullcalendar
 .fullcalendar
@@ -1401,16 +1391,29 @@ a
 	overflow: hidden
 	border-radius: 5px
 	border: 1px solid $bord_cab
+	&.is-active
+		.sub__substrate
+			display: block
+		.sub__video
+			& > img
+				opacity: 0
 	+r(1024)
 		max-width: 100%
 	&__video
 		position: relative
+		background: #bbc3ca
 		&:hover
 			.sub__control
 				background: rgba(#000, .8)
 		img
 			width: 100%
 			display: block
+	&__substrate
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		display: none
 	&__control
 		position: absolute
 		left: 0
@@ -1435,6 +1438,11 @@ a
 	font-size: 0
 	cursor: pointer
 	user-select: none
+	&.is-active
+		.icon-mute
+			display: none
+		.icon-mic
+			display: block
 	&:hover
 		.icon
 			transform: scale(1.25)
@@ -1443,6 +1451,9 @@ a
 		font-size: 20px
 		transition: transform .2s
 		opacity: .4
+	.icon-mic
+		margin: 0 1.5px 11px
+		display: none
 
 // volume
 .volume

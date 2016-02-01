@@ -237,7 +237,7 @@
 							<p><a href="#">$ 10.00</a></p>
 						</div>
 						<div class="event">
-							<p>Пакет консультаций “Стандарт” из 5 консуьтаций</p>
+							<p>Пакет из 5 консуьтаций</p>
 							<p><a href="#">$ 80.00</a></p>
 						</div>
 					</div>
@@ -250,32 +250,45 @@
 				<p>Массаж – это методика профилактики и коррекции заболеваний и патологических нарушений работы внутренних систем организма при помощи механического (ручного) воздействия на мягкие соединительные ткани тела.</p>
 				<p><a href="#">Лечебный</a> (медицинский массаж) имеет право выполнять: специалист с дипломом о высшем медицинском образовании по специальности </p>
 				<div class="row">
-					<div class="title-small">Работаю в:</div>
-					<p><a href="#">Медлайф</a></p>
+					<div class="column">
+						<div class="title-small">Работаю в:</div>
+						<p><a href="#">Медлайф</a></p>
+					</div>
+					<div class="column">
+						<div class="title-small">Специальность</div>
+						<p>Хирург</p>
+					</div>
 				</div>
 				<div class="row">
-					<div class="title-small">Владею языками</div>
-					<p>English</p>
-					<p>Spanish</p>
-					<p><a href="#">Посмотреть все</a></p>
+					<div class="column">
+						<div class="title-small">Cтаж</div>
+						<p>31 год</p>
+					</div>
+					<div class="column">
+						<div class="title-small">Владею языками</div>
+						<p>English</p>
+						<p>Spanish</p>
+						<p><a href="#">Посмотреть все</a></p>
+					</div>
+					
 				</div>
 				<div class="row">
-					<div class="title-small">Награды</div>
-					<ul>
-						<li><a href="#">Top 10 Doctors -2012</a></li>
-						<li><a href="#">Patients Choice Aware - 2012</a></li>
-						<li><a href="#">In-Network Insurances</a></li>
-					</ul>
-					<p><a href="#">Посмотреть все</a></p>
+					<div class="column">
+						<div class="title-small">Награды</div>
+						<ul>
+							<li><a href="#">Top 10 Doctors -2012</a></li>
+							<li><a href="#">Patients Choice Aware - 2012</a></li>
+							<li><a href="#">In-Network Insurances</a></li>
+						</ul>
+						<p><a href="#">Посмотреть все</a></p>
+					</div>
+					<div class="column">
+						<div class="title-small">Контактные данные</div>
+						<p>Страна: Украина</p>
+						<p>Город: Киев</p>
+						<p>Часовой пояс: +2 (Белорусия, Украина, Турция)</p>
+					</div>
 				</div>
-				<div class="title-small">Специальность</div>
-				<p>Хирург</p>
-				<div class="title-small">Cтаж</div>
-				<p>31 год</p>
-				<div class="title-small">Контактные данные</div>
-				<p>Страна: Украина</p>
-				<p>Город: Киев</p>
-				<p>Часовой пояс: +2 (Белорусия, Украина, Турция)</p>
 			</article>
 			<!-- col-right -->
 			<div class="col-right">
@@ -426,38 +439,40 @@
 						</div>
 					</div>
 					<!-- popup -->
-					<div class="popup js-popup is-active">
-						<form action="" class="form">
-							<div class="form__field">
-								<span>Выбрана дата:</span>
-								<date class="date">Среда 30.07.2015</date>
-							</div>
-							<div class="form__field">
-								<span>Выбрано время:</span>
-								<div class="time">13:00</div>
-							</div>
-							<div class="form__textarea">
-								<textarea class="textarea" placeholder="Введите ваш комментарий"></textarea>
-							</div>
-							<div class="form__row">
+					<div class="popup js-popup">
+						<div class="popup__in js-popup-in">
+							<form action="" class="form">
 								<div class="form__field">
-									<label class="radiobox">
-										<input type="radio" name="consultation" checked>
-										<span>Констультация с 1-м специалистом</span>
-									</label>
+									<span>Выбрана дата:</span>
+									<date class="date">Среда 30.07.2015</date>
 								</div>
 								<div class="form__field">
-									<label class="radiobox">
-										<input type="radio" name="consultation">
-										<span>Групповая консультация</span>
-									</label>
+									<span>Выбрано время:</span>
+									<div class="time">13:00</div>
 								</div>
-							</div>
-							<div class="form__subm">
-								<button class="btn btn_middle" type="submit">подтвердить</button>
-								<button class="btn btn_middle btn_red js-close-popup" type="button">отменить</button>
-							</div>
-						</form>
+								<div class="form__textarea">
+									<textarea class="textarea" placeholder="Введите ваш комментарий"></textarea>
+								</div>
+								<div class="form__row">
+									<div class="form__field">
+										<label class="radiobox">
+											<input type="radio" name="consultation" checked>
+											<span>Констультация с 1-м специалистом</span>
+										</label>
+									</div>
+									<div class="form__field">
+										<label class="radiobox">
+											<input type="radio" name="consultation">
+											<span>Групповая консультация</span>
+										</label>
+									</div>
+								</div>
+								<div class="form__subm">
+									<button class="btn btn_middle" type="submit">подтвердить</button>
+									<button class="btn btn_middle btn_red js-close-popup" type="button">отменить</button>
+								</div>
+							</form>
+						</div>
 					</div>
 				</div>
 				<a href="#" class="take">

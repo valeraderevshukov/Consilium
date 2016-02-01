@@ -13,7 +13,6 @@ $(document).ready(function() {
 		selectList.slideUp(200);
 		$('.js-talk-popup').removeClass('is-active');
 		wind.fadeOut(300);
-		$('.js-popup').removeClass('is-active');
 	});
 
 	// select list
@@ -256,13 +255,24 @@ $(document).ready(function() {
 		$(this).parents('.js-wrap-calendar')
 		.find('.js-popup')
 		.toggleClass('is-active');
+		$('body').addClass('is-hidden');
 		return false;
 	});
 
 	$('.js-close-popup').on('click', function(){
 		$(this).parents('.js-popup').removeClass('is-active');
+		$('body').removeClass('is-hidden');
 	});
 	$('.js-popup').on('click', function(event){
+		event.stopPropagation();
+	});
+
+	$('.js-popup').on('click', function(){
+		$(this).removeClass('is-active');
+		$('body').removeClass('is-hidden');
+	});
+
+	$('.js-popup-in').on('click', function(event){
 		event.stopPropagation();
 	});
 
@@ -405,7 +415,9 @@ $(document).ready(function() {
 			srcSmall 	= videoSmall.data('src'),
 			videoAct 	= wrap.find('.js-sub-active'),
 			srcAct 		= videoAct.find('img');
-		srcAct.attr('src', srcSmall);;
+		srcAct.attr('src', srcSmall);
+		$('.js-sub-small').removeClass('is-active');
+		videoSmall.addClass('is-active');
 	});
 
 	// open talk popup
@@ -520,5 +532,8 @@ $(document).ready(function() {
 		$(this).parents('.graph').remove();
 	});
 	
+	$('.js-mute').on('click', function(){
+		$(this).toggleClass('is-active');
+	});
 
 });

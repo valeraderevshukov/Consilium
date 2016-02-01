@@ -142,7 +142,7 @@ a { text-decoration: none; }
 .res__in:after { content: " "; display: table; clear: both; }
 .res__col { float: left; width: 50%; }
 .res__bot { margin-top: 32px; }
-.res .event + .event { margin-top: 24px; }
+.res .event + .event { margin-top: 26px; }
 
 .unit { padding: 22px 30px 30px; font-family: "Roboto Condensed", Arial, sans-serif; font-weight: 400; border-radius: 5px; box-shadow: 0 2px 5.7px 0.3px rgba(0, 0, 0, 0.2); box-sizing: border-box; }
 .unit + .unit { margin-top: 10px; }
@@ -190,7 +190,7 @@ a { text-decoration: none; }
 
 .specialists { position: relative; margin: 25px -30px 0; padding: 10px 10px 0 30px; }
 .specialists:before { position: absolute; content: ""; top: 0; left: 0; right: 0; height: 1px; background: #e5e5e5; }
-.specialists__list { padding-top: 12px; height: 540px; overflow-y: auto; }
+.specialists__list { padding-top: 12px; height: 612px; overflow-y: auto; }
 .specialists__list::-webkit-scrollbar { width: 7px; }
 .specialists__list::-webkit-scrollbar-thumb { border-radius: 4px; background: #bcc2c2; }
 .specialists__list::-webkit-scrollbar-thumb:active { background: #949e9e; }

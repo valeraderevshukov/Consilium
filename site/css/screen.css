@@ -1306,6 +1306,7 @@ body.is-open-menu .btn-search { opacity: 0; z-index: -1; }
 .btn-search:before { position: absolute; content: ""; bottom: -27px; right: 0; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); transition: -webkit-transform 0.3s; transition: transform 0.3s; width: 0px; height: 0px; border-style: solid; border-width: 7px 7px 0 7px; border-color: #fff transparent transparent transparent; }
 .btn-search.is-active { color: #61c2c1; }
 .btn-search.is-active:before { -webkit-transform: translate(0, 7px); -ms-transform: translate(0, 7px); transform: translate(0, 7px); }
+.btn-search__text { position: absolute; top: -1px; right: 100%; width: 120px; font-size: 14px; font-family: "Roboto Condensed", Arial, sans-serif; font-weight: 400; }
 
 .ico { display: inline-block; }
 .ico-search { background-image: url("../img/icons.png"); width: 19px; height: 19px; background-position: -322px -147px; }
